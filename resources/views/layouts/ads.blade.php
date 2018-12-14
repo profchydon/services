@@ -1,4 +1,4 @@
-<div class="col-md-3 sidebar" style="position:sticky;top:0;">
+<div class="col-md-3 sidebar">
 
   <a href="">
     <div class="sb-widget widget-register" style="background-image:url(img/e.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
@@ -27,5 +27,5 @@
       <a href="auth/signup/index.html" class="btn btn-primary">Get Started</a>
     </div>
   </a>
-  
+
 </div>

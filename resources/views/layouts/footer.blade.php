@@ -31,10 +31,6 @@ $(document).ready(function() {
     $('#video-gallery').lightGallery({
         videojs: true
     });
-    // lightGallery(document.getElementById('video-gallery'), {
-    //     videojs: true
-    // });
-
 
     $("#partner-slide").owlCarousel({
         autoPlay: 3000, //Set AutoPlay to 3 seconds
@@ -44,6 +40,29 @@ $(document).ready(function() {
         itemsMobile :	[479,2],
     });
 
+    //State and City Stuff
+    $.ajax({
+            url: '/js/locations.json',
+            type: 'GET',
+            dataType: 'json'
+        })
+        .done(function(error) {
+            mydata = error;
+            for (var state in mydata.States) {
+                $('#state').append('<option value="' + String(state) + '">' + String(state) + ' </option>');
+            }
+        })
+    $('#state').change(function(event) {
+        var selectedState = $(this).val();
+        $('#city').empty();
+        //Get cities for selectedState
+        var cities = mydata.States[String(selectedState)];
+        $('#city').append('<option value="" selected disabled>Please select</option>');
+
+        for (var i = 0; i < cities.length; i++) {
+            $('#city').append('<option value="' + String(cities[i]) + '">' + String(cities[i]) + ' </option>');
+        }
+    });
 
 });
 </script>

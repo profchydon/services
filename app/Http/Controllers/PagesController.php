@@ -53,6 +53,7 @@ class PagesController extends Controller
 
       $response = Json_decode($response);
 
+      // echo "<pre>";
       // var_dump($response);
       // die();
 

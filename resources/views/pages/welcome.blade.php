@@ -14,7 +14,7 @@
 
               <div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
                 <a href="escort/{{ $vipEscort->user->username }}">
-                  <div class="sb-widget widget-register" style="background-image:url(img/{{$vipEscort->escort->profile_image}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <div class="sb-widget widget-register" style="background-image:url(img/escort/images/{{ $vipEscort->escort->profile_image }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
                     <span id="vip">VIP</span>
                     <div class="escort-info">
                       <div class="escort-info-inner">
@@ -47,7 +47,7 @@
 
               <div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
                 <a href="escort/{{ $escort->user->username }}">
-                  <div class="sb-widget widget-register" style="background-image:url(img/{{$escort->escort->profile_image}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <div class="sb-widget widget-register" style="background-image:url(img/escort/images/{{ $escort->escort->profile_image }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
                     @if( $escort->escort->vip == 1)
                         <span id="vip">VIP</span>
                     @endif

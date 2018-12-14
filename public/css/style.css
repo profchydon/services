@@ -1,3 +1,43 @@
+availability-h5 {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 12px;
+}
+a.btn {
+    margin: 10px 0px;
+    font-size: 11px;
+    padding: 8px;
+    background: transparent;
+    border: 1.5px solid #ED2B7C;
+}
+
+textarea{
+    border-radius: 0px !important;
+}
+a.btn.btn-primary.btn-account {
+    margin: 0px;
+    font-size: 10px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    margin-bottom: 20px;
+    color: #ED2B7C;
+}
+a.btn.btn-primary.btn-account:hover {
+    color: #bc2463;
+    font-size: 11px;
+}
+label.reg-label {
+    font-size: 12px;
+    color: #fff;
+}
+select.form-control, input.form-control {
+    border-radius: 0px;
+    font-size: 13px;
+    height: 31px;
+}
 .review-block hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -306,10 +346,10 @@ div#lightgallery {
 #animated-thumbnails img {
     margin: 2px 0px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    max-width: 160px;
-    min-width: 160px;
-    max-height: 160px;
-    min-height: 160px;
+    max-width: 175px;
+    min-width: 175px;
+    max-height: 170px;
+    min-height: 170px;
     display: inline-block;
     padding: 3px;
     background: #fff;
@@ -678,6 +718,15 @@ select.selectpicker.form-control {
 }
 
 @media (max-width:768px) {
+  #animated-thumbnails img {
+    max-width: 48%;
+    min-width: 48%;
+    margin: 2px;
+    max-height: 170px;
+    min-height: 170px;
+    float: left;
+
+}
   .container.main-body {
     padding: 10px 25px;
   }

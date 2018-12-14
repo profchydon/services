@@ -56,7 +56,14 @@
                 <section class="col-md-6">
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">User Details:</h5>
+                        <div class="row">
+                          <div class="col-md-9 col-sm-7 col-xs-7">
+                              <h5 class="details-header">User Details: </h5>
+                          </div>
+                          <div class="col-md-3 col-sm-5 col-xs-5">
+                              <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit</a>
+                          </div>
+                        </div>
                           <div class="col-md-12 escort-list-details" style="padding:0px;">
                               <ul class="list-group">
                                   <li class="list-group-item"><span class="details-key">Name</span> : {{ $details['user']['name'] }} </li>
@@ -76,7 +83,14 @@
 
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Other Details:</h5>
+                        <div class="row">
+                          <div class="col-md-9 col-sm-7 col-xs-7">
+                              <h5 class="details-header">Other Details: </h5>
+                          </div>
+                          <div class="col-md-3 col-sm-5 col-xs-5">
+                              <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit </a>
+                          </div>
+                        </div>
 
                           @if(!($details['escort']) == NULL)
                           <div class="col-md-4 escort-list-details">
@@ -90,7 +104,7 @@
                           </div>
                           <div class="col-md-4 escort-list-details">
                               <ul class="list-group">
-                                  <li class="list-group-item"><span class="details-key">Date of birth</span> : {{ $details['escort']['date_of_birth'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Year of birth</span> : {{ $details['escort']['year_of_birth'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Ethnicity</span> : {{ $details['escort']['ethnicity'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Bust Size</span> : {{ $details['escort']['bust_size'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Height</span> : {{ $details['escort']['height'] }} </li>
@@ -113,6 +127,7 @@
                           </div>
                           @else
                               <h5>Seems you have not registered your escort details</h5>
+                              <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
                           @endif
 
 
@@ -123,7 +138,14 @@
 
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Services:</h5>
+                        <div class="row">
+                          <div class="col-md-9 col-sm-7 col-xs-7">
+                              <h5 class="details-header">Services: </h5>
+                          </div>
+                          <div class="col-md-3 col-sm-5 col-xs-5">
+                              <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit Services</a>
+                          </div>
+                        </div>
 
                           @if(!($details['escort']) == NULL)
                             <?php
@@ -146,6 +168,7 @@
                             ?>
                             @else
                                 <h5>Seems you have not registered your escort details</h5>
+                                <a href="" class="btn btn-primary btn-account">Add Services</a>
                             @endif
 
                       </fieldset>
@@ -153,7 +176,14 @@
 
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Pricing:</h5>
+                        <div class="row">
+                          <div class="col-md-9 col-sm-7 col-xs-7">
+                              <h5 class="details-header">Pricing: </h5>
+                          </div>
+                          <div class="col-md-3 col-sm-5 col-xs-5">
+                              <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit pricing</a>
+                          </div>
+                        </div>
 
                           @if(!($details['escort']) == NULL)
                               <div class="col-md-6 escort-list-details">
@@ -178,6 +208,7 @@
                               </div>
                             @else
                                 <h5>Seems you have not registered your escort details</h5>
+                                <a href="" class="btn btn-primary btn-account">Add your rates</a>
                             @endif
 
 
@@ -189,7 +220,16 @@
                 <section class="col-md-6">
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Images:</h5>
+
+                          <div class="row">
+                            <div class="col-md-9 col-sm-7 col-xs-7">
+                                <h5 class="details-header">Images: </h5>
+                            </div>
+                            <div class="col-md-3 col-sm-5 col-xs-5">
+                                <a href="/imageview" class="btn btn-primary btn-account pull-right">Click to add Images</a>
+                            </div>
+                          </div>
+
 
                           @if(!($details['escort']) == NULL)
                               <div id="animated-thumbnails">
@@ -206,8 +246,8 @@
                                   foreach ($details['images'] as $key => $images) {
                                       if ($images !== NULL) {
                                   ?>
-                                    <a href="../img/{{$images}}">
-                                        <img src="../img/{{$images}}" />
+                                    <a href="../img/escort/images/{{$images}}">
+                                        <img src="../img/escort/images/{{$images}}" />
                                     </a>
                                 <?php
                                       }
@@ -216,30 +256,97 @@
                                 ?>
                             @else
                                 <h5>Seems you have not registered your escort details</h5>
+                                <a href="/imageview" class="btn btn-primary btn-account">Upload Images</a>
                             @endif
+
 
                           </div>
 
                       </fieldset>
                     </div>
 
-
-                    @if(!($details['escort']) == NULL)
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Videos:</h5>
+
+                          <div class="row">
+                            <div class="col-md-9 col-sm-7 col-xs-7">
+                                <h5 class="details-header">Videos: </h5>
+                            </div>
+                            <div class="col-md-3 col-sm-5 col-xs-5">
+                                <a href="/videoview" class="btn btn-primary btn-account pull-right">Click to add Videos</a>
+                            </div>
+                          </div>
+
 
                           @if(!($details['escort']) == NULL)
-                              <iframe src="../video/meet.mp4" width="200" height="200"></iframe>
-                          @endif
+                              <div id="animated-thumbnails">
 
+                                <?php
+                                  if (!empty($details['videos'])) {
+
+                                    unset($details['videos']['id']);
+                                    unset($details['videos']['user_id']);
+                                    unset($details['videos']['escort_id']);
+                                    unset($details['videos']['created_at']);
+                                    unset($details['videos']['updated_at']);
+
+                                  $i = 1;
+
+                                  foreach ($details['videos'] as $key => $video) {
+                                      if ($video !== NULL) {
+                                      $videoCount = "video".$i;
+                                  ?>
+                                  <!-- Hidden video div -->
+                                  <div style="display:none;" id="{{ $videoCount }}">
+                                      <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                                          <source src="/video/escort/{{ $video }}" type="video/mp4">
+                                           Your browser does not support HTML5 video.
+                                      </video>
+                                  </div>
+
+                                  <?php
+                                      }
+                                      $i++;
+                                  }
+                                  ?>
+
+                                  <ul id="video-gallery">
+
+                                  <?php
+                                  $i = 1;
+                                  foreach ($details['videos'] as $key => $video) {
+                                      if ($video !== NULL) {
+                                      $videoCount = "video".$i;
+                                  ?>
+                                  <!-- Hidden video div -->
+                                  <!-- data-src should not be provided when you use html5 videos -->
+                                    <li data-poster="/img/e.jpg" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
+                                        <img src="/img/e.jpg" />
+                                    </li>
+
+                                  <?php
+                                      }
+                                      $i++;
+                                  }
+                                  ?>
+                                  </ul>
+
+                                <?php
+                                      }
+                                ?>
+                            @else
+                                <h5>Seems you have not registered your escort details</h5>
+                                <a href="/imageview" class="btn btn-primary btn-account">Upload Images</a>
+                            @endif
+
+
+                          </div>
 
                       </fieldset>
                     </div>
-                    @endif
-
 
                 </section>
+
               </div>
 
           </div>

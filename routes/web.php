@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@welcome');
+Route::get('/', 'PagesController@welcome')->name('welcome');
 Route::view('login' , 'login')->name('login');
 Route::view('forgotpassword' , 'forgotpassword');
 Route::view('signup' , 'signup');
@@ -20,8 +20,15 @@ Route::view('signup' , 'signup');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'escort'], function () {
-    Route::get('dashboard' , 'EscortController@dashboard');
+    Route::get('dashboard' , 'EscortController@dashboard')->name('escort_dashboard');
+
 });
+
+Route::get('imageview','ImageController@index');
+Route::post('image-view','EscortController@uploadImage');
+
+Route::get('videoview','ImageController@index2');
+Route::post('video-view','EscortController@uploadVideo');
 
 
 Route::get('escort/{escort}' , 'UserController@getEscort');

@@ -31,9 +31,9 @@
                               foreach ($escort['images'] as $key => $images) {
                                   if ($images !== NULL) {
                               ?>
-                                <a href="../img/{{$images}}">
-                                    <img src="../img/{{$images}}" />
-                                </a>
+                              <a href="../img/escort/images/{{$images}}">
+                                  <img src="../img/escort/images/{{$images}}" />
+                              </a>
                             <?php
                                   }
                               }
@@ -52,31 +52,72 @@
 
                     <div class="row user_details">
                       <fieldset>
-                          <h5 class="details-header">Videos:</h5>
-                          <!-- Hidden video div -->
-                          <div style="display:none;" id="video1">
-                              <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
-                                  <source src="/video/test.mp4" type="video/mp4">
-                                   Your browser does not support HTML5 video.
-                              </video>
-                          </div>
-                          <div style="display:none;" id="video2">
-                              <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
-                                  <source src="/video/test.mp4" type="video/mp4">
-                                   Your browser does not support HTML5 video.
-                              </video>
+
+                          <h5 class="details-header">Videos: </h5>
+
+                          @if(!($escort['escort']) == NULL)
+                              <div id="animated-thumbnails">
+
+                                <?php
+                                  if (!empty($escort['videos'])) {
+
+                                    unset($escort['videos']['id']);
+                                    unset($escort['videos']['user_id']);
+                                    unset($escort['videos']['escort_id']);
+                                    unset($escort['videos']['created_at']);
+                                    unset($escort['videos']['updated_at']);
+
+                                  $i = 1;
+
+                                  foreach ($escort['videos'] as $key => $video) {
+                                      if ($video !== NULL) {
+                                      $videoCount = "video".$i;
+                                  ?>
+                                  <!-- Hidden video div -->
+                                  <div style="display:none;" id="{{ $videoCount }}">
+                                      <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                                          <source src="/video/escort/{{ $video }}" type="video/mp4">
+                                           Your browser does not support HTML5 video.
+                                      </video>
+                                  </div>
+
+                                  <?php
+                                      }
+                                      $i++;
+                                  }
+                                  ?>
+
+                                  <ul id="video-gallery">
+
+                                  <?php
+                                  $i = 1;
+                                  foreach ($escort['videos'] as $key => $video) {
+                                      if ($video !== NULL) {
+                                      $videoCount = "video".$i;
+                                  ?>
+                                  <!-- Hidden video div -->
+                                  <!-- data-src should not be provided when you use html5 videos -->
+                                    <li data-poster="/img/e.jpg" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
+                                        <img src="/img/e.jpg" />
+                                    </li>
+
+                                  <?php
+                                      }
+                                      $i++;
+                                  }
+                                  ?>
+                                  </ul>
+
+                                <?php
+                                      }
+                                ?>
+                            @else
+
+                            @endif
+
+
                           </div>
 
-                          <!-- data-src should not be provided when you use html5 videos -->
-                          <ul id="video-gallery">
-                            <li data-poster="/img/e.jpg" data-sub-html="video caption1" data-html="#video1" >
-                                <img src="/img/e.jpg" />
-                            </li>
-                            <li data-poster="/img/e.jpg" data-sub-html="video caption2" data-html="#video2" >
-                                <img src="/img/e.jpg" />
-                            </li>
-
-                          </ul>
                       </fieldset>
                     </div>
 
@@ -119,7 +160,7 @@
                           </div>
                           <div class="col-md-4 escort-list-details">
                               <ul class="list-group">
-                                  <li class="list-group-item"><span class="details-key">Date of birth</span> : {{ $escort['escort']['date_of_birth'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Date of birth</span> : {{ $escort['escort']['year_of_birth'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Ethnicity</span> : {{ $escort['escort']['ethnicity'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Bust Size</span> : {{ $escort['escort']['bust_size'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Height</span> : {{ $escort['escort']['height'] }} </li>

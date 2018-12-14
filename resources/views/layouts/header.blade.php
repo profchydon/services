@@ -45,11 +45,11 @@
 
           <ul class="nav navbar-nav navbar-right">
             <div class="pull-right">
-                    <a class="btn btn-primary" href="/">Home</a>
+                    <a class="btn btn-primary" href="{{ route('welcome') }}">Home</a>
                     @if(Auth::user())
 
                         @if(Auth::user()->user_type == "escort")
-                            <a class="btn btn-primary" href="escort/dashboard">Dashboard</a>
+                            <a class="btn btn-primary" href="{{ route('escort_dashboard') }}">Dashboard</a>
                             <a class="btn btn-primary" href="contact.html">Contact us</a>
                             <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
                         @endif
