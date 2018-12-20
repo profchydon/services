@@ -8,24 +8,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
     <style type="text/css">
-        .main-section{
-            margin:0 auto;
-            padding: 20px;
-            margin-top: 50px;
-            background: #16141a;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-            border: 1px solid #0e0d10;
+        .main-section {
+          margin: 0 auto;
+          padding: 20px;
+          margin-top: 50px;
+          /* background: #16141a; */
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          /* border: 1px solid #0e0d10; */
+          /* background: #293145; */
+          border: 1px solid #272f41;
         }
         body{
             padding-top: 50px;
         }
         .file-preview {
           border-radius: 0px;
-          border: 1px solid #3a3543;
+          border: 1px solid #302c39;
           margin-bottom: 20px;
         }
         .file-drop-zone {
-          border: 1px dashed #494949;
+          border: 1px dashed #4d4d4d;
           border-radius: 0px;
 
         }
@@ -35,11 +37,15 @@
         }
         .header{
           color: #fff;
+          font-size: 19px;
         }
         .bg-danger {
-            background-color: #1A1920 !important;
+            background-color: #303a52 !important;
         }
-
+        .btn:not(:disabled):not(.disabled) {
+            cursor: pointer;
+            color: #fff;
+        }
         .btn-primary {
             color: #fff;
             background-color: #ED2B7C !important;
@@ -54,6 +60,7 @@
             color: #ED2B7C !important;
             background: transparent !important;
             border: none !important;
+            font-size: 13.5px !important;
         }
         .pull-right:hover {
             color: #c92569!important;
@@ -64,7 +71,7 @@
             border-radius: 0px;
         }
         .note{
-            color: red;
+            color: #ED2B7C;
             font-size: 14px;
             text-align: center !important;
         }
@@ -87,7 +94,7 @@
 
                 <div class="main-section">
                   <h4 class="text-center header">Upload your Images <br>
-                      <span class="text-center note">You are allow to uplaod a maximum of 12 images only</span>
+                      <span class="text-center note">You are allow to upload a maximum of 12 images only</span>
                   </h4>
 
                   <form class="" method="post">

@@ -54,6 +54,7 @@
                 </section>
 
                 <section class="col-md-6">
+
                     <div class="row user_details">
                       <fieldset>
                         <div class="row">
@@ -88,7 +89,7 @@
                               <h5 class="details-header">Other Details: </h5>
                           </div>
                           <div class="col-md-3 col-sm-5 col-xs-5">
-                              <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit </a>
+                              <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
                           </div>
                         </div>
 
@@ -346,7 +347,6 @@
                     </div>
 
                 </section>
-
               </div>
 
           </div>

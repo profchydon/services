@@ -10,6 +10,14 @@ class EscortController extends Controller
 {
 
   /**
+   * Class constructor
+   */
+  public function __construct()
+  {
+      $this->middleware('auth', ['except' => []]);
+  }
+
+  /**
    * success response method.
    *
    * @return \Illuminate\Http\Response
@@ -188,7 +196,7 @@ class EscortController extends Controller
 
           $escort = Json_decode($response , TRUE);
 
-          return view('escortdashboard', ['details' => $escort['data']]);
+          return view('escortdashboard2', ['details' => $escort['data']]);
 
         }
     }

@@ -15,13 +15,13 @@ Route::get('/', 'PagesController@welcome')->name('welcome');
 Route::view('login' , 'login')->name('login');
 Route::view('forgotpassword' , 'forgotpassword');
 Route::view('signup' , 'signup');
+Route::view('test' , 'test');
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'escort'], function () {
     Route::get('dashboard' , 'EscortController@dashboard')->name('escort_dashboard');
-
 });
 
 Route::get('imageview','ImageController@index');

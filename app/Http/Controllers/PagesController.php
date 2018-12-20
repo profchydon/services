@@ -53,10 +53,6 @@ class PagesController extends Controller
 
       $response = Json_decode($response);
 
-      // echo "<pre>";
-      // var_dump($response);
-      // die();
-
       if ($err) {
 
       echo "cURL Error #:" . $err;
@@ -65,7 +61,16 @@ class PagesController extends Controller
 
         if ($response->status === 'success' && $response->message === "Ok") {
 
-            return view('welcome', ['escorts' => $response->data->escorts , 'vipEscorts' => $response->data->vipEscorts]);
+            if ($response->data->escorts === "No escort available right now") {
+
+                return view('launching');
+
+            }else {
+
+                return view('welcome', ['escorts' => $response->data->escorts , 'platinumEscorts' => $response->data->platinumEscorts]);
+
+            }
+
         }
 
       }

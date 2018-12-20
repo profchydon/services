@@ -40,6 +40,14 @@ $(document).ready(function() {
         itemsMobile :	[479,2],
     });
 
+    $("#tour-slide").owlCarousel({
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        items : 6,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        itemsMobile :	[479,2],
+    });
+
     //State and City Stuff
     $.ajax({
             url: '/js/locations.json',
