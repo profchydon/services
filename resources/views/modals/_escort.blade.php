@@ -1,3 +1,5 @@
 @include('modals.escort.escort_register')
 @include('modals.escort.escort_edit')
 @include('modals.escort.user_edit')
+@include('modals.escort.services_register')
+@include('modals.escort.services_edit')

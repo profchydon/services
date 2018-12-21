@@ -195,15 +195,24 @@
                               unset($escort['services']['escort_id']);
                               unset($escort['services']['created_at']);
                               unset($escort['services']['updated_at']);
+                          ?>
 
-                              foreach ($escort['services'] as $key => $services) {
+                          <ul class="list-group">
 
-                                if ($services) {
-                              ?>
-                                <a class="dashboard-services">{{$key}}</a>
-                            <?php
-                                }
-                              }
+                            @foreach ($escort['services'] as $key => $services)
+
+                              @if ($services)
+                              <div class="col-md-6 col-sm-6 col-xs-6 service-register-div">
+                                <li class="list-group-item"><span class="service-list">{{$key}} </li>
+                              </div>
+
+                              @endif
+
+                            @endforeach
+
+                          </ul>
+
+                          <?php
                             }
                           ?>
                       </fieldset>

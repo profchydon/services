@@ -97,7 +97,7 @@
                     </div>
                     @else
                         <h5>Seems you have not registered your escort details</h5>
-                        <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
+                        <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account pull-right">Add Escort details</a>
                     @endif
 
                     </fieldset>
@@ -112,7 +112,11 @@
                         </div>
                         @if(!($details['escort']) == NULL)
                         <div class="col-md-3 col-sm-6 col-xs-6" id="edit-details">
-                            <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit Services</a>
+                            @if(empty($details['services']))
+                                <a data-toggle="modal" data-target="#services-register" class="btn btn-primary btn-account pull-right">Add Services</a>
+                            @else
+                                <a data-toggle="modal" data-target="#services-update" class="btn btn-primary btn-account pull-right">Edit Services</a>
+                            @endif
                         </div>
                         @endif
 
@@ -126,15 +130,24 @@
                               unset($details['services']['escort_id']);
                               unset($details['services']['created_at']);
                               unset($details['services']['updated_at']);
+                            ?>
 
-                              foreach ($details['services'] as $key => $services) {
+                              <ul class="list-group">
 
-                                if ($services) {
-                              ?>
-                                <a class="dashboard-services">{{$key}}</a>
+                                @foreach ($details['services'] as $key => $services)
+
+                                  @if ($services)
+                                  <div class="col-md-4 col-sm-4 col-xs-4 service-register-div">
+                                    <li class="list-group-item"><span class="service-list">{{$key}} </li>
+                                  </div>
+
+                                  @endif
+
+                                @endforeach
+
+                              </ul>
+
                             <?php
-                                }
-                              }
                             }
                           ?>
                           @else

@@ -22,6 +22,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name(
 
 Route::group(['prefix' => 'escort'], function () {
     Route::get('dashboard' , 'EscortController@dashboard')->name('escort_dashboard');
+    Route::post('service-register' , 'EscortController@serviceRegister')->name('service_register');
+    Route::post('service-update' , 'EscortController@serviceUpdate')->name('service_update');
 });
 
 Route::get('imageview','ImageController@index');

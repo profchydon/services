@@ -163,6 +163,134 @@ class EscortController extends Controller
 
     }
 
+    public function serviceRegister (Request $request)
+    {
+
+      $data = [
+        'escort_id' => $request->escort_id,
+        'sixty_nine' => isset($request->service1) ? 1 : 0,
+        'anal_rimming' => isset($request->service2) ? 1 : 0,
+        'a_level_anal' => isset($request->service3) ? 1 : 0,
+        'bdsm_giving' => isset($request->service4) ? 1 : 0,
+        'bdsm_receiving' => isset($request->service5) ? 1 : 0,
+        'being_filmed' => isset($request->service6) ? 1 : 0,
+        'body_worship' => isset($request->service7) ? 1 : 0,
+        'bondage' => isset($request->service8) ? 1 : 0,
+        'cum_in_mouth' => isset($request->service9) ? 1 : 0,
+        'cum_on_body' => isset($request->service10) ? 1 : 0,
+        'cum_on_face' => isset($request->service11) ? 1 : 0,
+        'couples' => isset($request->service12) ? 1 : 0,
+        'deep_french_kissing' => isset($request->service13) ? 1 : 0,
+        'dinner_dates' => isset($request->service14) ? 1 : 0,
+        'domination' => isset($request->service15) ? 1 : 0,
+        'domination_giving' => isset($request->service16) ? 1 : 0,
+        'domination_receiving' => isset($request->service17) ? 1 : 0,
+        'double_penetration' => isset($request->service18) ? 1 : 0,
+        'erotic_massage' => isset($request->service19) ? 1 : 0,
+        'extraball' => isset($request->service20) ? 1 : 0,
+        'face_sitting' => isset($request->service21) ? 1 : 0,
+        'fetish' => isset($request->service22) ? 1 : 0,
+        'fisting_giving' => isset($request->service23) ? 1 : 0,
+        'fisting_receiving' => isset($request->service24) ? 1 : 0,
+        'foot_fetish' => isset($request->service25) ? 1 : 0,
+        'french_kissing' => isset($request->service26) ? 1 : 0,
+        'gang_bang' => isset($request->service27) ? 1 : 0,
+        'girl_friend_experience' => isset($request->service28) ? 1 : 0,
+        'golden_shower' => isset($request->service29) ? 1 : 0,
+        'hand_relief' => isset($request->service30) ? 1 : 0,
+        'handjob' => isset($request->service31) ? 1 : 0,
+        'hardsports_giving' => isset($request->service32) ? 1 : 0,
+        'hardsports_receiving' => isset($request->service33) ? 1 : 0,
+        'humiliation_giving' => isset($request->service34) ? 1 : 0,
+        'humiliation_receiving' => isset($request->service35) ? 1 : 0,
+        'lap_dancing' => isset($request->service36) ? 1 : 0,
+        'long_time' => isset($request->service37) ? 1 : 0,
+        'massage' => isset($request->service38) ? 1 : 0,
+        'mmf_threesome' => isset($request->service39) ? 1 : 0,
+        'modelling' => isset($request->service40) ? 1 : 0,
+        'o_level_oral_sex' => isset($request->service41) ? 1 : 0,
+        'oral_with_condom' => isset($request->service42) ? 1 : 0,
+        'oral_without_condom' => isset($request->service43) ? 1 : 0,
+        'parties' => isset($request->service44) ? 1 : 0,
+        'period_play' => isset($request->service45) ? 1 : 0,
+        'pregnant' => isset($request->service46) ? 1 : 0,
+        'prostrate_massage' => isset($request->service47) ? 1 : 0,
+        'porn_star_experience' => isset($request->service48) ? 1 : 0,
+        'receiving_oral' => isset($request->service49) ? 1 : 0,
+        'rimming_giving' => isset($request->service50) ? 1 : 0,
+        'rimming_receiving' => isset($request->service51) ? 1 : 0,
+        'role_play' => isset($request->service52) ? 1 : 0,
+        'sex_toys' => isset($request->service53) ? 1 : 0,
+        'smoking_fetish' => isset($request->service54) ? 1 : 0,
+        'spanking_giving' => isset($request->service55) ? 1 : 0,
+        'spanking_receiving' => isset($request->service56) ? 1 : 0,
+        'strap_on' => isset($request->service57) ? 1 : 0,
+        'swallow' => isset($request->service58) ? 1 : 0,
+        'swallow_at_discretion' => isset($request->service59) ? 1 : 0,
+        'swinging' => isset($request->service60) ? 1 : 0,
+        'tantric_massage' => isset($request->service61) ? 1 : 0,
+        'threesome' => isset($request->service62) ? 1 : 0,
+        'tie_and_tease' => isset($request->service63) ? 1 : 0,
+        'travel_companion' => isset($request->service64) ? 1 : 0,
+        'uniforms' => isset($request->service65) ? 1 : 0,
+        'watersports_giving' => isset($request->service66) ? 1 : 0,
+        'watersports_receiving' => isset($request->service67) ? 1 : 0,
+        'watching_football' => isset($request->service68) ? 1 : 0,
+        'walking' => isset($request->service69) ? 1 : 0,
+        'beach_parties' => isset($request->service70) ? 1 : 0,
+        'swimming' => isset($request->service71) ? 1 : 0,
+        'attending_corporate_parties' => isset($request->service72) ? 1 : 0,
+        'attending_political_rallies' => isset($request->service73) ? 1 : 0,
+        'travelling_companion' => isset($request->service74) ? 1 : 0,
+        'travelling_outside_the_city' => isset($request->service75) ? 1 : 0,
+        'preparing_a_meal' => isset($request->service76) ? 1 : 0,
+      ];
+
+      $data = Json_encode($data, TRUE);
+
+      $authorization = Auth::user()->api_key;
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://localhost:8080/api/v1/services/create",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS => $data,
+          CURLOPT_HTTPHEADER => array(
+            "Authorization: {$authorization}",
+            "Content-Type: application/json"
+          ),
+      ));
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+      $response = Json_decode($response);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+
+        if ($response->status === 'failed') {
+
+            return redirect()->intended('escort/dashboard');
+
+        }elseif ($response->status === 'success' && $response->message === "Services created successfully") {
+
+            return redirect()->intended('escort/dashboard');
+
+        }
+
+      }
+
+    }
+
     //
     public function dashboard()
     {
@@ -341,6 +469,134 @@ class EscortController extends Controller
 
           }
 
+
+      }
+
+      public function serviceUpdate (Request $request)
+      {
+
+        $data = [
+          'escort_id' => $request->escort_id,
+          'sixty_nine' => isset($request->service1) ? 1 : 0,
+          'anal_rimming' => isset($request->service2) ? 1 : 0,
+          'a_level_anal' => isset($request->service3) ? 1 : 0,
+          'bdsm_giving' => isset($request->service4) ? 1 : 0,
+          'bdsm_receiving' => isset($request->service5) ? 1 : 0,
+          'being_filmed' => isset($request->service6) ? 1 : 0,
+          'body_worship' => isset($request->service7) ? 1 : 0,
+          'bondage' => isset($request->service8) ? 1 : 0,
+          'cum_in_mouth' => isset($request->service9) ? 1 : 0,
+          'cum_on_body' => isset($request->service10) ? 1 : 0,
+          'cum_on_face' => isset($request->service11) ? 1 : 0,
+          'couples' => isset($request->service12) ? 1 : 0,
+          'deep_french_kissing' => isset($request->service13) ? 1 : 0,
+          'dinner_dates' => isset($request->service14) ? 1 : 0,
+          'domination' => isset($request->service15) ? 1 : 0,
+          'domination_giving' => isset($request->service16) ? 1 : 0,
+          'domination_receiving' => isset($request->service17) ? 1 : 0,
+          'double_penetration' => isset($request->service18) ? 1 : 0,
+          'erotic_massage' => isset($request->service19) ? 1 : 0,
+          'extraball' => isset($request->service20) ? 1 : 0,
+          'face_sitting' => isset($request->service21) ? 1 : 0,
+          'fetish' => isset($request->service22) ? 1 : 0,
+          'fisting_giving' => isset($request->service23) ? 1 : 0,
+          'fisting_receiving' => isset($request->service24) ? 1 : 0,
+          'foot_fetish' => isset($request->service25) ? 1 : 0,
+          'french_kissing' => isset($request->service26) ? 1 : 0,
+          'gang_bang' => isset($request->service27) ? 1 : 0,
+          'girl_friend_experience' => isset($request->service28) ? 1 : 0,
+          'golden_shower' => isset($request->service29) ? 1 : 0,
+          'hand_relief' => isset($request->service30) ? 1 : 0,
+          'handjob' => isset($request->service31) ? 1 : 0,
+          'hardsports_giving' => isset($request->service32) ? 1 : 0,
+          'hardsports_receiving' => isset($request->service33) ? 1 : 0,
+          'humiliation_giving' => isset($request->service34) ? 1 : 0,
+          'humiliation_receiving' => isset($request->service35) ? 1 : 0,
+          'lap_dancing' => isset($request->service36) ? 1 : 0,
+          'long_time' => isset($request->service37) ? 1 : 0,
+          'massage' => isset($request->service38) ? 1 : 0,
+          'mmf_threesome' => isset($request->service39) ? 1 : 0,
+          'modelling' => isset($request->service40) ? 1 : 0,
+          'o_level_oral_sex' => isset($request->service41) ? 1 : 0,
+          'oral_with_condom' => isset($request->service42) ? 1 : 0,
+          'oral_without_condom' => isset($request->service43) ? 1 : 0,
+          'parties' => isset($request->service44) ? 1 : 0,
+          'period_play' => isset($request->service45) ? 1 : 0,
+          'pregnant' => isset($request->service46) ? 1 : 0,
+          'prostrate_massage' => isset($request->service47) ? 1 : 0,
+          'porn_star_experience' => isset($request->service48) ? 1 : 0,
+          'receiving_oral' => isset($request->service49) ? 1 : 0,
+          'rimming_giving' => isset($request->service50) ? 1 : 0,
+          'rimming_receiving' => isset($request->service51) ? 1 : 0,
+          'role_play' => isset($request->service52) ? 1 : 0,
+          'sex_toys' => isset($request->service53) ? 1 : 0,
+          'smoking_fetish' => isset($request->service54) ? 1 : 0,
+          'spanking_giving' => isset($request->service55) ? 1 : 0,
+          'spanking_receiving' => isset($request->service56) ? 1 : 0,
+          'strap_on' => isset($request->service57) ? 1 : 0,
+          'swallow' => isset($request->service58) ? 1 : 0,
+          'swallow_at_discretion' => isset($request->service59) ? 1 : 0,
+          'swinging' => isset($request->service60) ? 1 : 0,
+          'tantric_massage' => isset($request->service61) ? 1 : 0,
+          'threesome' => isset($request->service62) ? 1 : 0,
+          'tie_and_tease' => isset($request->service63) ? 1 : 0,
+          'travel_companion' => isset($request->service64) ? 1 : 0,
+          'uniforms' => isset($request->service65) ? 1 : 0,
+          'watersports_giving' => isset($request->service66) ? 1 : 0,
+          'watersports_receiving' => isset($request->service67) ? 1 : 0,
+          'watching_football' => isset($request->service68) ? 1 : 0,
+          'walking' => isset($request->service69) ? 1 : 0,
+          'beach_parties' => isset($request->service70) ? 1 : 0,
+          'swimming' => isset($request->service71) ? 1 : 0,
+          'attending_corporate_parties' => isset($request->service72) ? 1 : 0,
+          'attending_political_rallies' => isset($request->service73) ? 1 : 0,
+          'travelling_companion' => isset($request->service74) ? 1 : 0,
+          'travelling_outside_the_city' => isset($request->service75) ? 1 : 0,
+          'preparing_a_meal' => isset($request->service76) ? 1 : 0,
+        ];
+
+        $data = Json_encode($data, TRUE);
+
+        $authorization = Auth::user()->api_key;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "http://localhost:8080/api/v1/services/update",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_HTTPHEADER => array(
+              "Authorization: {$authorization}",
+              "Content-Type: application/json"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+        $response = Json_decode($response);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+
+          if ($response->status === 'failed') {
+
+              return redirect()->intended('escort/dashboard');
+
+          }elseif ($response->status === 'success' && $response->message === "Services updated successfully") {
+
+              return redirect()->intended('escort/dashboard');
+
+          }
+
+        }
 
       }
 

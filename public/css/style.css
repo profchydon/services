@@ -1,3 +1,18 @@
+.col-md-12.text-center.see-more-div {
+    z-index: -3000000 !important;
+}
+input.service-register-checkbox {
+    float: left;
+    margin-right: 3px;
+    margin-top: 3px;
+}
+.service-register-div{
+  padding: 0px;
+}
+li.list-group-item.service-register-list {
+    display: inherit;
+    font-size: 11px;
+}
 .tour-header {
     color: #fff;
     font-weight: 600;
@@ -396,6 +411,7 @@ h5.details-header {
 }
 .col-12.text-center.see-more-div {
     margin-top: 30px;
+    z-index: -3000000 !important;
 }
 
 #vip_escorts .escort-info {
