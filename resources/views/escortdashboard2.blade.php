@@ -269,6 +269,50 @@ $(document).ready(function(){
 
     });
 
+    $('#priceeditform').submit(function () {
+
+      event.preventDefault();
+
+      const formData = {
+          "user_id" : $("#price-edit-user_id").val(),
+          "incall_1hr" : $("#price-edit-incall_1hr").val(),
+          "incall_1dy" : $("#price-edit-incall_1dy").val(),
+          "incall_1wk" : $("#price-edit-incall_1wk").val(),
+          "incall_overnight" : $("#price-edit-incall_overnight").val(),
+          "outcall_1hr" : $("#price-edit-outcall_1hr").val(),
+          "outcall_1dy" : $("#price-edit-outcall_1dy").val(),
+          "outcall_1wk" : $("#price-edit-outcall_1wk").val(),
+          "outcall_overnight" : $("#price-edit-outcall_overnight").val(),
+      }
+
+      console.log(formData);
+
+      const data = JSON.stringify(formData);
+
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://localhost:8080/api/v1/escorts/update",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization" : $("#price-edit-auth").val(),
+        },
+        "processData": false,
+        "data": data
+      }
+
+      $.ajax(settings).done(function (response) {
+          if (response.message === "Update was successful") {
+              $('#edit-escort-message').append("Escort details updated successfully." );
+              location.reload();
+          }
+      });
+
+
+
+    });
+
 });
 
 

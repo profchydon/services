@@ -167,7 +167,7 @@
                         </div>
                         @if(!($details['escort']) == NULL)
                         <div class="col-md-3 col-sm-6 col-xs-6" id="edit-details">
-                            <a href="/imageview" class="btn btn-primary btn-account pull-right">Edit pricing</a>
+                            <a data-toggle="modal" data-target="#price-update" class="btn btn-primary btn-account pull-right">Edit Pricing</a>
                         </div>
                         @endif
 

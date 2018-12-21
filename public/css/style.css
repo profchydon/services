@@ -316,11 +316,10 @@ p.footer-p-main {
     font-weight: 500;
 }
 footer.footer {
-    background-color: #293145;
+    background-color: #2d4567;
     padding: 25px;
     margin: 0px;
-    border: 1px solid #1d2331;
-    /* margin-top: 30px; */
+    border: 1px solid #253853;
 }
 
 
@@ -886,7 +885,7 @@ h4.escort-name {
     background-color: #2d4567;
     padding: 25px;
     margin: 0px;
-    border: 1px solid #232a3b;
+    border: 1px solid #253853;
 }
 
 .sb-widget.widget-register {
@@ -926,7 +925,7 @@ select.selectpicker.form-control {
     background: #2d4567;
     position: relative;
     z-index: 2;
-    border-bottom: 1px solid #232a3b;
+    border-bottom: 1px solid #253853;
 }
 
 .city-list:after {
