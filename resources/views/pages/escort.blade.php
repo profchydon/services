@@ -251,7 +251,7 @@
                           @if(!($escort['review']))
                               <h5>No reviews yet for {{ $escort['user']['username'] }}. </h5>
                               <br>
-                              <a href="" data-toggle="modal" data-target="#review-modal" class="add-review">Be the first to write a review</a>
+                              <a href="" data-toggle="modal" data-target="#review-modal" class="btn btn-primary add-review" style="color:#fff;">Be the first to write a review</a>
                           @else
                               @foreach($escort['review'] as $review)
 
@@ -266,6 +266,7 @@
                                 </div>
 
                               @endforeach
+                              <a href="" data-toggle="modal" data-target="#review-modal" class="btn btn-primary add-review" style="color:#fff;">Add review</a>
                           @endif
 
                       </fieldset>
