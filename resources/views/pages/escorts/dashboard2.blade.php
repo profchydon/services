@@ -97,7 +97,7 @@
                     </div>
                     @else
                         <h5>Seems you have not registered your escort details</h5>
-                        <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account pull-right">Add Escort details</a>
+                        <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
                     @endif
 
                     </fieldset>

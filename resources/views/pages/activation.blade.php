@@ -11,14 +11,12 @@
                 Your account has not been activated. Kindly provide the code sent to your email
             </p>
 
-
-
             <form class="form-group" action="/activation" method="post">
                 @include('_messages')
                 {{ csrf_field() }}
                 <div class="form-group">
                   <label for="">Email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="" value="{{ $email}} " readonly>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="" value="{{ $email }} " readonly>
                 </div>
 
                 <div class="form-group">

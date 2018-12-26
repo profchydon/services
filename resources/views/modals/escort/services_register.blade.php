@@ -14,6 +14,8 @@
                 <div class="modal-body">
                   <div class="row">
                       <input type="text" name="escort_id" value="{{$details['escort']['id']}}" style="display:none">
+                      @if(!($details['escort']) == NULL)
+
                       <?php
                         $count = count($details['servicesFields']);
                         $prev = $count - 1;
@@ -37,6 +39,9 @@
                           @endforeach
 
                       </ul>
+
+
+                      @endif
 
                    </div>
                 </div>

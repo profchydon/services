@@ -6,7 +6,8 @@ use App\User;
 use Alert;
 use Session;
 use Illuminate\Pagination\LengthAwarePaginator;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendActivationMail;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -64,10 +65,6 @@ class UserController extends Controller
           }elseif ($response->status === 'success' && $response->message === "Ok") {
 
               $user = $response->data;
-
-              // echo "<pre>";
-              // var_dump($user->user->email);
-              // die();
 
               Auth::loginUsingId($user->user->id);
 
@@ -273,6 +270,11 @@ class UserController extends Controller
           return view('escorts', ['escorts' => $escorts['data']]);
 
         }
+    }
+
+    public function getActivation($email)
+    {
+        return view('activation' , ['email' => $email]);
     }
 
 }

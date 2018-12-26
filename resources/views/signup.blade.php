@@ -63,8 +63,11 @@ $(document).ready(function(){
                 $('#signup-phone-error-message').show();
                 $('#signup-phone-error-message').append(response.message);
             }else if (response.message === "User created successfully") {
+
                 $('#signup-success-message').show();
                 $('#signup-success-message').append("Congrats! Your account was created successfully. An email for verification has been sent to "+$("#email").val()+ ". Kindly check your email and complete the verification process." );
+
+                setTimeout("window.location='login'", 5000);
             }
         });
 

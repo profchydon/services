@@ -270,7 +270,7 @@ select.form-control, input.form-control {
     text-align: justify;
 }
 h6.review-block-header {
-    font-weight: 600;
+    font-weight: 500;
 }
 .modal-body {
     position: relative;
@@ -511,7 +511,7 @@ li#service-string {
 
 span.details-key {
     color: #ed2b7c;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
 }
 

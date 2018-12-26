@@ -10,7 +10,7 @@
             <p id="signup-success-message"></p>
 
             <form class="form-group" id="signup-form">
-
+              
                 <div class="form-group">
                   <label for="">Name <small>(This will be the name displayed to other users)</small> </label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Enter your fullname">
