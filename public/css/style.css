@@ -877,6 +877,7 @@ h4.escort-name {
 .col-md-3.col-sm-6.col-xs-6.escorts-img-holder {
     margin: 15px -13.7px;
     padding: 0px 15px;
+    margin-bottom: 0px;
 }
 
 /* .navbar-default {

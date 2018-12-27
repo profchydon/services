@@ -9,6 +9,9 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendActivationMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
+use DB;
 
 class UserController extends Controller
 {
@@ -142,6 +145,16 @@ class UserController extends Controller
               Alert::success('Account activation was successful');
 
               $user = $response->data->user;
+
+              // Get the current date
+              $date = Carbon::now();
+
+              // Create a random key as api_key for the User
+              $hash = Hash::make($date);
+              $apikey = str_random(100);
+
+              // Update api_key in the user table for the particular user
+              DB::table('users')->where('username', $user->username)->update(['api_key' => $apikey]);
 
               Auth::loginUsingId($user->id);
 

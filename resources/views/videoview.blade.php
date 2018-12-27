@@ -12,18 +12,16 @@
           margin: 0 auto;
           padding: 20px;
           margin-top: 50px;
-          /* background: #16141a; */
+          background-color: #2a3e5c !important;
+          border: 1px solid #253752 !important;
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          /* border: 1px solid #0e0d10; */
-          /* background: #293145; */
-          border: 1px solid #272f41;
         }
         body{
             padding-top: 50px;
         }
         .file-preview {
           border-radius: 0px;
-          border: 1px solid #302c39;
+          border: 1px solid #25364f;
           margin-bottom: 20px;
         }
         .file-drop-zone {
@@ -40,7 +38,7 @@
           font-size: 19px;
         }
         .bg-danger {
-            background-color: #303a52 !important;
+            background-color: #2d4567 !important;
         }
         .btn:not(:disabled):not(.disabled) {
             cursor: pointer;
@@ -74,6 +72,7 @@
             color: #ED2B7C;
             font-size: 14px;
             text-align: center !important;
+            font-weight: 300 !important;
         }
 
     </style>
