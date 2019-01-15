@@ -214,13 +214,13 @@ class UserController extends Controller
     }
 
 
-    public function getVIPEscorts()
+    public function getEscortsByRank($rank)
     {
 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/vip/all",
+          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/{$rank}/all",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -242,11 +242,11 @@ class UserController extends Controller
           echo "cURL Error #:" . $err;
         } else {
 
-          $vipEscorts = json_decode($response , TRUE);
+          $escorts = json_decode($response , TRUE);
 
-          $vipEscorts = $vipEscorts['data'];
+          $escorts = (new Collection($escorts['data']))->paginate(24);
 
-          return view('vip_escorts', compact('vipEscorts'));
+          return view('escorts', ['escorts' => $escorts]);
 
         }
     }

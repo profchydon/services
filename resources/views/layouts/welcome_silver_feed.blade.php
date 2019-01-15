@@ -27,10 +27,10 @@
     </a>
   </div>
 
-  <div class="col-md-12 text-center see-more-div">
-      <a href="escorts/rank/platinum" class="btn btn-primary btn block">See More Platinum Escorts</a>
-  </div>
-
   @endforeach
+
+  <div class="col-md-12 text-center see-more-div">
+      <a href="escorts/silver/all" class="btn btn-primary btn block">See More Silver Escorts</a>
+  </div>
 
 @endif

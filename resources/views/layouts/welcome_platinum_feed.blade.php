@@ -30,7 +30,7 @@
   @endforeach
 
   <div class="col-md-12 text-center see-more-div">
-      <a href="escorts/rank/platinum" class="btn btn-primary btn block">See More Platinum Escorts</a>
+      <a href="escorts/platinum/all" class="btn btn-primary btn block">See More Platinum Escorts</a>
   </div>
 
 @endif
