@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 use DB;
+use Illuminate\Support\Collection;
 
 class UserController extends Controller
 {
@@ -256,7 +257,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/escorts",
+          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/all",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -280,7 +281,9 @@ class UserController extends Controller
 
           $escorts = json_decode($response , TRUE);
 
-          return view('escorts', ['escorts' => $escorts['data']]);
+          $escorts = (new Collection($escorts['data']))->paginate(24);
+
+          return view('escorts', ['escorts' => $escorts]);
 
         }
     }

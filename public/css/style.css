@@ -1,10 +1,22 @@
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #ED2B7C;
+    border-color: #ED2B7C;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #ed2b7c;
+    font-weight: 900;
+}
+.pagination>li {
+    display: inline;
+    font-size: 11px;
+    font-weight: 900;
+}
 label.review-label {
     color: #fff;
     font-size: 12px;
 }
-.col-md-12.text-center.see-more-div {
-    z-index: -3000000 !important;
-}
+
 input.service-register-checkbox {
     float: left;
     margin-right: 3px;
@@ -956,6 +968,24 @@ select.selectpicker.form-control {
     right: -1px;
   }
 
+  .col-md-12.text-center.see-more-div {
+      z-index: 0 !important;
+      position: initial;
+  }
+
+  .user_details p {
+    text-align: justify;
+    line-height: 22px;
+  }
+
+  .service-register-div {
+      width: 100%;
+  }
+
+  li.list-group-item {
+    font-size: 8.5px;
+  }
+
   #feature-widget #vip {
     right: 25px;
   }
@@ -992,7 +1022,7 @@ select.selectpicker.form-control {
     padding-right: 10px;
   }
   h5.details-header {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
   a.btn.btn-primary.btn-account {
     margin-bottom: 0px;
@@ -1019,8 +1049,8 @@ select.selectpicker.form-control {
     max-width: 48%;
     min-width: 48%;
     margin: 2px;
-    max-height: 170px;
-    min-height: 170px;
+    max-height: 150px;
+    min-height: 150px;
     float: left;
 
 }

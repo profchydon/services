@@ -13,9 +13,15 @@
 
               <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder" id="other_escorts">
                 <a href="escort/{{ $escort['user']['username'] }}">
-                  <div class="sb-widget widget-register" style="background-image:url(../img/{{$escort['escort']['profile_image']}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                    @if( $escort['escort']['vip'] == 1)
-                        <span id="vip">VIP</span>
+                  <div class="sb-widget widget-register" style="background-image:url(../img/escort/images/{{$escort['escort']['profile_image']}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                    @if ( $escort['escort']['rank'] === "platinum")
+                        <span id="vip" class="platinum-badge">P</span>
+                    @elseif ( $escort['escort']['rank'] === "gold")
+                        <span id="vip" class="gold-badge">G</span>
+                    @elseif ( $escort['escort']['rank'] === "silver")
+                        <span id="vip" class="silver-badge">S</span>
+                    @elseif ( $escort['escort']['rank'] === "regular")
+                        <span id="vip" class="regular-badge">R</span>
                     @endif
                     <div class="escort-info">
                       <div class="escort-info-inner">
@@ -32,6 +38,10 @@
 
               @endforeach
 
+          </div>
+
+          <div class="row text-center">
+              {{ $escorts->links() }}
           </div>
 
       </div>
