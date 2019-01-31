@@ -242,11 +242,22 @@ class UserController extends Controller
           echo "cURL Error #:" . $err;
         } else {
 
-          $escorts = json_decode($response , TRUE);
 
-          $escorts = (new Collection($escorts['data']))->paginate(24);
+          $response = json_decode($response , TRUE);
 
-          return view('escorts', ['escorts' => $escorts]);
+
+          $escorts = (new Collection($response['data']['escorts']))->paginate(24);
+          $features = $response['data']['features'];
+          $features = (object) $features;
+
+          // var_dump($features);
+          // die();
+
+          return view('platinumescorts',
+          [
+            'escorts' => $escorts,
+            'features' => $features
+          ]);
 
         }
     }

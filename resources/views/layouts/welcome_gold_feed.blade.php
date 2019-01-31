@@ -4,6 +4,9 @@
 
 @if ($platinumEscorts === "No gold escort available right now")
 
+<div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
+    <h5>No Gold Escort at the momment.</h5>
+</div>
 
 @else
 

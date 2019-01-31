@@ -53,7 +53,13 @@ START - Mobile Menu
                 <a href="users_profile_big.html">Go Feature</a>
               </li>
               <li>
-                <a href="users_profile_small.html">Go Premium</a>
+                <a href="users_profile_small.html">Go Platinum</a>
+              </li>
+              <li>
+                <a href="users_profile_small.html">Go Gold</a>
+              </li>
+              <li>
+                <a href="users_profile_small.html">Go Silver</a>
               </li>
             </ul>
           </div>
@@ -170,7 +176,13 @@ START - Main Menu
               <a href="users_profile_big.html">Go Feature</a>
             </li>
             <li>
-              <a href="users_profile_small.html">Go Premium</a>
+              <a href="users_profile_small.html">Go Platinum</a>
+            </li>
+            <li>
+              <a href="users_profile_small.html">Go Gold</a>
+            </li>
+            <li>
+              <a href="users_profile_small.html">Go Silver</a>
             </li>
           </ul>
         </div>

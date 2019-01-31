@@ -66,8 +66,18 @@ class PagesController extends Controller
                 return view('launching');
 
             }else {
+                $features = array($response->data->features);
 
-                return view('welcome', ['escorts' => $response->data->escorts , 'platinumEscorts' => $response->data->platinumEscorts]);
+                // echo "<pre>";
+                // var_dump($features[0]);
+                // die();
+
+                return view('welcome',
+                [
+                  'escorts' => $response->data->escorts ,
+                  'platinumEscorts' => $response->data->platinumEscorts ,
+                  'features' => $features[0]
+                ]);
 
             }
 

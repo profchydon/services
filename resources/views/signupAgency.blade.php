@@ -35,7 +35,7 @@ $(document).ready(function(){
             "email" : $("#email").val(),
             "password" : $("#password").val(),
             "phone" : $("#phone").val(),
-            "user_type" : "escort"
+            "user_type" : "agency"
         }
 
         const data = JSON.stringify(formData);
@@ -67,7 +67,7 @@ $(document).ready(function(){
                 $('#signup-success-message').show();
                 $('#signup-success-message').append("Congrats! Your account was created successfully. An email for verification has been sent to "+$("#email").val()+ ". Kindly check your email and complete the verification process." );
 
-                setTimeout("window.location='login'", 5000);
+                setTimeout("window.location='/login'", 5000);
             }
         });
 

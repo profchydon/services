@@ -71,7 +71,19 @@
                     <!-- Authentication Links -->
                     @guest
                         <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-primary" href="signup">Signup</a>
+                        <div class="dropdown" id="signupdropdownnav">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="signupdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Signup
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="signupdropdown">
+                            <li><a href="signup/escort">As Escort</a></li>
+                            <hr class="signuphr">
+                            <li><a href="signup/agency" style="display:none;">As Agency</a></li>
+                            <hr class="signuphr"  style="display:none;">
+                            <li><a href="signup/client">As Client</a></li>
+                          </ul>
+                        </div>
                         <a class="btn btn-primary" href="contact.html">Contact us</a>
                     @endguest
 

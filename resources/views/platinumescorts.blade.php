@@ -4,7 +4,7 @@
 
 @include('layouts.search')
 
-@include('layouts.feature')
+@include('layouts.feature2')
 
 @include('pages.escorts')
 
