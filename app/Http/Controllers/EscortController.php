@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use Session;
 
 class EscortController extends Controller
 {
@@ -324,6 +325,14 @@ class EscortController extends Controller
 
           $escort = Json_decode($response , TRUE);
 
+          // echo "<pre>";
+          // var_dump($escort['data']["escort"]); die();
+          Session::put('profile_image' , $escort['data']["escort"]['profile_image']);
+          Session::put('escort_id' , $escort['data']["escort"]['id']);
+          Session::put('verified' , $escort['data']["escort"]['verified']);
+
+          // var_dump(session('verified')); die();
+
           return view('escortdashboard2', ['details' => $escort['data']]);
 
         }
@@ -598,6 +607,46 @@ class EscortController extends Controller
 
         }
 
+      }
+
+      public function saveGoFeatureDetails(Request $request)
+      {
+        $authorization = Auth::user()->api_key;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "http://localhost:8080/api/v1/features/create",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_HTTPHEADER => array(
+              "Authorization: {$authorization}",
+              "Content-Type: application/json"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+
+          $response = Json_decode($response , TRUE);
+
+          if ($response['message'] == "Feature successful created") {
+
+              return "Transaction successfully processed and saved";
+
+          }
+
+        }
       }
 
 }

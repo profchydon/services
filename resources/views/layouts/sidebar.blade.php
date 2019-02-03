@@ -1,6 +1,4 @@
-<!--------------------
-START - Mobile Menu
--------------------->
+
 <div class="menu-mobile menu-activated-on-click color-scheme-dark">
   <div class="mm-logo-buttons-w">
     <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>Wildplayground</span></a>
@@ -16,7 +14,7 @@ START - Mobile Menu
   <div class="menu-and-user">
     <div class="logged-user-w">
       <div class="avatar-w">
-        <img alt="" src="/img/escort/images/{{ $details['escort']['profile_image'] }}">
+        <img alt="" src="/img/escort/images/{{ session('profile_image')  }}">
       </div>
       <div class="logged-user-info-w">
         <div class="logged-user-name">
@@ -24,9 +22,7 @@ START - Mobile Menu
         </div>
       </div>
     </div>
-    <!--------------------
-    START - Mobile Menu List
-    -------------------->
+
     <ul class="main-menu">
 
       <li class="sub-header">
@@ -50,7 +46,7 @@ START - Mobile Menu
           <div class="sub-menu-i">
             <ul class="sub-menu">
               <li>
-                <a href="users_profile_big.html">Go Feature</a>
+                <a href="/gofeature">Go Feature</a>
               </li>
               <li>
                 <a href="users_profile_small.html">Go Platinum</a>
@@ -134,7 +130,7 @@ START - Main Menu
   <div class="logged-user-w avatar-inline">
     <div class="logged-user-i">
       <div class="avatar-w">
-        <img alt="" src="/img/escort/images/{{ $details['escort']['profile_image'] }}">
+        <img alt="" src="/img/escort/images/{{ session('profile_image') }}">
       </div>
       <div class="logged-user-info-w">
         <div class="logged-user-name">
@@ -173,7 +169,7 @@ START - Main Menu
         <div class="sub-menu-i">
           <ul class="sub-menu">
             <li>
-              <a href="users_profile_big.html">Go Feature</a>
+              <a href="/gofeature">Go Feature</a>
             </li>
             <li>
               <a href="users_profile_small.html">Go Platinum</a>
