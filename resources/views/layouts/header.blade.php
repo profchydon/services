@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsiveslides.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   </head>
 
@@ -35,9 +36,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
-              <!-- <img src="img/logo.svg" class="logo img-responsive" alt=""> -->
-          </a>
+          <h1>LOGO<span>.ng</span></h1>
+          <!-- <a class="navbar-brand" href="#">
+              <img src="img/logo.svg" class="logo img-responsive" alt="">
+          </a> -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +70,8 @@
 
                     @endif
 
+                    <a class="btn btn-primary" href="{{ route('welcome') }}" id="nav-ind">Platinum Escorts</a>
+
                     <!-- Authentication Links -->
                     @guest
                         <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
@@ -84,7 +88,7 @@
                             <li><a href="signup/client">As Client</a></li>
                           </ul>
                         </div>
-                        <a class="btn btn-primary" href="contact.html">Contact us</a>
+                        <a class="btn btn-primary" href="contact.html" id="nav-ind">Contact us</a>
                     @endguest
 
 

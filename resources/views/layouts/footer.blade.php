@@ -12,7 +12,7 @@
 
 <!-- Magnific Popup core JS file -->
 <!-- <script src="{{ asset('js/magnific-popup.min.js') }}"></script> -->
-
+<script src="{{ asset('js/responsiveslides.min.js') }}"></script>
 <script src="{{ asset('js/lightgallery.js') }}"></script>
 <script src="{{ asset('js/lg-thumbnail.js') }}"></script>
 <script src="{{ asset('js/lg-fullscreen.js') }}"></script>
@@ -24,6 +24,14 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+
+    $(".rslides").responsiveSlides({
+      auto: true,             // Boolean: Animate automatically, true or false
+      speed: 2000,            // Integer: Speed of the transition, in milliseconds
+      timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+      random: true,          // Boolean: Randomize the order of the slides, true or false
+      pause: true,           // Boolean: Pause on hover, true or false
+    });
 
     $('#animated-thumbnails').lightGallery({
       thumbnail:true

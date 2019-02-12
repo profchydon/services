@@ -14,13 +14,13 @@
                 <div class="escorts-img-holder">
                   <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/escort/images/{{$feature[0]['profile_image']}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
                     @if ( $feature[0]['rank'] === "platinum")
-                        <span id="vip" class="platinum-badge">P</span>
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "gold")
-                        <span id="vip" class="gold-badge">G</span>
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "silver")
-                        <span id="vip" class="silver-badge">S</span>
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "regular")
-                        <span id="vip" class="regular-badge">R</span>
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
                     @endif
                     <div class="escort-info">
                       <div class="escort-info-inner">

@@ -15,13 +15,17 @@
                 <a href="/escort/{{ $escort['user']['username'] }}">
                   <div class="sb-widget widget-register" style="background-image:url(/img/escort/images/{{$escort['escort']['profile_image']}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;" id="other_escorts_inner">
                     @if ( $escort['escort']['rank'] === "platinum")
-                        <span id="other_info_vip" class="platinum-badge">P</span>
+                        <!-- <span id="other_info_vip" class="platinum-badge">P</span> -->
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
                     @elseif ( $escort['escort']['rank'] === "gold")
-                        <span id="other_info_vip" class="gold-badge">G</span>
+                        <!-- <span id="other_info_vip" class="gold-badge">G</span> -->
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
                     @elseif ( $escort['escort']['rank'] === "silver")
-                        <span id="other_info_vip" class="silver-badge">S</span>
+                        <!-- <span id="other_info_vip" class="silver-badge">S</span> -->
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
                     @elseif ( $escort['escort']['rank'] === "regular")
-                        <span id="other_info_vip" class="regular-badge">R</span>
+                        <!-- <span id="other_info_vip" class="regular-badge">R</span> -->
+                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
                     @endif
                     <div class="escort-info" id="other_escorts_info">
                       <div class="escort-info-inner" id="other_escorts_info_inner">

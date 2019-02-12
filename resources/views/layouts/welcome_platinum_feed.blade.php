@@ -12,7 +12,7 @@
     <div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $platinumEscort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url(img/escort/images/{{ $platinumEscort->escort->profile_image }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-          <span id="vip">P</span>
+          <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           <span id="video"></span>
           <div class="escort-info">
             <div class="escort-info-inner">

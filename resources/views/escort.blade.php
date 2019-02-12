@@ -1,6 +1,5 @@
 @include('layouts.header')
 
-@include('layouts.search')
 @include('pages.escort')
 @include('modals._review')
 

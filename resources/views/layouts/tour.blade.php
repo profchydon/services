@@ -1,4 +1,4 @@
-<div class="container">
+<div class="tour-container">
   <div class="row">
 
     <h4 class="tour-header">Escorts on Tour</h4>

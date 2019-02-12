@@ -16,13 +16,13 @@
       <a href="escort/{{ $escort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url(img/escort/images/{{ $escort->escort->profile_image }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
           @if ( $escort->escort->rank === "platinum")
-              <span id="vip" class="platinum-badge">P</span>
+              <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @elseif ( $escort->escort->rank === "gold")
-              <span id="vip" class="gold-badge">G</span>
+              <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @elseif ( $escort->escort->rank === "silver")
-              <span id="vip" class="silver-badge">S</span>
+              <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @elseif ( $escort->escort->rank === "regular")
-              <span id="vip" class="regular-badge">R</span>
+              <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @endif
 
           <div class="escort-info">

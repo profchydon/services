@@ -1,4 +1,4 @@
-<div class="container main-body">
+<div class="main-body">
     <div class="row">
 
       @include('../layouts.ads')
