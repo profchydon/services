@@ -17,7 +17,7 @@
 
                        <div class="row">
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Gender:</label>
                              <select class="form-control" name="edit-gender" id="edit-gender" readonly>
@@ -26,7 +26,7 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Country:</label>
                              <select class="form-control" name="edit-country" id="edit-country">
@@ -38,7 +38,7 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">State:</label>
                              <select class="form-control" name="edit-state" id="edit-state">
@@ -47,7 +47,11 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
+                       </div>
+
+                       <div class="row">
+
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">City:</label>
                              <select class="form-control" name="edit-city" id="edit-city">
@@ -56,11 +60,39 @@
                            </div>
                          </div>
 
+                         <div class="col-md-4">
+                           <div class="form-group">
+                             <label for="email" class="reg-label">Build:</label>
+                             <select class="form-control" name="edit-build" id="edit-build">
+                                 <option selected value="{{ $details['escort']['build'] }}">{{ $details['escort']['build'] }}</option>
+                                 <option value="Skinny">Skinny</option>
+                                 <option value="Slim">Slim</option>
+                                 <option value="Regular">Regular</option>
+                                 <option value="Curvy">Curvy</option>
+                                 <option value="Chubby">Chubby</option>
+                                 <option value="Fat">Fat</option>
+                             </select>
+                           </div>
+                         </div>
+
+                         <div class="col-md-4">
+                           <div class="form-group">
+                             <label for="email" class="reg-label">Sex Orientation:</label>
+                             <select class="form-control" name="edit-sex_orientation" id="edit-sex_orientation">
+                               <option selected value="{{ $details['escort']['sex_orientation'] }}">{{ $details['escort']['sex_orientation'] }}</option>
+                               <option value="Straight">Hetrosexual(Straight)</option>
+                               <option value="Bisexual">Bisexual</option>
+                               <option value="Lesbian">Lesbian</option>
+                               <option value="Gay">Gay</option>
+                             </select>
+                           </div>
+                         </div>
+
                        </div>
 
                        <div class="row">
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Year of birth:</label>
                              <select class="form-control" name="edit-year_of_birth" id="edit-year_of_birth">
@@ -78,7 +110,7 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Ethnicity:</label>
                              <select class="form-control" name="edit-ethnicity" id="edit-ethnicity">
@@ -89,7 +121,7 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Bust size:</label>
                              <select class="form-control" name="edit-bust_size" id="edit-bust_size">
@@ -105,33 +137,18 @@
                            </div>
                          </div>
 
-                         <div class="col-md-3">
-                           <div class="form-group">
-                             <label for="email" class="reg-label">Build:</label>
-                             <select class="form-control" name="edit-build" id="edit-build">
-                                 <option selected value="{{ $details['escort']['build'] }}">{{ $details['escort']['build'] }}</option>
-                                 <option value="Skinny">Skinny</option>
-                                 <option value="Slim">Slim</option>
-                                 <option value="Regular">Regular</option>
-                                 <option value="Curvy">Curvy</option>
-                                 <option value="Chubby">Chubby</option>
-                                 <option value="Fat">Fat</option>
-                             </select>
-                           </div>
-                         </div>
-
                        </div>
 
                        <div class="row">
 
-                           <div class="col-md-3">
+                           <div class="col-md-4">
                              <div class="form-group">
                                <label for="email" class="reg-label">Weight:</label>
                                <input type="text" name="edit-weight" id="edit-weight" class="form-control" value="{{ $details['escort']['weight'] }}" placeholder="Enter weight in kg">
                              </div>
                            </div>
 
-                           <div class="col-md-3">
+                           <div class="col-md-4">
                              <div class="form-group">
                                <label for="email" class="reg-label">Height:</label>
                                <input type="text" name="edit-height" id="edit-height" class="form-control" value="{{ $details['escort']['height'] }}" placeholder="Enter weight in cm">
@@ -142,7 +159,7 @@
                            <input type="text" name="edit-auth" id="edit-auth" class="form-control" value="{{ Auth::user()->api_key}}" style="display:none;">
 
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                            <div class="form-group">
                              <label for="email" class="reg-label">Smoker:</label>
                              <select class="form-control" name="edit-smoker" id="edit-smoker">
@@ -150,19 +167,6 @@
                                  <option value="Yes">Yes</option>
                                  <option value="No">No</option>
                                  <option value="Occasionally">Occasionally</option>
-                             </select>
-                           </div>
-                         </div>
-
-                         <div class="col-md-3">
-                           <div class="form-group">
-                             <label for="email" class="reg-label">Sex Orientation:</label>
-                             <select class="form-control" name="edit-sex_orientation" id="edit-sex_orientation">
-                               <option selected value="{{ $details['escort']['sex_orientation'] }}">{{ $details['escort']['sex_orientation'] }}</option>
-                               <option value="Straight">Hetrosexual(Straight)</option>
-                               <option value="Bisexual">Bisexual</option>
-                               <option value="Lesbian">Lesbian</option>
-                               <option value="Gay">Gay</option>
                              </select>
                            </div>
                          </div>
@@ -311,10 +315,7 @@
 
                  <div class="modal-footer">
 
-                   <div class="form-group">
-                     <button type="submit" class="btn btn-primary btn-block" name="submit-escort" id="edit-submit-escort" style="font-weight:600;">Submit</button>
-                   </div>
-
+                  <button type="submit" class="btn btn-primary btn-block" name="submit-escort" id="edit-submit-escort" style="font-weight:600;">Submit</button>
                  </div>
 
              </form>

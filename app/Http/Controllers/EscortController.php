@@ -333,7 +333,7 @@ class EscortController extends Controller
 
           // var_dump(session('verified')); die();
 
-          return view('escortdashboard2', ['details' => $escort['data']]);
+          return view('escortdashboard', ['details' => $escort['data']]);
 
         }
     }

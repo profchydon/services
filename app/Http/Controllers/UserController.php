@@ -75,7 +75,6 @@ class UserController extends Controller
               if ( Auth::user()->user_type == "escort") {
 
                   return redirect()->intended('escort/dashboard');
-                  // return view('escortdashboard', ['details' => $user]);
 
               }elseif ( Auth::user()->user_type == "user" ) {
 

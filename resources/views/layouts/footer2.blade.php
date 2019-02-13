@@ -1,11 +1,3 @@
-<footer class="footer">
-
-<div class="row text-center">
-    <!-- <p class="footer-p-main">This site is restricted to persons 18 years or over.</p> -->
-</div>
-
-</footer>
-
 <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
 <script src="{{ asset('bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js') }}"></script>
@@ -137,8 +129,6 @@ $(document).ready(function() {
         itemsDesktopSmall : [979,3],
         itemsMobile :	[479,2],
     });
-
-
 
 });
 </script>
