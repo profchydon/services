@@ -15,88 +15,91 @@
     <div class="row">
 
       <div class="col-md-4">
-          <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
-          <div class="row contact-me-section">
-              <div class="col-md-6">
-                <a target="_blank" href="tel:+{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
-              </div>
+        <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
-              <div class="col-md-6">
-                <a target="_blank" href="https://wa.me/{{ $phone }}?text={{ $text }}" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
-              </div>
-          </div>
+        <div class="row contact-me-section">
 
-          <div class="video-div">
-            <fieldset>
-              <h4 class="details-header">VIDEOS: </h4>
+            <div class="col-md-6">
+              <a target="_blank" href="tel:+{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
+            </div>
 
-              @if(!($escort['escort']) == NULL)
-                  <div id="animated-thumbnails">
+            <div class="col-md-6">
+              <a target="_blank" href="https://wa.me/{{ $phone }}?text={{ $text }}" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
+            </div>
+        </div>
 
-                    <?php
-                      if (!empty($escort['videos'])) {
+        <div class="video-div">
+          <fieldset>
+            <h4 class="details-header">VIDEOS: </h4>
 
-                        unset($escort['videos']['id']);
-                        unset($escort['videos']['user_id']);
-                        unset($escort['videos']['escort_id']);
-                        unset($escort['videos']['created_at']);
-                        unset($escort['videos']['updated_at']);
+            @if(!($escort['escort']) == NULL)
+                <div id="video-animated-thumbnails">
 
-                      $i = 1;
+                  <?php
+                    if (!empty($escort['videos'])) {
 
-                      foreach ($escort['videos'] as $key => $video) {
-                          if ($video !== NULL) {
-                          $videoCount = "video".$i;
-                          $this_video = $video_path."{$video}";
-                      ?>
-                      <!-- Hidden video div -->
-                      <div style="display:none;" id="{{ $videoCount }}">
-                          <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
-                              <source src="{{ asset($this_video) }}" type="video/mp4">
-                               Your browser does not support HTML5 video.
-                          </video>
-                      </div>
+                      unset($escort['videos']['id']);
+                      unset($escort['videos']['user_id']);
+                      unset($escort['videos']['escort_id']);
+                      unset($escort['videos']['created_at']);
+                      unset($escort['videos']['updated_at']);
 
-                      <?php
-                          }
-                          $i++;
-                      }
-                      ?>
+                    $i = 1;
 
-                      <ul id="video-gallery">
-
-                      <?php
-                      $i = 1;
-                      foreach ($escort['videos'] as $key => $video) {
-                          if ($video !== NULL) {
-                          $videoCount = "video".$i;
-                      ?>
-                      <!-- Hidden video div -->
-                      <!-- data-src should not be provided when you use html5 videos -->
-                        <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
-                            <img src="{{ asset('img/e.jpg') }}" />
-                        </li>
-
-                      <?php
-                          }
-                          $i++;
-                      }
-                      ?>
-                      </ul>
-
-                    <?php
-                          }
+                    foreach ($escort['videos'] as $key => $video) {
+                        if ($video !== NULL) {
+                        $videoCount = "video".$i;
+                        $this_video = $video_path."{$video}";
                     ?>
-                @else
+                    <!-- Hidden video div -->
+                    <div style="display:none;" id="{{ $videoCount }}">
+                        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                            <source src="{{ asset($this_video) }}" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                        </video>
+                    </div>
 
-                @endif
+                    <?php
+                        }
+                        $i++;
+                    }
+                    ?>
+
+                    <ul id="video-gallery">
+
+                    <?php
+                    $i = 1;
+                    foreach ($escort['videos'] as $key => $video) {
+                        if ($video !== NULL) {
+                        $videoCount = "video".$i;
+                    ?>
+                    <!-- Hidden video div -->
+                    <!-- data-src should not be provided when you use html5 videos -->
+                      <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
+                          <img src="{{ asset('img/e.jpg') }}" />
+                      </li>
+
+                    <?php
+                        }
+                        $i++;
+                    }
+                    ?>
+                    </ul>
+
+                  <?php
+                        }
+                  ?>
+              @else
+
+              @endif
 
 
-              </div>
+            </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
+
       </div>
 
       <div class="col-md-8">

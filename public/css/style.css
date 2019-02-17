@@ -1,7 +1,9 @@
-/* .btn {
-    background: #ed2b7c !important;
-    color: #fff !important;
-} */
+.menu-w.menu-layout-compact .logged-user-w .avatar-w img {
+    width: 40px;
+    height: 40px;
+    border-radius: 318px;
+    object-fit: cover;
+}
 .video-div {
     margin: 30px 0px;
 }

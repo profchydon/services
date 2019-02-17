@@ -12,4 +12,6 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public $base_url ="http://localhost:8080";
+    // public $base_url ="http://api.xcort.africausaforums.com";
+
 }
