@@ -18,6 +18,7 @@ Route::view('signup/escort' , 'signupEscort')->name('escort_signup');
 Route::view('signup/agency' , 'signupAgency')->name('agency_signup');
 Route::view('signup/client' , 'signupClient')->name('client_signup');
 Route::view('gofeature' , 'gofeature')->name('gofeature');
+Route::view('account/upgrade' , 'upgrade')->name('upgrade');
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');

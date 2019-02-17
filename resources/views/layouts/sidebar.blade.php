@@ -1,7 +1,7 @@
 
 <div class="menu-mobile menu-activated-on-click color-scheme-dark">
   <div class="mm-logo-buttons-w">
-    <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>Wildplayground</span></a>
+    <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>Xcort.ng</span></a>
     <div class="mm-buttons">
       <div class="content-panel-open">
         <div class="os-icon os-icon-grid-circles"></div>
@@ -49,13 +49,7 @@
                 <a href="/gofeature">Go Feature</a>
               </li>
               <li>
-                <a href="users_profile_small.html">Go Platinum</a>
-              </li>
-              <li>
-                <a href="users_profile_small.html">Go Gold</a>
-              </li>
-              <li>
-                <a href="users_profile_small.html">Go Silver</a>
+                <a href="/account/upgrade">Upgrade Account</a>
               </li>
             </ul>
           </div>
@@ -142,15 +136,19 @@ START - Main Menu
 
   <ul class="main-menu">
 
-    <li class="sub-header">
-      <span>Menu</span>
-    </li>
     <li class="">
       <a href="{{ route('welcome') }}">
         <div class="icon-w">
           <div class="os-icon os-icon-mail"></div>
         </div>
         <span>Home</span></a>
+    </li>
+    <li class="">
+      <a href="{{ route('escort_dashboard') }}">
+        <div class="icon-w">
+          <div class="os-icon os-icon-mail"></div>
+        </div>
+        <span>Dashboard</span></a>
     </li>
     <li class=" has-sub-menu">
       <a href="#">
@@ -172,13 +170,7 @@ START - Main Menu
               <a href="/gofeature">Go Feature</a>
             </li>
             <li>
-              <a href="users_profile_small.html">Go Platinum</a>
-            </li>
-            <li>
-              <a href="users_profile_small.html">Go Gold</a>
-            </li>
-            <li>
-              <a href="users_profile_small.html">Go Silver</a>
+              <a href="/account/upgrade">Upgrade Account</a>
             </li>
           </ul>
         </div>

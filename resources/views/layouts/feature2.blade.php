@@ -6,21 +6,28 @@
       @if($features == NULL)
       @else
 
+      <?php $path = "img/escort/images/" ?>
+
       @foreach($features as $feature)
+
+        <?php
+          $img = $feature[0]["profile_image"];
+          $image_url = $path."{$img}";
+        ?>
 
         <div class="item">
           <div class="row">
               <a href="/escort/{{ $feature[0]['username'] }}">
                 <div class="escorts-img-holder">
-                  <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/escort/images/{{$feature[0]['profile_image']}}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <div class="sb-widget widget-register" id="feature-widget" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
                     @if ( $feature[0]['rank'] === "platinum")
-                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
+                        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "gold")
-                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
+                        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "silver")
-                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
+                        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @elseif ( $feature[0]['rank'] === "regular")
-                        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive feature-ribbon">
+                        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @endif
                     <div class="escort-info">
                       <div class="escort-info-inner">

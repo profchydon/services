@@ -62,7 +62,7 @@ class EscortController extends Controller
           $curl = curl_init();
 
           curl_setopt_array($curl, array(
-              CURLOPT_URL => "http://localhost:8080/api/v1/images/create",
+              CURLOPT_URL => $this->base_url."/api/v1/images/create",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => "",
               CURLOPT_MAXREDIRS => 10,
@@ -134,7 +134,7 @@ class EscortController extends Controller
           $curl = curl_init();
 
           curl_setopt_array($curl, array(
-              CURLOPT_URL => "http://localhost:8080/api/v1/images/update",
+              CURLOPT_URL => $this->base_url."/api/v1/images/update",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => "",
               CURLOPT_MAXREDIRS => 10,
@@ -254,7 +254,7 @@ class EscortController extends Controller
       $curl = curl_init();
 
       curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/services/create",
+          CURLOPT_URL => $this->base_url."/api/v1/services/create",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -301,7 +301,7 @@ class EscortController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://localhost:8080/api/v1/escorts/details/dashboard",
+            CURLOPT_URL => $this->base_url."/api/v1/escorts/details/dashboard",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -325,15 +325,12 @@ class EscortController extends Controller
 
           $escort = Json_decode($response , TRUE);
 
-          // echo "<pre>";
-          // var_dump($escort['data']["escort"]); die();
           Session::put('profile_image' , $escort['data']["escort"]['profile_image']);
           Session::put('escort_id' , $escort['data']["escort"]['id']);
           Session::put('verified' , $escort['data']["escort"]['verified']);
 
-          // var_dump(session('verified')); die();
-
           return view('escortdashboard', ['details' => $escort['data']]);
+          // return view('pages.escorts.dashboard2', ['details' => $escort['data']]);
 
         }
     }
@@ -383,7 +380,7 @@ class EscortController extends Controller
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => "http://localhost:8080/api/v1/videos/create",
+                CURLOPT_URL => $this->base_url."/api/v1/videos/create",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -451,7 +448,7 @@ class EscortController extends Controller
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => "http://localhost:8080/api/v1/videos/update",
+                CURLOPT_URL => $this->base_url."/api/v1/videos/update",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -571,7 +568,7 @@ class EscortController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://localhost:8080/api/v1/services/update",
+            CURLOPT_URL => $this->base_url."/api/v1/services/update",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -616,7 +613,7 @@ class EscortController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://localhost:8080/api/v1/features/create",
+            CURLOPT_URL => $this->base_url."/api/v1/features/create",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

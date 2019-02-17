@@ -1,3 +1,9 @@
+<?php
+
+  $path = "img/escort/images/";
+  $video_path = "video/escort/";
+
+?>
 <div class="all-wrapper with-side-panel solid-bg-all">
 
   <div class="layout-w">
@@ -231,8 +237,11 @@
 
                                           foreach ($details['images'] as $key => $images) {
                                               if ($images !== NULL) {
+                                                $image = $path."{$images}";
                               ?>
-                                                <a href='../img/escort/images/{{$images}}'><img src='../img/escort/images/{{$images}}' /></a>
+                                  <a href="{{ asset($image) }}">
+                                      <img src="{{ asset($image) }}" />
+                                  </a>
                               <?php
                                               }
                                           }
@@ -285,14 +294,15 @@
                                         if ($video !== NULL) {
 
                                             $videoCount = "video".$i;
+                                            $this_video = $video_path."{$video}";
                               ?>
 
-                                    <div style='display:none;' id='{{ $videoCount }}'>
-                                        <video class='lg-video-object lg-html5 video-js vjs-default-skin' controls preload='none'>
-                                            <source src='/video/escort/{{ $video }}' type='video/mp4'>
-                                             Your browser does not support HTML5 video.
-                                        </video>
-                                    </div>
+                                  <div style="display:none;" id="{{ $videoCount }}">
+                                      <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                                          <source src="{{ asset($this_video) }}" type="video/mp4">
+                                           Your browser does not support HTML5 video.
+                                      </video>
+                                  </div>
                               <?php
                                         }
 
@@ -324,10 +334,9 @@
                                               $videoCount = "video".$i;
 
                                   ?>
-                                          <li data-poster='/img/e.jpg' data-sub-html='{{ $video }}' data-html='#{{ $videoCount }}'>
-                                              <img src='/img/e.jpg' />
-
-                                          </li>
+                                      <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
+                                          <img src="{{ asset('img/e.jpg') }}" />
+                                      </li>
                                   <?php
                                             }
 

@@ -30,7 +30,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => "http://localhost:8080/api/v1/auth/login",
+        CURLOPT_URL => $this->base_url."/api/v1/auth/login",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_MAXREDIRS => 10,
@@ -104,7 +104,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/activations/user/activate",
+          CURLOPT_URL => $this->base_url."/api/v1/activations/user/activate",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -183,7 +183,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/".$escort,
+          CURLOPT_URL => $this->base_url."/api/v1/escorts/".$escort,
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -219,7 +219,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/{$rank}/all",
+          CURLOPT_URL => $this->base_url."/api/v1/escorts/{$rank}/all",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -267,7 +267,7 @@ class UserController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:8080/api/v1/escorts/all",
+          CURLOPT_URL => $this->base_url."/api/v1/escorts/all",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,

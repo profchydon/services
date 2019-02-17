@@ -2,6 +2,12 @@
   $phone = $escort['user']['phone'];
   $phone = (int)$phone;
   $phone = "234".$phone;
+  $path = "img/escort/images/";
+  $video_path = "video/escort/";
+  $img = $escort['images']['image_1'];
+  $profile_image = $path."{$img}";
+  $profile_page = "http://xcort.africausaforums.com/escort/".$escort['user']['username'];
+  $text = $profile_page."\n \n Hi,%20I%20just%20viewed%20your%20profile%20on%20xcort.ng%20and%20i'm%20interested%20in%20meeting%20you";
 ?>
 
 <div class="container main-body">
@@ -9,16 +15,87 @@
     <div class="row">
 
       <div class="col-md-4">
-          <img src="../img/escort/images/{{$escort['images']['image_1']}}" class="img-responsive escort-page-profile-image"/>
+          <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
           <div class="row contact-me-section">
               <div class="col-md-6">
-                <a target="_blank" href="tel:{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
+                <a target="_blank" href="tel:+{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
               </div>
 
               <div class="col-md-6">
-                <a target="_blank" href="https://wa.me/{{ $phone }}?text=Hi,%20I%20just%20viewed%20your%20profile%20on%20xcort.ng%20and%20i'm%20interested%20in%20meeting%20you" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
+                <a target="_blank" href="https://wa.me/{{ $phone }}?text={{ $text }}" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
               </div>
+          </div>
+
+          <div class="video-div">
+            <fieldset>
+              <h4 class="details-header">VIDEOS: </h4>
+
+              @if(!($escort['escort']) == NULL)
+                  <div id="animated-thumbnails">
+
+                    <?php
+                      if (!empty($escort['videos'])) {
+
+                        unset($escort['videos']['id']);
+                        unset($escort['videos']['user_id']);
+                        unset($escort['videos']['escort_id']);
+                        unset($escort['videos']['created_at']);
+                        unset($escort['videos']['updated_at']);
+
+                      $i = 1;
+
+                      foreach ($escort['videos'] as $key => $video) {
+                          if ($video !== NULL) {
+                          $videoCount = "video".$i;
+                          $this_video = $video_path."{$video}";
+                      ?>
+                      <!-- Hidden video div -->
+                      <div style="display:none;" id="{{ $videoCount }}">
+                          <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                              <source src="{{ asset($this_video) }}" type="video/mp4">
+                               Your browser does not support HTML5 video.
+                          </video>
+                      </div>
+
+                      <?php
+                          }
+                          $i++;
+                      }
+                      ?>
+
+                      <ul id="video-gallery">
+
+                      <?php
+                      $i = 1;
+                      foreach ($escort['videos'] as $key => $video) {
+                          if ($video !== NULL) {
+                          $videoCount = "video".$i;
+                      ?>
+                      <!-- Hidden video div -->
+                      <!-- data-src should not be provided when you use html5 videos -->
+                        <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
+                            <img src="{{ asset('img/e.jpg') }}" />
+                        </li>
+
+                      <?php
+                          }
+                          $i++;
+                      }
+                      ?>
+                      </ul>
+
+                    <?php
+                          }
+                    ?>
+                @else
+
+                @endif
+
+
+              </div>
+
+            </fieldset>
           </div>
       </div>
 
@@ -34,11 +111,13 @@
               unset($escort['images']['created_at']);
               unset($escort['images']['updated_at']);
 
+
             foreach ($escort['images'] as $key => $images) {
                 if ($images !== NULL) {
+                    $image = $path."{$images}";
             ?>
-            <a href="../img/escort/images/{{$images}}">
-                <img src="../img/escort/images/{{$images}}" />
+            <a href="{{ asset($image) }}">
+                <img src="{{ asset($image) }}" />
             </a>
           <?php
                 }
@@ -59,74 +138,6 @@
     <div class="row">
 
       <div class="col-md-4">
-
-        <fieldset>
-          <h4 class="details-header">VIDEOS: </h4>
-
-          @if(!($escort['escort']) == NULL)
-              <div id="animated-thumbnails">
-
-                <?php
-                  if (!empty($escort['videos'])) {
-
-                    unset($escort['videos']['id']);
-                    unset($escort['videos']['user_id']);
-                    unset($escort['videos']['escort_id']);
-                    unset($escort['videos']['created_at']);
-                    unset($escort['videos']['updated_at']);
-
-                  $i = 1;
-
-                  foreach ($escort['videos'] as $key => $video) {
-                      if ($video !== NULL) {
-                      $videoCount = "video".$i;
-                  ?>
-                  <!-- Hidden video div -->
-                  <div style="display:none;" id="{{ $videoCount }}">
-                      <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
-                          <source src="/video/escort/{{ $video }}" type="video/mp4">
-                           Your browser does not support HTML5 video.
-                      </video>
-                  </div>
-
-                  <?php
-                      }
-                      $i++;
-                  }
-                  ?>
-
-                  <ul id="video-gallery">
-
-                  <?php
-                  $i = 1;
-                  foreach ($escort['videos'] as $key => $video) {
-                      if ($video !== NULL) {
-                      $videoCount = "video".$i;
-                  ?>
-                  <!-- Hidden video div -->
-                  <!-- data-src should not be provided when you use html5 videos -->
-                    <li data-poster="/img/e.jpg" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
-                        <img src="/img/e.jpg" />
-                    </li>
-
-                  <?php
-                      }
-                      $i++;
-                  }
-                  ?>
-                  </ul>
-
-                <?php
-                      }
-                ?>
-            @else
-
-            @endif
-
-
-          </div>
-
-        </fieldset>
 
         <div class="col-md-12 escort-list-details">
             <h4 class="details-header">ABOUT ME: </h4>

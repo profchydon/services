@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="background-image:url({{ asset('img/header-bg.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -81,11 +81,11 @@
                             <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="signupdropdown">
-                            <li><a href="signup/escort">As Escort</a></li>
+                            <li><a href="/signup/escort">As Escort</a></li>
                             <hr class="signuphr">
-                            <li><a href="signup/agency" style="display:none;">As Agency</a></li>
+                            <li><a href="/signup/agency" style="display:none;">As Agency</a></li>
                             <hr class="signuphr"  style="display:none;">
-                            <li><a href="signup/client">As Client</a></li>
+                            <li><a href="/signup/client">As Client</a></li>
                           </ul>
                         </div>
                         <a class="btn btn-primary" href="contact.html" id="nav-ind">Contact us</a>

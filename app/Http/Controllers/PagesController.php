@@ -34,7 +34,7 @@ class PagesController extends Controller
       $curl = curl_init();
 
       curl_setopt_array($curl, array(
-      CURLOPT_URL => "http://localhost:8080/api/v1/escorts/details/feed",
+      CURLOPT_URL => $this->base_url."/api/v1/escorts/details/feed",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,

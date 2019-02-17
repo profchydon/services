@@ -52,33 +52,33 @@
 <div class="col-md-2" id="side-img" style="padding:0px; margin:0px">
   <div class="col-md-12" style="padding:0px;">
       <a href="#">
-          <img src="/img/ld.jpg" alt="" style="padding:0px; margin:0px">
-          <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+          <img src="{{ asset('img/l.jpg') }}" alt="" style="padding:0px; margin:0px">
+          <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
       </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld1.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld1.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld3.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld3.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
 </div>
 <div class="col-md-8" style="padding:0px; margin:0px;border-bottom: 4.1px solid #b41c5c;">
   <ul class="rslides">
     <li>
-        <a href="#"><img src="/img/ld.jpg" alt=""></a>
+        <a href="#"><img src="{{ asset('img/ld.jpg') }}" alt=""></a>
         <div class="home-banner-info-container clear">
           <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
           Richmond, VA </a>
@@ -87,7 +87,7 @@
         </div>
     </li>
     <li>
-        <a href="#"><img src="/img/ld1.jpg" alt=""></a>
+        <a href="#"><img src="{{ asset('img/ld1.jpg') }}" alt=""></a>
         <div class="home-banner-info-container clear">
           <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
           Richmond, VA </a>
@@ -96,7 +96,7 @@
         </div>
     </li>
     <li>
-        <a href="#"><img src="/img/ld3.jpg" alt=""></a>
+        <a href="#"><img src="{{ asset('img/ld3.jpg') }}" alt=""></a>
         <div class="home-banner-info-container clear">
           <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
           Richmond, VA </a>
@@ -105,7 +105,7 @@
         </div>
     </li>
     <li>
-        <a href="#"><img src="/img/ld.jpg" alt=""></a>
+        <a href="#"><img src="{{ asset('img/ld.jpg') }}" alt=""></a>
         <div class="home-banner-info-container clear">
           <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
           Richmond, VA </a>
@@ -118,26 +118,26 @@
 <div class="col-md-2" id="side-img" style="padding:0px; margin:0px">
   <div class="col-md-12" style="padding:0px;">
       <a href="#">
-          <img src="/img/ld.jpg" alt="" style="padding:0px; margin:0px">
-          <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+        <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
+        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
       </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld1.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld1.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld3.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld3.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
   <div class="col-md-12" style="padding:0px;">
     <a href="#">
-        <img src="/img/ld.jpg" alt="" style="padding:0px; margin:0px">
-        <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive banner-ribbon">
+      <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
+      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
     </a>
   </div>
 </div>
