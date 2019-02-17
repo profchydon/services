@@ -16,6 +16,7 @@ class EscortController extends Controller
   public function __construct()
   {
       $this->middleware('auth', ['except' => []]);
+      Session::put('base_url' , $this->base_url);
   }
 
   /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,5 +14,7 @@ class Controller extends BaseController
 
     public $base_url ="http://localhost:8080";
     // public $base_url ="http://api.xcort.africausaforums.com";
+
+
 
 }

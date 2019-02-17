@@ -23,3 +23,4 @@
     </head>
 
   <body class="menu-position-side menu-side-left full-screen with-content-panel">
+    <input type="text" id="base_url" value="{{ session('base_url') }}" style="display:none;" />
