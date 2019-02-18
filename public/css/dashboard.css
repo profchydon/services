@@ -1,3 +1,14 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body{
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Roboto Slab', serif;
+}
+.menu-w.menu-layout-compact ul.main-menu > li .icon-w {
+    width: 70px;
+    color: #ed2b7c;
+}
 .modal.fade.show {
   padding-right: 0px;
 }
@@ -303,7 +314,7 @@ li.list-group-item {
   padding-left: 0px;
   color: #fff;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .logged-user-name {
   color: #fff;
@@ -399,6 +410,14 @@ ul#video-gallery {
 }
 
 @media (max-width: 768px) {
+  .menu-mobile ul.main-menu > li .icon-w + span {
+    padding-left: 0px;
+    font-size: 13px;
+  }
+  .menu-mobile.color-scheme-dark ul.sub-menu li {
+    border: none;
+    list-style-type: none;
+  }
   h5.details-header {
     margin-bottom: 10px;
   }
@@ -432,7 +451,7 @@ ul#video-gallery {
     width: 100%;
   }
   li.list-group-item {
-    font-size: 13.5px;
+    font-size: 12px;
     border-radius: 0px;
   }
 }

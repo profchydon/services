@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use Session;
+use Alert;
 
 class EscortController extends Controller
 {
@@ -599,7 +600,7 @@ class EscortController extends Controller
 
           }elseif ($response->status === 'success' && $response->message === "Services updated successfully") {
 
-              return redirect()->intended('escort/dashboard');
+              return redirect()->intended('escort/dashboard')->with('success', 'Profile updated!');
 
           }
 

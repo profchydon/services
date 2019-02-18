@@ -9,6 +9,8 @@
 <script src="{{ asset('js/owl.carousel.js') }}"></script>
 <script src="{{ asset('js/pagination.js') }}"></script>
 <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- Custom Js files -->
 <script src="{{ asset('js/dashboard.js') }}"></script>

@@ -214,10 +214,9 @@ $(document).ready(function() {
 
     $.ajax(settings).done(function(response) {
       if (response.message === "Update was successful") {
-        $("#edit-escort-message").append(
-          "Escort details updated successfully."
-        );
         location.reload();
+        $("#escorts-edit").modal("toggle");
+        swal("Successful!", "Your update was successful", "success");
       }
     });
   });
@@ -253,13 +252,17 @@ $(document).ready(function() {
         $("#edit-email-error-message").empty();
         $("#edit-phone-error-message").empty();
         $("#edit-email-error-message").append("Email address already exist");
+        swal("Error!", "Email address already exist", "error");
       } else if (response.message === "Phone number already exist") {
         $("#edit-email-error-message").empty();
         $("#edit-phone-error-message").empty();
         $("#edit-phone-error-message").append("Phone number already exist");
+        swal("Error!", "Phone number already exist", "error");
       } else if (response.message === "User updated successfully") {
         $("#edit-escort-message").append("User updated successfully.");
         location.reload();
+        $("#user-edit").modal("toggle");
+        swal("Successful!", "Your update was successful", "success");
       }
     });
   });
@@ -298,10 +301,9 @@ $(document).ready(function() {
 
     $.ajax(settings).done(function(response) {
       if (response.message === "Update was successful") {
-        $("#edit-escort-message").append(
-          "Escort details updated successfully."
-        );
         location.reload();
+        $("#price-update").modal("toggle");
+        swal("Successful!", "Your update was successful", "success");
       }
     });
   });

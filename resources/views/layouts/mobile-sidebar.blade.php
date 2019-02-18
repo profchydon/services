@@ -28,21 +28,21 @@
       <li class="">
         <a href="{{ route('welcome') }}">
           <div class="icon-w">
-            <div class="os-icon os-icon-home"></div>
+            <ion-icon name="home"></ion-icon>
           </div>
           <span>Home</span></a>
       </li>
       <li class="">
         <a href="{{ route('escort_dashboard') }}">
           <div class="icon-w">
-            <div class="os-icon os-icon-dashboard"></div>
+            <ion-icon name="clipboard"></ion-icon>
           </div>
           <span>Dashboard</span></a>
       </li>
       <li class=" has-sub-menu">
         <a href="#">
           <div class="icon-w">
-            <div class="os-icon os-icon-users"></div>
+            <ion-icon name="cash"></ion-icon>
           </div>
           <span>Subscriptions</span></a>
         <div class="sub-menu-w">
@@ -62,7 +62,7 @@
       <li class=" has-sub-menu">
         <a href="#">
           <div class="icon-w">
-            <div class="os-icon os-icon-users"></div>
+            <ion-icon name="airplane"></ion-icon>
           </div>
           <span>Tours</span></a>
         <div class="sub-menu-w">
@@ -82,14 +82,14 @@
       <li class="">
         <a href="{{ route('welcome') }}">
           <div class="icon-w">
-            <div class="os-icon os-icon-mail"></div>
+            <ion-icon name="checkmark"></ion-icon>
           </div>
           <span>Verify Account</span></a>
       </li>
       <li class="">
         <a href="{{ route('logout') }}">
           <div class="icon-w">
-            <div class="os-icon os-icon-mail"></div>
+            <ion-icon name="log-out"></ion-icon>
           </div>
           <span>Logout</span></a>
       </li>
