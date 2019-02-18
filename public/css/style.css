@@ -1,8 +1,52 @@
-.menu-w.menu-layout-compact .logged-user-w .avatar-w img {
-    width: 40px;
-    height: 40px;
-    border-radius: 318px;
-    object-fit: cover;
+a:hover{
+  text-decoration: none;
+  color: #ed2b7c;
+  transition: 0.6s;
+}
+a:visited, a:active, a:focus{
+  text-decoration: none;
+}
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #1e2a3b;
+    border: 1px solid #1c2635;
+    border-radius: 0px;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+}
+.row.contact-me-section {
+    margin: 20px -15px;
+}
+span.fa.fa-star {
+    font-size: 25px;
+    margin: 10px 4px;
+    font-weight: 600;
+    color: gray;
+}
+span.fa.fa-star.checked{
+  color: #ed2b7c;
+}
+i.fa.fa-plus {
+    font-size: 12px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+.panel-heading{
+  padding: 8px 10px;
+}
+.panel-default {
+    border-color: #212d3d;
+}
+.panel-group {
+    margin: 3px 0px !important;
+}
+.panel-group .panel {
+    border-radius: 0px;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #1e2a3b;
+    background: #1c2737;
+    padding: 5px 10px;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
 }
 .video-div {
     margin: 30px 0px;
@@ -12,16 +56,17 @@
     opacity: 0.7;
     height: 547px !important;
 }
-.about-p{
-    font-size: 15px;
+.about-p {
+    font-size: 13px;
     color: #fff;
-
+    line-height: 22px;
 }
-h4.details-header {
-    text-transform: uppercase;
+.details-header {
+    /* text-transform: uppercase; */
     margin-bottom: 20px;
     color: #fff;
     font-weight: 600;
+    font-size: 14px;
 }
 #gift-me{
   margin: 10px 0px;
@@ -65,7 +110,7 @@ a.chat-with-me {
   box-sizing: border-box;
 }
 img.img-responsive.escort-page-profile-image {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     background: #fff;
     border: 1px solid #d1d1d1;
     object-fit: cover;
@@ -540,6 +585,8 @@ select.form-control, input.form-control {
 }
 .review-block p {
     text-align: justify;
+    color: #fff;
+    font-size: 13px;
 }
 h6.review-block-header {
     font-weight: 500;
@@ -909,7 +956,7 @@ p.review-p {
 .list-group-item {
     background-color: #1e2a3b;
     border: 1px solid #1c2635;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
 }
 
 .side-image-holder {
@@ -1449,5 +1496,11 @@ select.selectpicker.form-control {
   .escorts-img-holder {
     margin: 0px -13.5px;
     padding: 0px 7px;
+  }
+  #video-gallery img {
+    max-width: 136px;
+    min-width: 136px;
+    max-height: 136px;
+    min-height: 136px;
   }
 }

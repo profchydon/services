@@ -1,3 +1,29 @@
+.modal.fade.show {
+  padding-right: 0px;
+}
+.menu-w.menu-layout-compact .logged-user-w .avatar-w img {
+    width: 40px;
+    height: 40px;
+    border-radius: 318px;
+    object-fit: cover;
+}
+h5.availability-h5 {
+    color: #b41c5c;
+    margin: 15px 0px;
+    font-weight: 600;
+}
+.price-edit-heading h4 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.price-edit-heading h5 {
+    color: #b41c5c;
+}
+label.reg-label {
+    margin-bottom: 4px;
+    color: #fff;
+}
 h6.card-price.text-center {
     font-size: 2rem;
     margin: 3px;
