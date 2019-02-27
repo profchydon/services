@@ -46,7 +46,8 @@ $(document).ready(function(){
           "url": "http://localhost:8080/api/v1/users/create",
           "method": "POST",
           "headers": {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
           },
           "processData": false,
           "data": data

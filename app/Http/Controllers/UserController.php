@@ -16,6 +16,15 @@ use Illuminate\Support\Collection;
 
 class UserController extends Controller
 {
+
+    /**
+     * Class constructor
+     */
+    public function __construct()
+    {
+        Session::put('base_url' , $this->base_url);
+    }
+
     //
     public function login(Request $request)
     {

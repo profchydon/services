@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title></title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> -->
@@ -25,6 +26,7 @@
   </head>
 
   <body>
+    <input type="text" id="base_url" value="{{ session('base_url') }}" style="display:none;" />
 
     <nav class="navbar navbar-default navbar-static-top" style="background-image:url({{ asset('img/header-bg.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <div class="container-fluid">

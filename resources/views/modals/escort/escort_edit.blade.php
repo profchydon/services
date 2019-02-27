@@ -236,7 +236,39 @@
                            <div class="col-md-3">
                              <div class="form-group">
                                <label for="email" class="reg-label">1 hour:</label>
-                               <input type="text" name="incall_1hr" id="edit-incall_1hr" class="form-control" value="{{ $details['escort']['incall_1hr'] }}" placeholder="Enter amount">
+                               <select class="form-control" name="incall_1hr" id="edit-incall_1hr">
+                                   <option selected value="{{ $details['escort']['incall_1hr'] }}">{{ $details['escort']['incall_1hr'] }}</option>
+                                   <option value="10,000">10,000</option>
+                                   <option value="15,000">15,000</option>
+
+                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                     <option value="20,000">20,000</option>
+                                     <option value="25,000">25,000</option>
+                                     <option value="30,000">30,000</option>
+                                     <option value="35,000">35,000</option>
+                                   @endif
+
+                                   @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                     <option value="40,000">40,000</option>
+                                     <option value="45,000">45,000</option>
+                                     <option value="50,000">50,000</option>
+                                     <option value="55,000">55,000</option>
+                                   @endif
+
+                                   @if($details['escort']['rank'] == "platinum")
+                                   <option value="60,000">60,000</option>
+                                   <option value="65,000">65,000</option>
+                                   <option value="70,000">70,000</option>
+                                   <option value="75,000">75,000</option>
+                                   <option value="80,000">80,000</option>
+                                   <option value="85,000">85,000</option>
+                                   <option value="95,000">90,000</option>
+                                   <option value="90,000">95,000</option>
+                                   <option value="100,000">100,000</option>
+                                   @endif
+
+                               </select>
                              </div>
                            </div>
 

@@ -41,50 +41,11 @@
 
         </div>
 
-      </div>
+        <div class="row contact-me-section hidden-sm hidden-xs">
 
-      <div class="col-md-8">
-        <div id="animated-thumbnails">
-
-          <?php
-            if (!empty($escort['images'])) {
-
-              unset($escort['images']['id']);
-              unset($escort['images']['user_id']);
-              unset($escort['images']['escort_id']);
-              unset($escort['images']['created_at']);
-              unset($escort['images']['updated_at']);
-
-
-            foreach ($escort['images'] as $key => $images) {
-                if ($images !== NULL) {
-                    $image = $path."{$images}";
-            ?>
-            <a href="{{ asset($image) }}">
-                <img src="{{ asset($image) }}" />
-            </a>
-          <?php
-                }
-            }
-
-          }else {
-          ?>
-            <h5> Seems {{ $escort['user']['username'] }} haven't uploaded an image yet</h5>
-          <?php
-          }
-          ?>
-
+          <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
+          <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
         </div>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-4">
-
-        <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
-        <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
 
       </div>
 
@@ -95,7 +56,54 @@
             <div class="panel panel-default">
               <div class="panel-heading panel-clr">
                 <div class="panel-title">
-                    <a href="#video" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>Videos</a>
+                    <a href="#image" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Images</a>
+                </div>
+              </div>
+              <div class="panel-collapse collapse" id="image">
+                  <div class="panel-body">
+                    <div id="animated-thumbnails">
+
+                      <?php
+                        if (!empty($escort['images'])) {
+
+                          unset($escort['images']['id']);
+                          unset($escort['images']['user_id']);
+                          unset($escort['images']['escort_id']);
+                          unset($escort['images']['created_at']);
+                          unset($escort['images']['updated_at']);
+
+
+                        foreach ($escort['images'] as $key => $images) {
+                            if ($images !== NULL) {
+                                $image = $path."{$images}";
+                        ?>
+                        <a href="{{ asset($image) }}">
+                            <img src="{{ asset($image) }}" />
+                        </a>
+                      <?php
+                            }
+                        }
+
+                      }else {
+                      ?>
+                        <h5> Seems {{ $escort['user']['username'] }} haven't uploaded an image yet</h5>
+                      <?php
+                      }
+                      ?>
+
+                    </div>
+                  </div>
+               </div>
+            </div>
+
+        </div>
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+              <div class="panel-heading panel-clr">
+                <div class="panel-title">
+                    <a href="#video" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Videos</a>
                 </div>
               </div>
               <div class="panel-collapse collapse" id="video">
@@ -231,7 +239,7 @@
               <div class="panel-collapse collapse" id="pricing">
                   <div class="panel-body">
                     <fieldset>
-                        <div class="col-md-6 escort-list-details">
+                        <div class="col-md-4 escort-list-details">
                             <ul class="list-group">
                                 <li class="list-group-item"><span class="details-key">Incall</span> </li>
                                 <li class="list-group-item"><span class="details-key">1 hour</span> : {{ $escort['escort']['incall_1hr'] }} </li>
@@ -240,7 +248,7 @@
                                 <li class="list-group-item"><span class="details-key">1 week</span> : {{ $escort['escort']['incall_1wk'] }} </li>
                             </ul>
                         </div>
-                        <div class="col-md-6 escort-list-details">
+                        <div class="col-md-4 escort-list-details">
                             <ul class="list-group">
                               <ul class="list-group">
                                   <li class="list-group-item"><span class="details-key">Outcall</span> </li>
@@ -248,6 +256,17 @@
                                   <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $escort['escort']['outcall_1dy'] }} </li>
                                   <li class="list-group-item"><span class="details-key">Overnight</span> : {{ $escort['escort']['outcall_overnight'] }} </li>
                                   <li class="list-group-item"><span class="details-key">1 week</span> : {{ $escort['escort']['outcall_1wk'] }} </li>
+                              </ul>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 escort-list-details">
+                            <ul class="list-group">
+                              <ul class="list-group">
+                                  <li class="list-group-item"><span class="details-key">Others</span> </li>
+                                  <li class="list-group-item"><span class="details-key">Video Sex</span> : {{ $escort['escort']['outcall_1hr'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Sex Chat</span> : {{ $escort['escort']['outcall_1dy'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Phone sex</span> : {{ $escort['escort']['outcall_overnight'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Nude</span> : {{ $escort['escort']['outcall_1wk'] }} </li>
                               </ul>
                             </ul>
                         </div>
@@ -357,7 +376,7 @@
             <div class="panel panel-default">
               <div class="panel-heading panel-clr">
                 <div class="panel-title">
-                    <a href="#review" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>Reviews</a>
+                    <a href="#review" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Reviews</a>
                 </div>
               </div>
               <div class="panel-collapse collapse" id="review">
@@ -391,8 +410,14 @@
             </div>
 
         </div>
-
       </div>
 
     </div>
+
+    <div class="contact-me-section hidden-md hidden-lg">
+
+      <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
+      <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
+    </div>
+
 </div>

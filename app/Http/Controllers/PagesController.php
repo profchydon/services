@@ -3,11 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Escort;
+use Session;
 
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+
+    /**
+     * Class constructor
+     */
+    public function __construct()
+    {
+        Session::put('base_url' , $this->base_url);
+    }
     //
     public function escort()
     {

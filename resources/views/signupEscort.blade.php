@@ -43,7 +43,7 @@ $(document).ready(function(){
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "http://localhost:8080/api/v1/users/create",
+          "url": $("#base_url").val() + "/api/v1/users/create",
           "method": "POST",
           "headers": {
             "Content-Type": "application/json"
