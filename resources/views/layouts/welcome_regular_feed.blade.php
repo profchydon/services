@@ -12,7 +12,7 @@
 
     <?php $image_url = $path."{$escort->escort->profile_image}"; ?>
 
-    <div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
+    <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $escort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
           @if ( $escort->escort->rank === "platinum")
@@ -25,13 +25,15 @@
               <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @endif
 
+          @if( $escort->escort->verified == 1)
+              <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
+          @endif
+
           <div class="escort-info">
             <div class="escort-info-inner">
               <h4 class="escort-name">{{ $escort->user->username }}</h4>
               <p class="escort-location">{{ $escort->escort->city }} , {{ $escort->escort->state }}</p>
-              @if( $escort->escort->verified == 1)
-                  <span class="verified pull-right">verified</span>
-              @endif
+
             </div>
           </div>
         </div>

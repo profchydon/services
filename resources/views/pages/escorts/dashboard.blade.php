@@ -69,42 +69,42 @@
                       </div>
 
                       @if(!($details['escort']) == NULL)
-                    <div class="col-md-4 escort-list-details">
-                        <ul class="list-group">
-                            <li class="list-group-item"><span class="details-key">Gender</span> : {{ $details['escort']['gender'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Country</span> : {{ $details['escort']['country'] }} </li>
-                            <li class="list-group-item"><span class="details-key">State</span> : {{ $details['escort']['state'] }} </li>
-                            <li class="list-group-item"><span class="details-key">City</span> : {{ $details['escort']['city'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Language</span> : {{ $details['escort']['language'] }} </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 escort-list-details">
-                        <ul class="list-group">
-                            <li class="list-group-item"><span class="details-key">Year of birth</span> : {{ $details['escort']['year_of_birth'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Ethnicity</span> : {{ $details['escort']['ethnicity'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Bust Size</span> : {{ $details['escort']['bust_size'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Height</span> : {{ $details['escort']['height'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Sex Orientation</span> : {{ $details['escort']['sex_orientation'] }} </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 escort-list-details">
-                        <ul class="list-group">
-                            <li class="list-group-item"><span class="details-key">Weight</span> : {{ $details['escort']['weight'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Build</span> : {{ $details['escort']['build'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Looks</span> : {{ $details['escort']['looks'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Availability</span> : {{ $details['escort']['availability'] }} </li>
-                            <li class="list-group-item"><span class="details-key">Smoker</span> : {{ $details['escort']['smoker'] }} </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 escort-list-details">
+                        <div class="col-md-4 escort-list-details">
+                            <ul class="list-group">
+                                <li class="list-group-item"><span class="details-key">Gender</span> : {{ $details['escort']['gender'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Country</span> : {{ $details['escort']['country'] }} </li>
+                                <li class="list-group-item"><span class="details-key">State</span> : {{ $details['escort']['state'] }} </li>
+                                <li class="list-group-item"><span class="details-key">City</span> : {{ $details['escort']['city'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Language</span> : {{ $details['escort']['language'] }} </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 escort-list-details">
+                            <ul class="list-group">
+                                <li class="list-group-item"><span class="details-key">Year of birth</span> : {{ $details['escort']['year_of_birth'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Ethnicity</span> : {{ $details['escort']['ethnicity'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Bust Size</span> : {{ $details['escort']['bust_size'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Height</span> : {{ $details['escort']['height'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Sex Orientation</span> : {{ $details['escort']['sex_orientation'] }} </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 escort-list-details">
+                            <ul class="list-group">
+                                <li class="list-group-item"><span class="details-key">Weight</span> : {{ $details['escort']['weight'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Build</span> : {{ $details['escort']['build'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Looks</span> : {{ $details['escort']['looks'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Availability</span> : {{ $details['escort']['availability'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Smoker</span> : {{ $details['escort']['smoker'] }} </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 escort-list-details">
                         <span class="details-key">About</span> <br>
                         <p>{{ $details['escort']['about'] }}</p>
 
                     </div>
-                    @else
-                        <h5>Seems you have not registered your escort details</h5>
-                        <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
-                    @endif
+                      @else
+                          <h5>Seems you have not registered your escort details</h5>
+                          <a data-toggle="modal" data-target="#escorts-register" class="btn btn-primary btn-account">Add Escort details</a>
+                      @endif
 
                     </fieldset>
                 </div>
@@ -180,23 +180,34 @@
                       </div>
 
                       @if(!($details['escort']) == NULL)
-                            <div class="col-md-6 escort-list-details">
+                            <div class="col-md-4 escort-list-details">
                                 <ul class="list-group">
                                     <li class="list-group-item"><span class="details-key">Incall</span> </li>
                                     <li class="list-group-item"><span class="details-key">1 hour</span> : {{ $details['escort']['incall_1hr'] }} </li>
-                                    <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $details['escort']['incall_1dy'] }} </li>
+                                    <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $details['escort']['incall_1dy'] }}
                                     <li class="list-group-item"><span class="details-key">Overnight</span> : {{ $details['escort']['incall_overnight'] }} </li>
                                     <li class="list-group-item"><span class="details-key">1 week</span> : {{ $details['escort']['incall_1wk'] }} </li>
                                 </ul>
                             </div>
-                            <div class="col-md-6 escort-list-details">
+                            <div class="col-md-4 escort-list-details">
                                 <ul class="list-group">
                                   <ul class="list-group">
                                       <li class="list-group-item"><span class="details-key">Outcall</span> </li>
                                       <li class="list-group-item"><span class="details-key">1 hour</span> : {{ $details['escort']['outcall_1hr'] }} </li>
-                                      <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $details['escort']['outcall_1dy'] }} </li>
+                                      <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $details['escort']['outcall_1dy'] }}
                                       <li class="list-group-item"><span class="details-key">Overnight</span> : {{ $details['escort']['outcall_overnight'] }} </li>
                                       <li class="list-group-item"><span class="details-key">1 week</span> : {{ $details['escort']['outcall_1wk'] }} </li>
+                                  </ul>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 escort-list-details">
+                                <ul class="list-group">
+                                  <ul class="list-group">
+                                      <li class="list-group-item"><span class="details-key">Remote Services</span> </li>
+                                      <li class="list-group-item"><span class="details-key">Video sex</span> : {{ $details['escort']['video_sex'] }} </li>
+                                      <li class="list-group-item"><span class="details-key">Phone Sex</span> : {{ $details['escort']['phone_sex'] }} </li>
+                                      <li class="list-group-item"><span class="details-key">Sex Chat</span> : {{ $details['escort']['sex_chat'] }} </li>
+                                      <li class="list-group-item"><span class="details-key">Nude</span> : {{ $details['escort']['nudes'] }} </li>
                                   </ul>
                                 </ul>
                             </div>

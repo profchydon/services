@@ -20,7 +20,73 @@ class EscortController extends Controller
       Session::put('base_url' , $this->base_url);
   }
 
-  /**
+    /**
+   * success response method.
+   *
+   * @return \Illuminate\Http\Response
+   */
+    public function uploadImageForVerification(Request $request)
+    {
+
+      $user = Auth::user()->username;
+
+      $imageName = "{$user}"."_".request()->file->getClientOriginalName();
+
+      $imageName = preg_replace("/[^a-zA-Z0-9.]/", "", $imageName);
+
+      request()->file->move(public_path('img/escort/verification'), $imageName);
+
+      $this->insertImageForVerification($imageName, Auth::user()->id);
+
+      return response()->json(['uploaded' => '/img/escort/verification/'.$imageName]);
+
+    }
+
+    public function insertImageForVerification($imageName, $user_id)
+    {
+
+        $escort = DB::table('escorts')->where('user_id' , $user_id)->first();
+
+        $data = [
+          'escort_id' => $escort->id,
+          'image' => $imageName,
+        ];
+
+        $data = Json_encode($data, TRUE);
+
+        $authorization = Auth::user()->api_key;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $this->base_url."/api/v1/verifications/create",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_HTTPHEADER => array(
+              "Authorization: {$authorization}",
+              "Content-Type: application/json"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+
+        }
+
+    }
+
+    /**
    * success response method.
    *
    * @return \Illuminate\Http\Response

@@ -8,16 +8,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Laila');
+        
         .main-section {
           margin: 0 auto;
           padding: 20px;
           margin-top: 50px;
-          background-color: #2a3e5c !important;
-          border: 1px solid #253752 !important;
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          background-color: #1d2939!important;
+          border: 1px solid #1d2939!important;
         }
         body{
             padding-top: 50px;
+            font-family: 'Laila', serif;
         }
         .file-preview {
           border-radius: 0px;
@@ -38,7 +40,7 @@
           font-size: 19px;
         }
         .bg-danger {
-            background-color: #2d4567 !important;
+            background-color: #1e2a3b !important;
         }
         .btn:not(:disabled):not(.disabled) {
             cursor: pointer;

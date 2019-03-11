@@ -1,3 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Laila');
+body{
+  font-family: 'Laila', serif;
+}
+#tour-widget {
+    max-width: 186px;
+    min-width: 186px;
+    padding: 15px !important;
+}
+#tour-widget > .escort-info {
+    position: absolute;
+    bottom: 0;
+    left: -27px;
+    line-height: 10px;
+    width: 99.4%;
+    background: #b41c5c;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+}
+#tour-escorts-img-holder{
+  margin: 0px -17.5px;
+}
+#tour-verified-icon{
+  right: 30px;
+}
+
+#feature-widget {
+    max-width: 186px;
+    min-width: 186px;
+    padding: 15px !important;
+}
+
+#feature-widget > .escort-info {
+    position: absolute;
+    bottom: 0;
+    left: -27px;
+    line-height: 10px;
+    width: 99.4%;
+    background: #b41c5c;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+}
+
+#feature-widget #vip {
+  right: 31px;
+}
+#feature-escorts-img-holder{
+  margin: 0px -17.5px;
+}
+#featured-verified-icon{
+  right: 30px;
+}
+
+
+#feature2-widget {
+    max-width: 186px;
+    min-width: 186px;
+    padding: 15px !important;
+}
+
+#feature2-widget > .escort-info {
+    position: absolute;
+    bottom: 0;
+    left: -27px;
+    line-height: 10px;
+    width: 100%;
+    background: #b41c5c;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+}
+
+#feature2-widget #vip {
+  right: 31px;
+}
+#feature2-escorts-img-holder{
+  margin: 0px -17.5px;
+}
+#featured2-verified-icon{
+  right: 30px;
+}
+
+
+
+img#other_escorts_inner_verified_icon {
+    right: 2px;
+}
+div#other_escorts_inner {
+    max-width: 198px;
+    min-width: 198px;
+}
+.col-md-12.text-center.see-more-div {
+    clear: both;
+}
+img.img-responsive.verified-icon {
+    width: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0px;
+}
 a:hover{
   text-decoration: none;
   color: #ed2b7c;
@@ -118,6 +221,8 @@ img.img-responsive.escort-page-profile-image {
     border: 1px solid #d1d1d1;
     object-fit: cover;
     padding: 1px;
+    max-height: 350px;
+    min-height: 350px;
 }
 #span-button {
   background: #b41c5c;
@@ -153,7 +258,7 @@ img.img-responsive.feature-ribbon {
     left: -27px;
 }
 .tour-container{
-    padding: 15px 20px;
+    padding: 15px 30px;
     /* background-image: url('/img/header-bg.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +266,7 @@ img.img-responsive.feature-ribbon {
 }
 .feature-container{
   clear: both;
-  padding: 15px 20px;
+  padding: 15px 30px;
 }
 .feature-header {
     font-weight: 600;
@@ -285,8 +390,8 @@ div#other_escorts {
 }
 
 #other_escorts_info {
-    width: 100% !important;
-    left: 0px;
+  width: 99.4% !important;
+  left: 1px;
 }
 span#other_info_vip {
     font-size: 12px;
@@ -407,7 +512,7 @@ h5.unverified-alert.text-center {
     font-size: 14px;
 }
 .escorts-img-holder {
-    margin: 0px -17.5px;
+    /* margin: 0px -17.5px; */
     padding: 0px 5px;
 }
 .fade {
@@ -1008,27 +1113,7 @@ h3.image-heading {
     border-bottom: none;
 }
 
-#feature-widget {
-    width: 80% !important;
-    padding: 15px !important;
-}
 
-#feature-widget > .escort-info {
-    position: absolute;
-    bottom: 0;
-    left: -25px;
-    line-height: 1em;
-    width: 98.4%;
-    /* background: linear-gradient(-154deg, #ed2b7c 8%, #4b2662 90%); */
-    background: #b41c5c;
-    color: #fff;
-    padding: 5px 10px;
-    text-align: left;
-}
-
-#feature-widget #vip {
-  right: 31px;
-}
 
 .owl-wrapper {
     margin: 25px;
@@ -1094,7 +1179,6 @@ img.logo.img-responsive {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     background: #212d3e;
     /* background: #2d4567; */
@@ -1189,13 +1273,13 @@ body {
 .escort-info {
     position: absolute;
     bottom: 0;
-    left: 15px;
-    line-height: 1em;
-    width: 88.4%;
+    left: 5px;
+    line-height: 10px;
+    width: 99.3%;
     /* background: linear-gradient(-154deg, #ed2b7c 8%, #4b2662 90%); */
     background: #b41c5c;
     color: #fff;
-    padding: 5px 10px;
+    padding: 5px;
     text-align: left;
     opacity: 0.8;
 }
@@ -1246,10 +1330,12 @@ h4.escort-name {
 }
 
 .sb-widget.widget-register {
-    max-height: 220px;
-    min-height: 220px;
-    border: 0.02px solid #ff498e2b;
-    object-fit: cover;
+  max-height: 220px;
+  min-height: 220px;
+  border: 0.02px solid #ff498e2b;
+  object-fit: cover;
+  max-width: 166px;
+  min-width: 166px;
 }
 
 select.selectpicker.form-control {
@@ -1302,11 +1388,40 @@ select.selectpicker.form-control {
 }
 
 @media (max-width:768px) {
+  #feature2-escorts-img-holder {
+    margin: 0px -9px;
+  }
+  #feature2-escorts-img-holder .sb-widget.widget-register {
+    max-width: 174px !important;
+    min-width: 174px !important;
+  }
+  #feature2-escorts-img-holder img.img-responsive.feature-ribbon{
+    left: -19px;
+  }
+  #feature2-widget > .escort-info{
+    left: -19px;
+    width: 97%;
+  }
+  .sb-widget.widget-register {
+    max-width: 170px !important;
+    min-width: 170px !important;
+  }
+
+  #escorts-main-body .sb-widget.widget-register {
+    max-width: 173px !important;
+    min-width: 173px !important;
+  }
+  #escorts-main-body{
+    padding: 20px;
+  }
+  div#other_escorts {
+    margin: 1.2px 0px;
+  }
   .home-banner-info-container{
     padding: 20px;
   }
   .rslides img {
-    height: 300px;
+    height: 280px;
     width: 100%;
     object-fit: cover;
   }
@@ -1338,7 +1453,7 @@ select.selectpicker.form-control {
     font-size: 14px;
   }
   img.img-responsive.feature-ribbon{
-    left: -21px;
+    left: -27px;
   }
   .main-body {
       padding: 15px 20px;
@@ -1452,13 +1567,23 @@ select.selectpicker.form-control {
   #review-modal p {
     font-size: 12px;
   }
+  #tour-widget{
+    max-width: 163px !important;
+    min-width: 163px !important;
+  }
+  #tour-widget > .escort-info {
+    left: -27px;
+    width: 99%;
+    padding: 5px;
+  }
   #feature-widget{
-    width: 78% !important;
+    max-width: 163px !important;
+    min-width: 163px !important;
   }
   #feature-widget > .escort-info {
-      left: -24px;
-      width: 99%;
-      padding: 3px 7px;
+    left: -27px;
+    width: 99%;
+    padding: 5px;
   }
   .modal-body {
     padding: 10px;
@@ -1477,9 +1602,9 @@ select.selectpicker.form-control {
       margin: 0px;
   }
   .escort-info {
-    width: 98%;
+    width: 97%;
     bottom: 0px;
-    left: 2px;
+    left: 5px;
   }
   .col-md-3.col-sm-6.col-xs-6.escorts-img-holder {
     padding: 2px;
@@ -1505,8 +1630,9 @@ select.selectpicker.form-control {
     padding-right: 0px;
   }
   .escorts-img-holder {
-    margin: 0px -13.5px;
-    padding: 0px 7px;
+    margin: 1px -1px;
+    /* margin: 0px -13.5px; */
+    /* padding: 0px 7px; */
   }
   #video-gallery img {
     max-width: 136px;

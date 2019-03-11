@@ -10,8 +10,6 @@
 
         <div class="row inner-row-content">
 
-          @include('layouts._unverified')
-
           <section class="upgrade-pricing-section">
 
               <h2 class="upgrade-heading text-center">Upgrade your account today. Choose a package</h2>

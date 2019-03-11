@@ -13,18 +13,18 @@
 
     <?php $image_url = $path."{$platinumEscort->escort->profile_image}"; ?>
 
-    <div class="col-md-3 col-sm-6 col-xs-6 escorts-img-holder">
+    <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $platinumEscort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
           <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+          @if( $platinumEscort->escort->verified == 1)
+              <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
+          @endif
           <span id="video"></span>
           <div class="escort-info">
             <div class="escort-info-inner">
               <h4 class="escort-name">{{ $platinumEscort->user->username }}</h4>
               <p class="escort-location">{{ $platinumEscort->escort->city }} , {{ $platinumEscort->escort->state }}</p>
-              @if( $platinumEscort->escort->verified == 1)
-                  <span class="verified pull-right">verified</span>
-              @endif
             </div>
           </div>
         </div>

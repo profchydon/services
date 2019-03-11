@@ -8,14 +8,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -27,14 +27,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -46,14 +46,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -65,14 +65,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -84,14 +84,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -103,14 +103,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -122,14 +122,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -141,14 +141,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -160,14 +160,14 @@
       <div class="item">
         <div class="row">
             <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
+              <div class="escorts-img-holder" id="tour-escorts-img-holder">
+                <div class="sb-widget widget-register" id="tour-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
+                  <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
+                  <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="tour-verified-icon">
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
                       <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
                     </div>
                   </div>
                 </div>
@@ -175,122 +175,6 @@
             </a>
         </div>
       </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-            <a href="http://localhost/wildpg/escorts/escort_name">
-              <div class="escorts-img-holder">
-                <div class="sb-widget widget-register" id="feature-widget" style="background-image:url(/img/default.png); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                  <span id="vip">VIP</span>
-                  <div class="escort-info">
-                    <div class="escort-info-inner">
-                      <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
-                      <span class="verified pull-right">verified</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-
 
     </div>
 

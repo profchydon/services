@@ -10,60 +10,73 @@
 
         <div class="row inner-row-content">
 
-          @include('layouts._unverified')
+          <section class="upgrade-pricing-section">
 
-            <section class="col-md-6 go-feature-aside">
+              <h2 class="feature-heading text-center">INCREASE YOUR PROFILE VISIBLITY. SUBSCRIBE FOR A FEATURE PACKAGE TODAY</h2>
+              <h4 class="feature-sub-heading text-center">Get your profile listed on the feature slider on all pages</h4>
 
-              <div class="row">
-                  <h3 class="feature-h3 text-center">Why Go Feature?</h3>
-                  <br>
+
+              <div class="col-md-3">
+
               </div>
 
-              <ul class="feature-ul">
-                  <li> Increased profile view</li>
-                  <li> Profile is displayed on the pages sliders</li>
-                  <li> Increased profile view</li>
-                  <li> Increased profile view</li>
-                  <li> Increased profile view</li>
-              </ul>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase package-heading text-center">Go Feature</h5>
+                  <h6 class="card-price text-center">N5,000<span class="period">/week</span></h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Profile listed on the feature slider on all relevant pages.</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free exclusive video session.</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Exclusive access to exclusive clients</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated verification support</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Access to set pricing above N70,000</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                  </ul>
 
-            </section>
+                  <div class="row">
 
-            <section class="col-md-5 go-feature-aside">
+                    <form class="form-group" method="post">
 
-              <div class="row">
+                        {{ csrf_field() }}
+                        <input type="text" name="escort_id" id="escort_id" class="project__contact__box__input project__contact__box__input--3" value="{{ session('escort_id') }}" style="display:none"/>
 
-                <form class="form-group" method="post">
+                        <input type="text" name="email" id="email" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->email }}" style="display:none"/>
 
-                    {{ csrf_field() }}
-                    <input type="text" name="escort_id" id="escort_id" class="project__contact__box__input project__contact__box__input--3" value="{{ session('escort_id') }}" style="display:none"/>
+                        <input type="text" name="api_key" id="api_key" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->api_key }}" style="display:none"/>
 
-                    <input type="text" name="email" id="email" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->email }}" style="display:none"/>
+                        <input type="text" name="user_id" id="user_id" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->id }}" style="display:none"/>
 
-                    <input type="text" name="api_key" id="api_key" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->api_key }}" style="display:none"/>
+                    </form>
 
-                    <input type="text" name="user_id" id="user_id" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->id }}" style="display:none"/>
+                  </div>
 
-                    <label for="">How long do you want to subscribe for?</label>
+                  <form >
+
+                    <label for="" id="feature-label">How long do you want to subscribe for?</label>
                     <select class="form-control" name="" id="duration">
-                        <option value="7">7 days</option>
-                        <option value="14">14 days</option>
-                        <option value="21">21 days</option>
-                        <option value="31">31 days</option>
+                        <option value="7">7 days - N5,000</option>
+                        <option value="14">14 days - N9,000</option>
+                        <option value="21">21 days - N13,000</option>
+                        <option value="31">31 days - N17,000</option>
                     </select>
 
-                </form>
+                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                    <button type="button" onclick="payWithPaystack()" class="btn-get-started feature-subscribe-btn btn-block"> Pay now </button>
+                  </form>
+
+                </div>
+              </div>
+
+              <div class="col-md-3">
 
               </div>
 
-              <div class="row">
-                <form >
-                  <script src="https://js.paystack.co/v1/inline.js"></script>
-                  <button type="button" onclick="payWithPaystack()" class="btn btn__pay"> Pay now </button>
-                </form>
-              </div>
 
-            </section>
+          </section>
 
         </div>
 

@@ -1,6 +1,6 @@
 <?php $path = "img/escort/images/" ?>
 
-<div class="container main-body">
+<div class="container main-body" id="escorts-main-body">
     <div class="row">
 
       <div class="col-md-12">
@@ -27,13 +27,14 @@
                     @elseif ( $escort['escort']['rank'] === "regular")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
                     @endif
+
+                    @if( $escort['escort']['verified'] == 1)
+                        <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="other_escorts_inner_verified_icon">
+                    @endif
                     <div class="escort-info" id="other_escorts_info">
                       <div class="escort-info-inner" id="other_escorts_info_inner">
                         <h4 class="escort-name">{{ $escort['user']['username'] }}</h4>
                         <p class="escort-location">{{ $escort['escort']['city'] }} , {{ $escort['escort']['state'] }}</p>
-                        @if( $escort['escort']['verified'] == 1)
-                            <span class="verified pull-right">verified</span>
-                        @endif
                       </div>
                     </div>
                   </div>

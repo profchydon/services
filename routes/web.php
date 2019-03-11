@@ -28,13 +28,18 @@ Route::group(['prefix' => 'escort'], function () {
     Route::post('service-register' , 'EscortController@serviceRegister')->name('service_register');
     Route::post('service-update' , 'EscortController@serviceUpdate')->name('service_update');
     Route::post('gofeature/success' , 'EscortController@saveGoFeatureDetails');
+    Route::view('verify-escort','verify-escort')->name('verify');
+
 });
 
-Route::get('imageview','ImageController@index');
+
+Route::view('imageview','imageview');
 Route::post('image-view','EscortController@uploadImage');
 
-Route::get('videoview','ImageController@index2');
+Route::view('videoview','videoview');
 Route::post('video-view','EscortController@uploadVideo');
+
+Route::post('verify-escort','EscortController@uploadImageForVerification');
 
 
 Route::get('escort/{escort}' , 'UserController@getEscort');

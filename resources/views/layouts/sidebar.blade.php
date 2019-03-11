@@ -24,7 +24,7 @@
 
   <ul class="main-menu">
 
-    <li class="">
+    <li class="" disabled="true">
       <a href="{{ route('welcome') }}">
         <div class="icon-w">
           <ion-icon name="home"></ion-icon>
@@ -38,8 +38,21 @@
         </div>
         <span>Dashboard</span></a>
     </li>
-    <li class=" has-sub-menu">
-      <a href="#">
+
+    @if ( !( session('verified') === 1) && !($details['escort']) == NULL )
+    <li class="">
+      <a href="{{ route('verify') }}">
+        <div class="icon-w">
+          <ion-icon name="checkmark"></ion-icon>
+        </div>
+        <span>Verify Account</span>
+      </a>
+    </li>
+    @endif
+
+    @if ( session('verified') === 1 )
+    <li class=" has-sub-menu" disabled="">
+      <a href="#" disabled="">
         <div class="icon-w">
           <ion-icon name="cash"></ion-icon>
         </div>
@@ -89,13 +102,8 @@
         </div>
       </div>
     </li>
-    <li class="">
-      <a href="{{ route('welcome') }}">
-        <div class="icon-w">
-          <ion-icon name="checkmark"></ion-icon>
-        </div>
-        <span>Verify Account</span></a>
-    </li>
+    @endif
+
     <li class="">
       <a href="{{ route('logout') }}">
         <div class="icon-w">

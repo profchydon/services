@@ -1,13 +1,65 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Slab'); */
+@import url('https://fonts.googleapis.com/css?family=Laila');
 
 body{
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: 'Laila', serif;
 }
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .menu-w.menu-layout-compact ul.main-menu > li .icon-w {
     width: 70px;
     color: #ed2b7c;
+}
+button.btn-get-started.feature-subscribe-btn.btn-block {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+.unverified-alert-div {
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    text-align: center;
+    background-image: url('/img/header-bg.png');
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+}
+.unverified-alert-div a{
+  text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background: #b41c5c;
+    padding: 9px;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+h5.unverified-alert.text-center {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 20px;
 }
 .modal.fade.show {
   padding-right: 0px;
@@ -72,7 +124,6 @@ i.fa.fa-check {
     text-decoration: none;
     text-align: center;
     color: #fff;
-    background: #ed2b7c;
     padding: 5px;
     font-weight: 600;
     border-radius: 5px;
@@ -80,7 +131,8 @@ i.fa.fa-check {
     font-size: 15px;
     font-weight: 700;
     border-radius: 4px;
-    background-color: #ed2b7c;
+    background-color: transparent;
+    border: 1px solid;
     cursor: pointer;
     box-sizing: border-box;
 }
@@ -92,14 +144,28 @@ h6.card-price.text-center {
     color: #fff;
     font-size: 12px;
 }
+label#feature-label {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
 .package-heading {
     text-align: center;
     color: #fff !important;
     text-transform: uppercase;
     font-weight: 600;
-    background: #99169c;
+    background: #0a7cf8;
     margin: 0px;
     padding: 9px;
+}
+.feature-heading.text-center {
+    color: #fff;
+    margin: 15px;
+    font-weight: 700;
+}
+.feature-sub-heading.text-center {
+    color: #fff;
+    font-weight: 500;
 }
 .upgrade-heading.text-center {
     color: #fff;
@@ -196,6 +262,7 @@ select.form-control,
 input.form-control {
   font-size: 13px !important;
   height: 31px !important;
+  font-weight: 600;
 }
 button#edit-submit-user,
 .btn-primary,
@@ -413,6 +480,13 @@ ul#video-gallery {
   .menu-mobile ul.main-menu > li .icon-w + span {
     padding-left: 0px;
     font-size: 13px;
+  }
+  .feature-heading.text-center {
+    margin: 10px;
+    font-size: 15px;
+  }
+  .feature-sub-heading.text-center {
+    font-size: 12px;
   }
   .menu-mobile.color-scheme-dark ul.sub-menu li {
     border: none;

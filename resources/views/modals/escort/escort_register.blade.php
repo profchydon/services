@@ -590,6 +590,197 @@
 
                    </div>
 
+
+                   <div class="row">
+
+                     <div class="col-md-12">
+                         <h5 class="availability-h5">Enter rates for Remote Services:</h5>
+                     </div>
+
+
+                       <div class="col-md-3">
+                         <div class="form-group">
+                           <label for="email" class="reg-label">Video Sex:</label>
+                           <select class="form-control" name="video_sex" id="video_sex">
+                               <option selected>Select an amount</option>
+                               <option value="10,000">10,000</option>
+                               <option value="15,000">15,000</option>
+
+                               @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                 <option value="20,000">20,000</option>
+                                 <option value="25,000">25,000</option>
+                                 <option value="30,000">30,000</option>
+                                 <option value="35,000">35,000</option>
+                               @endif
+
+                               @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                 <option value="40,000">40,000</option>
+                                 <option value="45,000">45,000</option>
+                                 <option value="50,000">50,000</option>
+                                 <option value="55,000">55,000</option>
+                               @endif
+
+                               @if($details['escort']['rank'] == "platinum")
+                               <option value="60,000">60,000</option>
+                               <option value="65,000">65,000</option>
+                               <option value="70,000">70,000</option>
+                               <option value="75,000">75,000</option>
+                               <option value="80,000">80,000</option>
+                               <option value="85,000">85,000</option>
+                               <option value="95,000">90,000</option>
+                               <option value="90,000">95,000</option>
+                               <option value="100,000">100,000</option>
+                               @endif
+
+                           </select>
+                         </div>
+                       </div>
+
+                       <div class="col-md-3">
+                         <div class="form-group">
+                           <label for="email" class="reg-label">Sex Chat:</label>
+                           <select class="form-control" name="sex_chat" id="sex_chat">
+                               <option selected>Select an amount</option>
+                               <option value="10,000">10,000</option>
+                               <option value="15,000">15,000</option>
+                               <option value="20,000">20,000</option>
+                               <option value="25,000">25,000</option>
+
+                               @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                 <option value="30,000">30,000</option>
+                                 <option value="35,000">35,000</option>
+                                 <option value="40,000">40,000</option>
+                                 <option value="45,000">45,000</option>
+                                 <option value="50,000">50,000</option>
+                               @endif
+
+                               @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                 <option value="55,000">55,000</option>
+                                 <option value="60,000">60,000</option>
+                                 <option value="65,000">65,000</option>
+                                 <option value="70,000">70,000</option>
+                                 <option value="75,000">75,000</option>
+                                 <option value="80,000">80,000</option>
+                                 <option value="85,000">85,000</option>
+                                 <option value="95,000">90,000</option>
+                                 <option value="90,000">95,000</option>
+                                 <option value="100,000">100,000</option>
+                               @endif
+
+                               @if($details['escort']['rank'] == "platinum")
+                               <option value="60,000">150,000</option>
+                               <option value="65,000">200,000</option>
+                               <option value="70,000">250,000</option>
+                               <option value="75,000">300,000</option>
+                               <option value="80,000">350,000</option>
+                               <option value="85,000">400,000</option>
+                               <option value="95,000">450,000</option>
+                               <option value="90,000">500,000</option>
+                               @endif
+
+                           </select>
+                         </div>
+                       </div>
+
+                       <div class="col-md-3">
+                         <div class="form-group">
+                           <label for="email" class="reg-label">Phone Sex:</label>
+                           <select class="form-control" name="phone_sex" id="phone_sex">
+                              <option selected>Select a value</option>
+                               <option value="10,000">10,000</option>
+                               <option value="15,000">15,000</option>
+                               <option value="20,000">20,000</option>
+                               <option value="25,000">25,000</option>
+
+                               @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                 <option value="30,000">30,000</option>
+                                 <option value="35,000">35,000</option>
+                                 <option value="40,000">40,000</option>
+                                 <option value="45,000">45,000</option>
+                                 <option value="50,000">50,000</option>
+                               @endif
+
+                               @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                 <option value="55,000">55,000</option>
+                                 <option value="60,000">60,000</option>
+                                 <option value="65,000">65,000</option>
+                                 <option value="70,000">70,000</option>
+                                 <option value="75,000">75,000</option>
+                                 <option value="80,000">80,000</option>
+                                 <option value="85,000">85,000</option>
+                                 <option value="95,000">90,000</option>
+                                 <option value="90,000">95,000</option>
+                                 <option value="100,000">100,000</option>
+                               @endif
+
+                               @if($details['escort']['rank'] == "platinum")
+                               <option value="60,000">150,000</option>
+                               <option value="65,000">200,000</option>
+                               <option value="70,000">250,000</option>
+                               <option value="75,000">300,000</option>
+                               <option value="80,000">350,000</option>
+                               <option value="85,000">400,000</option>
+                               <option value="95,000">450,000</option>
+                               <option value="90,000">500,000</option>
+                               @endif
+                           </select>
+                         </div>
+                       </div>
+
+                       <div class="col-md-3">
+                         <div class="form-group">
+                           <label for="email" class="reg-label">Nudes:</label>
+                           <select class="form-control" name="nudes" id="nudes">
+                              <option selected>Select a value</option>
+                              <option value="10,000">10,000</option>
+                              <option value="15,000">15,000</option>
+                              <option value="20,000">20,000</option>
+                              <option value="25,000">25,000</option>
+                              <option value="30,000">30,000</option>
+                              <option value="35,000">35,000</option>
+                              <option value="40,000">40,000</option>
+                              <option value="45,000">45,000</option>
+                              <option value="50,000">50,000</option>
+                              <option value="55,000">55,000</option>
+                              <option value="60,000">60,000</option>
+                              <option value="65,000">65,000</option>
+                              <option value="70,000">70,000</option>
+                              <option value="75,000">75,000</option>
+                              <option value="80,000">80,000</option>
+
+
+                              @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                              <option value="85,000">85,000</option>
+                              <option value="95,000">90,000</option>
+                              <option value="90,000">95,000</option>
+                              <option value="100,000">100,000</option>
+                              <option value="150,000">150,000</option>
+                              <option value="200,000">200,000</option>
+
+                              @endif
+
+                              @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                              <option value="250,000">250,000</option>
+                              <option value="300,000">300,000</option>
+                              <option value="350,000">350,000</option>
+                              <option value="400,000">400,000</option>
+
+
+                              @endif
+
+                              @if($details['escort']['rank'] == "platinum")
+                              <option value="450,000">450,000</option>
+                              <option value="500,000">500,000</option>
+                              @endif
+                           </select>
+                         </div>
+                       </div>
+
+                   </div>
+
                    <div class="row">
                        <div class="col-md-12">
                        <label for="email" class="reg-label">Describe yourself:</label>
@@ -601,11 +792,7 @@
              </div>
 
              <div class="modal-footer">
-
-               <div class="form-group">
-                 <button type="submit" class="btn btn-primary btn-block" name="submit-escort" id="submit-escort" style="font-weight:600;">Submit</button>
-               </div>
-
+                <button type="submit" class="btn btn-primary btn-block" name="submit-escort" id="submit-escort" style="font-weight:600;">Submit</button>
              </div>
 
          </form>

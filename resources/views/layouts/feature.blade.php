@@ -19,7 +19,7 @@
         <div class="item">
           <div class="row">
               <a href="/escort/{{ $feature[0]->username }}">
-                <div class="escorts-img-holder">
+                <div class="escorts-img-holder" id="feature-escorts-img-holder">
                   <div class="sb-widget widget-register" id="feature-widget" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
                     @if ( $feature[0]->rank === "platinum")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
@@ -30,11 +30,14 @@
                     @elseif ( $feature[0]->rank === "regular")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @endif
+
+                    @if( $feature[0]->verified == 1)
+                        <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="featured-verified-icon">
+                    @endif
                     <div class="escort-info">
                       <div class="escort-info-inner">
                         <h4 class="escort-name">{{ $feature[0]->name }}</h4>
                         <p class="escort-location">{{ $feature[0]->city }} , {{ $feature[0]->state }} </p>
-                        <span class="verified pull-right">verified</span>
                       </div>
                     </div>
                   </div>

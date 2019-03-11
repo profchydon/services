@@ -19,8 +19,8 @@ function payWithPaystack() {
   var handler = PaystackPop.setup({
     key: "pk_test_8d18f652ec39f7839f86277eda11281d04238e78",
     email: email,
-    amount: amount,
-    ref: "XCORT" + Math.floor(Math.random() * 100000 + 1),
+    amount: amount + "00",
+    ref: "XCORT" + Math.floor(Math.random() * 1000000 + 1),
     metadata: {
       custom_fields: [
         {

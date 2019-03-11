@@ -10,6 +10,19 @@
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Laila');
 
+        #verification-rules-section h4 {
+          color: #fff;
+          font-size: 20px;
+          text-align: center;
+          line-height: 25px;
+        }
+
+        #verification-rules-section ul {
+          color: #fff;
+          list-style-type: decimal;
+          line-height: 27px;
+        }
+
         .main-section {
           margin: 0 auto;
           padding: 20px;
@@ -56,6 +69,9 @@
             border: 1px solid #c92569 !important;
             background: #c92569 !important
         }
+        .btn-primary:visited{
+            border: none;
+        }
         .pull-right {
             color: #ED2B7C !important;
             background: transparent !important;
@@ -63,6 +79,11 @@
             font-size: 13.5px !important;
         }
         .pull-right:hover {
+            color: #c92569!important;
+            background: transparent !important;
+            border: none !important;
+        }
+        .pull-right:visited {
             color: #c92569!important;
             background: transparent !important;
             border: none !important;
@@ -83,26 +104,39 @@
     <div class="container">
 
 
+        <!-- <a href="/escort/dashboard" class="btn btn-primary pull-right"><i class="fa fa-arrow-left"></i>  Back to dashboard</a> -->
         <div class="row">
 
-            <div class="col-md-2">
-
+            <div class="col-md-12">
+                <a href="/escort/dashboard" class="btn btn-primary pull-right"><i class="fa fa-arrow-left"></i>  Back to dashboard</a>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-5">
+              <div class="main-section" id="verification-rules-section">
 
-                <a href="/escort/dashboard" class="btn btn-primary pull-right"><i class="fa fa-arrow-left"></i>  Back to dashboard</a>
+                  <h4>Rules for xcort.ng escort account verification.</h4>
+
+                  <ul>
+                    <li>Upload an image that clearly shows your face and your xcort.ng username written boldly on a plain white paper.</li>
+                    <li>Do not upload image more than once.</li>
+                    <li>Do not upload image more than once.</li>
+                  </ul>
+
+              </div>
+            </div>
+
+            <div class="col-md-7">
 
                 <div class="main-section">
-                  <h4 class="text-center header">Upload your Images <br>
-                      <span class="text-center note">You are allow to upload a maximum of 12 images only</span>
+                  <h4 class="text-center header">Verify your Xcort.ng account <br>
+                      <span class="text-center note">You are allow to upload a maximum of 1 image only for verification</span>
                   </h4>
 
                   <form class="" method="post">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="file-loading">
-                            <input id="file-1" type="file" name="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
+                            <input id="file-1" type="file" name="file" multiple class="file" data-overwrite-initial="false" data-max-file-count="1" data-min-file-count="1">
                         </div>
                     </div>
 
@@ -124,7 +158,7 @@
     <script type="text/javascript">
         $("#file-1").fileinput({
             theme: 'fa',
-            uploadUrl: "/image-view",
+            uploadUrl: "/verify-escort",
             uploadExtraData: function() {
                 return {
                     _token: $("input[name='_token']").val(),
@@ -132,8 +166,8 @@
             },
             allowedFileExtensions: ['jpg', 'jpeg', 'png'],
             overwriteInitial: false,
-            maxFileSize : 1500,
-            maxFilesNum: 12,
+            maxFileSize : 3500,
+            maxFilesNum: 1,
             slugCallback: function (filename) {
                 return filename.replace('(', '_').replace(']', '_');
             }

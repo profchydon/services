@@ -243,7 +243,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item"><span class="details-key">Incall</span> </li>
                                 <li class="list-group-item"><span class="details-key">1 hour</span> : {{ $escort['escort']['incall_1hr'] }} </li>
-                                <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $escort['escort']['incall_1dy'] }} </li>
+                                <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $escort['escort']['incall_1dy'] }}
                                 <li class="list-group-item"><span class="details-key">Overnight</span> : {{ $escort['escort']['incall_overnight'] }} </li>
                                 <li class="list-group-item"><span class="details-key">1 week</span> : {{ $escort['escort']['incall_1wk'] }} </li>
                             </ul>
@@ -253,7 +253,7 @@
                               <ul class="list-group">
                                   <li class="list-group-item"><span class="details-key">Outcall</span> </li>
                                   <li class="list-group-item"><span class="details-key">1 hour</span> : {{ $escort['escort']['outcall_1hr'] }} </li>
-                                  <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $escort['escort']['outcall_1dy'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">24 hours</span> : {{ $escort['escort']['outcall_1dy'] }}
                                   <li class="list-group-item"><span class="details-key">Overnight</span> : {{ $escort['escort']['outcall_overnight'] }} </li>
                                   <li class="list-group-item"><span class="details-key">1 week</span> : {{ $escort['escort']['outcall_1wk'] }} </li>
                               </ul>
@@ -262,11 +262,11 @@
                         <div class="col-md-4 escort-list-details">
                             <ul class="list-group">
                               <ul class="list-group">
-                                  <li class="list-group-item"><span class="details-key">Others</span> </li>
-                                  <li class="list-group-item"><span class="details-key">Video Sex</span> : {{ $escort['escort']['outcall_1hr'] }} </li>
-                                  <li class="list-group-item"><span class="details-key">Sex Chat</span> : {{ $escort['escort']['outcall_1dy'] }} </li>
-                                  <li class="list-group-item"><span class="details-key">Phone sex</span> : {{ $escort['escort']['outcall_overnight'] }} </li>
-                                  <li class="list-group-item"><span class="details-key">Nude</span> : {{ $escort['escort']['outcall_1wk'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Remote Services</span> </li>
+                                  <li class="list-group-item"><span class="details-key">Video Sex</span> : {{ $escort['escort']['video_sex'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Phone Sex</span> : {{ $escort['escort']['phone_sex'] }}
+                                  <li class="list-group-item"><span class="details-key">Sex Chat</span> : {{ $escort['escort']['sex_chat'] }} </li>
+                                  <li class="list-group-item"><span class="details-key">Nude</span> : {{ $escort['escort']['nudes'] }} </li>
                               </ul>
                             </ul>
                         </div>

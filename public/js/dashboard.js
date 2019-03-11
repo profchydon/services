@@ -61,13 +61,13 @@ $(document).ready(function() {
     videojs: true
   });
 
-  $("#partner-slide").owlCarousel({
-    autoPlay: 3000, //Set AutoPlay to 3 seconds
-    items: 6,
-    itemsDesktop: [1199, 3],
-    itemsDesktopSmall: [979, 3],
-    itemsMobile: [479, 2]
-  });
+  // $("#partner-slide").owlCarousel({
+  //   autoPlay: 3000, //Set AutoPlay to 3 seconds
+  //   items: 7,
+  //   itemsDesktop: [1199, 3],
+  //   itemsDesktopSmall: [979, 3],
+  //   itemsMobile: [479, 2]
+  // });
 
   $("#availability").on("change", function() {
     var availability = $("#availability").val();
@@ -149,8 +149,7 @@ $(document).ready(function() {
       url: $("#base_url").val() + "/api/v1/escorts/create",
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        "Content-Type": "application/json"
       },
       processData: false,
       data: data
@@ -207,8 +206,7 @@ $(document).ready(function() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: $("#edit-auth").val(),
-        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        Authorization: $("#edit-auth").val()
       },
       processData: false,
       data: data
@@ -243,8 +241,7 @@ $(document).ready(function() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: $("#edit-auth").val(),
-        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        Authorization: $("#edit-auth").val()
       },
       processData: false,
       data: data
@@ -296,8 +293,7 @@ $(document).ready(function() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: $("#price-edit-auth").val(),
-        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        Authorization: $("#price-edit-auth").val()
       },
       processData: false,
       data: data

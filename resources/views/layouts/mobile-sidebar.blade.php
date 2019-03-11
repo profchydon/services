@@ -39,6 +39,8 @@
           </div>
           <span>Dashboard</span></a>
       </li>
+
+      @if ( !( session('verified') === 1) && !($details['escort']) == NULL )
       <li class=" has-sub-menu">
         <a href="#">
           <div class="icon-w">
@@ -86,6 +88,9 @@
           </div>
           <span>Verify Account</span></a>
       </li>
+      @endif
+
+
       <li class="">
         <a href="{{ route('logout') }}">
           <div class="icon-w">
