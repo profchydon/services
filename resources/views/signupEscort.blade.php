@@ -21,6 +21,7 @@ $(document).ready(function(){
 
     $('#signup-form').submit(function () {
         event.preventDefault();
+        $('#loading-modal').show();
 
         $('#signup-email-error-message').hide();
         $('#signup-email-error-message').empty();
@@ -54,16 +55,19 @@ $(document).ready(function(){
 
         $.ajax(settings).done(function (response) {
             if (response.message === "Email address already exist") {
+                $('#loading-modal').hide();
                 $('#signup-email-error-message').show();
                 $('#signup-email-error-message').append(response.message);
             }else if (response.message === "Username already exist") {
+                $('#loading-modal').hide();
                 $('#signup-username-error-message').show();
                 $('#signup-username-error-message').append(response.message);
             }else if (response.message === "Phone number already exist") {
+                $('#loading-modal').hide();
                 $('#signup-phone-error-message').show();
                 $('#signup-phone-error-message').append(response.message);
             }else if (response.message === "User created successfully") {
-
+                $('#loading-modal').hide();
                 $('#signup-success-message').show();
                 $('#signup-success-message').append("Congrats! Your account was created successfully. An email for verification has been sent to "+$("#email").val()+ ". Kindly check your email and complete the verification process." );
 

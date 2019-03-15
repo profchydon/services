@@ -15,6 +15,9 @@ h1,h2,h3,h4,h5,h6{
     width: 70px;
     color: #ed2b7c;
 }
+a#silver-upgrade {
+    margin: 10px 0px;
+}
 button.btn-get-started.feature-subscribe-btn.btn-block {
     text-decoration: none;
     text-align: center;

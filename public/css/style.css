@@ -2,9 +2,51 @@
 body{
   font-family: 'Laila', serif;
 }
+h3.escort-profile-greeting-header {
+    color: #fff;
+    text-align: center;
+    background: #ed2b7c;
+    margin: 0px;
+    padding: 7px;
+    font-weight: 500;
+    font-size: 16px;
+}
+div#loading-modal-body {
+    padding: 0px 80px;
+    background-color: transparent !important;
+}
+div#loading-modal {
+    opacity: 1;
+    background: #000000d9;
+    padding: 130px 0px;
+}
+div#loading-modal-content {
+    background: transparent;
+    border-radius: 4px;
+    border: transparent;
+    padding: 10px;
+    box-shadow: none;
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #ed2b7c; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+a.btn.btn-primary.btn.block.see-more-button {
+    border: 1px solid #fff;
+    margin: 30px 0px;
+}
 #tour-widget {
-    max-width: 186px;
-    min-width: 186px;
+    max-width: 218px;
+    min-width: 218px;
     padding: 15px !important;
 }
 #tour-widget > .escort-info {
@@ -26,8 +68,8 @@ body{
 }
 
 #feature-widget {
-    max-width: 186px;
-    min-width: 186px;
+    max-width: 218px;
+    min-width: 218px;
     padding: 15px !important;
 }
 
@@ -55,8 +97,8 @@ body{
 
 
 #feature2-widget {
-    max-width: 186px;
-    min-width: 186px;
+    max-width: 195px;
+    min-width: 195px;
     padding: 15px !important;
 }
 
@@ -385,7 +427,7 @@ div#signupdropdownnav {
     display: inline;
 }
 div#other_escorts {
-    margin: 5px 0px;
+    margin: 1px 0px;
     padding: 0px 1px;
 }
 
@@ -512,7 +554,7 @@ h5.unverified-alert.text-center {
     font-size: 14px;
 }
 .escorts-img-holder {
-    /* margin: 0px -17.5px; */
+    margin: 1px 0px;
     padding: 0px 5px;
 }
 .fade {
@@ -1390,6 +1432,10 @@ select.selectpicker.form-control {
 @media (max-width:768px) {
   #feature2-escorts-img-holder {
     margin: 0px -9px;
+  }
+  div#loading-modal-body {
+    padding: 0px 115px;
+    background-color: transparent !important;
   }
   #feature2-escorts-img-holder .sb-widget.widget-register {
     max-width: 174px !important;

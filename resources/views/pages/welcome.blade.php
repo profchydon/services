@@ -13,6 +13,18 @@
 
           <div class="row">
 
+              @include('layouts.welcome_gold_feed')
+
+          </div>
+
+          <div class="row">
+
+              @include('layouts.welcome_silver_feed')
+
+          </div>
+
+          <div class="row">
+
               @include('layouts.welcome_regular_feed')
 
           </div>

@@ -43,7 +43,7 @@
     @endforeach
 
     <div class="col-md-12 text-center see-more-div">
-        <a href="escorts" class="btn btn-primary btn block">See More Escorts</a>
+        <a href="escorts" class="btn btn-primary btn block see-more-button">See More Escorts</a>
     </div>
 
 @endif

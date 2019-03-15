@@ -1,6 +1,8 @@
 <div class="container login-body">
     <div class="row">
 
+      <!-- <button name="button" data-toggle="modal" data-target="#loading-modal">Load</button> -->
+
       <div class="col-md-4"></div>
 
       <div class="col-md-4">
@@ -10,7 +12,7 @@
             <p id="signup-success-message"></p>
 
             <form class="form-group" id="signup-form">
-              
+
                 <div class="form-group">
                   <label for="">Name <small>(This will be the name displayed to other users)</small> </label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Enter your fullname">
@@ -64,4 +66,22 @@
       <div class="col-md-4"></div>
 
     </div>
+
+    <div class="modal fade" id="loading-modal" tabindex="-1" role="dialog" aria-labelledby="signupLabel">
+
+            <div class="modal-dialog modal-sm" role="document" id="loading-modal-dialog">
+
+                <div class="modal-content" id="loading-modal-content">
+
+                  <div class="modal-body" id="loading-modal-body">
+
+                      <div class="loader"></div>
+
+                  </div>
+
+                </div>
+
+            </div>
+
+     </div>
 </div>

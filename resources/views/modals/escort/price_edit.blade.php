@@ -422,12 +422,11 @@
                              <h5 class="availability-h5">Enter rates for Remote Services:</h5>
                          </div>
 
-
                            <div class="col-md-3">
                              <div class="form-group">
                                <label for="email" class="reg-label">Video Sex:</label>
-                               <select class="form-control" name="video_sex" id="video_sex">
-                                   <option selected>Select an amount</option>
+                               <select class="form-control" name="video_sex" id="price-edit-video_sex">
+                                   <option selected value="{{ $details['escort']['video_sex'] }}">{{ $details['escort']['video_sex'] }}</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
 
@@ -465,8 +464,8 @@
                            <div class="col-md-3">
                              <div class="form-group">
                                <label for="email" class="reg-label">Sex Chat:</label>
-                               <select class="form-control" name="sex_chat" id="sex_chat">
-                                   <option selected>Select an amount</option>
+                               <select class="form-control" name="sex_chat" id="price-edit-sex_chat">
+                                   <option selected value="{{ $details['escort']['sex_chat'] }}">{{ $details['escort']['sex_chat'] }}</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -512,8 +511,8 @@
                            <div class="col-md-3">
                              <div class="form-group">
                                <label for="email" class="reg-label">Phone Sex:</label>
-                               <select class="form-control" name="phone_sex" id="phone_sex">
-                                  <option selected>Select a value</option>
+                               <select class="form-control" name="phone_sex" id="price-edit-phone_sex">
+                                   <option selected value="{{ $details['escort']['phone_sex'] }}">{{ $details['escort']['phone_sex'] }}</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -558,8 +557,8 @@
                            <div class="col-md-3">
                              <div class="form-group">
                                <label for="email" class="reg-label">Nudes:</label>
-                               <select class="form-control" name="nudes" id="nudes">
-                                  <option selected>Select a value</option>
+                               <select class="form-control" name="nudes" id="price-edit-nudes">
+                                  <option selected value="{{ $details['escort']['nudes'] }}">{{ $details['escort']['nudes'] }}</option>
                                   <option value="10,000">10,000</option>
                                   <option value="15,000">15,000</option>
                                   <option value="20,000">20,000</option>

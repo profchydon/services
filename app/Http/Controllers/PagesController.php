@@ -85,6 +85,8 @@ class PagesController extends Controller
                 [
                   'escorts' => $response->data->escorts ,
                   'platinumEscorts' => $response->data->platinumEscorts ,
+                  'goldEscorts' => $response->data->goldEscorts ,
+                  'silverEscorts' => $response->data->silverEscorts ,
                   'features' => $features[0]
                 ]);
 

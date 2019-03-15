@@ -61,14 +61,6 @@ $(document).ready(function() {
     videojs: true
   });
 
-  // $("#partner-slide").owlCarousel({
-  //   autoPlay: 3000, //Set AutoPlay to 3 seconds
-  //   items: 7,
-  //   itemsDesktop: [1199, 3],
-  //   itemsDesktopSmall: [979, 3],
-  //   itemsMobile: [479, 2]
-  // });
-
   $("#availability").on("change", function() {
     var availability = $("#availability").val();
 
@@ -136,6 +128,10 @@ $(document).ready(function() {
       outcall_1dy: $("#outcall_1dy").val(),
       outcall_1wk: $("#outcall_1wk").val(),
       outcall_overnight: $("#outcall_overnight").val(),
+      video_sex: $("#video_sex").val(),
+      phone_sex: $("#phone_sex").val(),
+      sex_chat: $("#sex_chat").val(),
+      nudes: $("#nudes").val(),
       about: $("#about").val()
     };
 
@@ -279,7 +275,11 @@ $(document).ready(function() {
       outcall_1hr: $("#price-edit-outcall_1hr").val(),
       outcall_1dy: $("#price-edit-outcall_1dy").val(),
       outcall_1wk: $("#price-edit-outcall_1wk").val(),
-      outcall_overnight: $("#price-edit-outcall_overnight").val()
+      outcall_overnight: $("#price-edit-outcall_overnight").val(),
+      video_sex: $("#price-edit-video_sex").val(),
+      phone_sex: $("#price-edit-phone_sex").val(),
+      sex_chat: $("#price-edit-sex_chat").val(),
+      nudes: $("#price-edit-nudes").val()
     };
 
     console.log(formData);

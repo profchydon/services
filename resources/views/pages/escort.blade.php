@@ -13,11 +13,15 @@
   $text = $profile_page."\n \n Hi,%20I%20just%20viewed%20your%20profile%20on%20xcort.ng%20and%20i'm%20interested%20in%20meeting%20you";
 ?>
 
-<div class="container main-body">
+<h3 class="escort-profile-greeting-header">Hi, I'm {{ $escort['user']['name'] }} and i'm {{ $age }}yrs old</h3>
+<div class="container main-body" id="escort-main-body">
 
     <div class="row">
 
       <div class="col-md-4">
+
+        <!-- <div class="profile profile-image" style="background-image:url({{ asset($profile_image) }}); background-position: center; background-repeat: no-repeat;  background-size: cover; vertical-align: middle;">
+        </div> -->
 
         <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
@@ -111,6 +115,7 @@
                     <fieldset>
 
                       @if(!($escort['escort']) == NULL)
+
                           <div id="video-animated-thumbnails">
 
                             <?php
@@ -165,7 +170,12 @@
                               </ul>
 
                             <?php
-                                  }
+                              }else {
+                            ?>
+                              <h5 style="text-align:center; color: #fff;">{{ $escort['user']['name'] }} has no Videos yet</h5>
+                            <?php
+                                // code...
+                              }
                             ?>
                         @else
 
@@ -194,11 +204,11 @@
                     <fieldset>
                         <div class="col-md-12 escort-list-details" style="padding:0px;">
                             <ul class="list-group">
-                                <li class="list-group-item"><span class="details-key">Name</span> : {{ $escort['user']['name'] }} </li>
-                                <li class="list-group-item"><span class="details-key">Username</span> : {{ $escort['user']['username'] }} </li>
+                                <!-- <li class="list-group-item"><span class="details-key">Name</span> : {{ $escort['user']['name'] }} </li>
+                                <li class="list-group-item"><span class="details-key">Username</span> : {{ $escort['user']['username'] }} </li> -->
                                 <li class="list-group-item"><span class="details-key">Email</span> : {{ $escort['user']['email'] }} </li>
                                 <li class="list-group-item"><span class="details-key">Phone Number</span> : {{ $escort['user']['phone'] }} </li>
-                                <li class="list-group-item"><span class="details-key">Account created: </span> : {{ Carbon\Carbon::parse($escort['user']['created_at'])->toDayDateTimeString() }} </li>
+                                <!-- <li class="list-group-item"><span class="details-key">Account created: </span> : {{ Carbon\Carbon::parse($escort['user']['created_at'])->toDayDateTimeString() }} </li> -->
                                 <li class="list-group-item"><span class="details-key">Last seen</span> : {{ Carbon\Carbon::parse($escort['user']['updated_at'])->toDayDateTimeString() }} </li>
                                 <li class="list-group-item"><span class="details-key">Profile views: </span> : {{ $escort['escort']['views'] }} </li>
                             </ul>
@@ -384,7 +394,7 @@
                     <fieldset>
 
                         @if(!($escort['review']))
-                            <h5>No reviews yet for {{ $escort['user']['username'] }}. </h5>
+                            <h5 style="text-align:center; color: #fff;">{{ $escort['user']['name'] }} has no reviews yet</h5>
                             <br>
                             <a href="" data-toggle="modal" data-target="#review-modal" class="btn btn-primary add-review" style="color:#fff;">Be the first to write a review</a>
                         @else

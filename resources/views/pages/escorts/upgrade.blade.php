@@ -14,12 +14,23 @@
 
               <h2 class="upgrade-heading text-center">Upgrade your account today. Choose a package</h2>
 
+              <form class="form-group" method="post">
 
+                  {{ csrf_field() }}
+                  <input type="text" name="escort_id" id="escort_id" class="project__contact__box__input project__contact__box__input--3" value="{{ session('escort_id') }}" style="display:none"/>
+
+                  <input type="text" name="email" id="email" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->email }}" style="display:none"/>
+
+                  <input type="text" name="api_key" id="api_key" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->api_key }}" style="display:none"/>
+
+                  <input type="text" name="user_id" id="user_id" class="project__contact__box__input project__contact__box__input--3" value="{{ Auth::user()->id }}" style="display:none"/>
+
+              </form>
 
               <div class="col-md-4">
                 <div class="card-body">
                   <h5 class="card-title text-muted text-uppercase package-heading text-center">Silver Package</h5>
-                  <h6 class="card-price text-center">N3,000<span class="period">/month</span></h6>
+                  <h6 class="card-price text-center">N3,000<span class="period">/week</span></h6>
                   <hr>
                   <ul class="fa-ul">
                     <li><span class="fa-li"><i class="fas fa-check"></i></span>Free exclusive photography session.</li>
@@ -32,7 +43,20 @@
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
                   </ul>
-                  <a href="" class="btn-get-started upgrade-btn" id="silver-upgrade">Go Silver</a>
+                  <form >
+
+                    <label for="" id="feature-label">How long do you want to subscribe for?</label>
+                    <select class="form-control" name="" id="silver_duration">
+                        <option value="7">7 days - N3,000</option>
+                        <option value="14">14 days - N5,000</option>
+                        <option value="21">21 days - N14,000</option>
+                        <option value="31">31 days - N18,000</option>
+                    </select>
+
+                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                    <button type="button" onclick="goSilver()" class="btn-get-started feature-subscribe-btn btn-block" id="silver-upgrade">Go Silver</button>
+                  </form>
+
                 </div>
               </div>
 
@@ -52,7 +76,20 @@
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
                   </ul>
-                  <a href="" class="btn-get-started upgrade-btn" id="silver-upgrade">Go Gold</a>
+                  <form >
+
+                    <label for="" id="feature-label">How long do you want to subscribe for?</label>
+                    <select class="form-control" name="" id="gold_duration">
+                        <option value="7">7 days - N5,000</option>
+                        <option value="14">14 days - N9,000</option>
+                        <option value="21">21 days - N13,000</option>
+                        <option value="31">31 days - N17,000</option>
+                    </select>
+
+                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                    <button type="button" onclick="goGold()" class="btn-get-started feature-subscribe-btn btn-block" id="silver-upgrade">Go Gold</button>
+                  </form>
+
                 </div>
               </div>
 
@@ -72,7 +109,20 @@
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
                     <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
                   </ul>
-                  <a href="" class="btn-get-started upgrade-btn" id="silver-upgrade">Go Platinum</a>
+                  <form >
+
+                    <label for="" id="feature-label">How long do you want to subscribe for?</label>
+                    <select class="form-control" name="" id="platinum_duration">
+                        <option value="7">7 days - N10,000</option>
+                        <option value="14">14 days - N19,000</option>
+                        <option value="21">21 days - N28,000</option>
+                        <option value="31">31 days - N37,000</option>
+                    </select>
+
+                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                    <button type="button" onclick="goPlatinum()" class="btn-get-started feature-subscribe-btn btn-block" id="silver-upgrade">Go Platinum</button>
+                  </form>
+
                 </div>
               </div>
 
