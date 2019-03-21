@@ -49,96 +49,25 @@
     </div>
   </div>
 </div> -->
-<div class="col-md-2" id="side-img" style="padding:0px; margin:0px">
-  <div class="col-md-12" style="padding:0px;">
-      <a href="#">
-          <img src="{{ asset('img/l.jpg') }}" alt="" style="padding:0px; margin:0px">
-          <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-      </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld1.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld3.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
+<div id="code-hero" class="c-brick">
+  <div class="code_content__wrap">
+    <h1>Yaa! <span class="highlight">xcort.ng</span> has got you covered.</h1>
+    <h2>Over 1000 <span class="highlight">escorts</span> available to give you a <span class="highlight">comfortable</span> time</h2>
+    <div class="row" style="margin:0px;">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-8">
+        <form class="form-group" id="" method="get" action="/">
+          <div class="form-group">
+            <input autocomplete="off" placeholder="Search for escort using location, price or services..." type="text" name="s" value="" class="form-control search-input">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2">
+
+      </div>
+
+    </div>
   </div>
 </div>
-<div class="col-md-8" style="padding:0px; margin:0px;border-bottom: 4.1px solid #b41c5c;">
-  <ul class="rslides">
-    <li>
-        <a href="#"><img src="{{ asset('img/ld.jpg') }}" alt=""></a>
-        <div class="home-banner-info-container clear">
-          <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
-          Richmond, VA </a>
-          <a class="banner-name-city txtRight right media-cover-button" href="/Tskimcarta" style="margin-top: -10px;"><span class="button" id="span-button">view my profile</span></a>
-          <a class="txtWhite banner-name-city left" href="/Tskimcarta">Tskimcarta</a>
-        </div>
-    </li>
-    <li>
-        <a href="#"><img src="{{ asset('img/ld1.jpg') }}" alt=""></a>
-        <div class="home-banner-info-container clear">
-          <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
-          Richmond, VA </a>
-          <a class="banner-name-city txtRight right media-cover-button" href="/Tskimcarta" style="margin-top: -10px;"><span class="button" id="span-button">view my profile</span></a>
-          <a class="txtWhite banner-name-city left" href="/Tskimcarta">Tskimcarta</a>
-        </div>
-    </li>
-    <li>
-        <a href="#"><img src="{{ asset('img/ld3.jpg') }}" alt=""></a>
-        <div class="home-banner-info-container clear">
-          <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
-          Richmond, VA </a>
-          <a class="banner-name-city txtRight right media-cover-button" href="/Tskimcarta" style="margin-top: -10px;"><span class="button" id="span-button">view my profile</span></a>
-          <a class="txtWhite banner-name-city left" href="/Tskimcarta">Tskimcarta</a>
-        </div>
-    </li>
-    <li>
-        <a href="#"><img src="{{ asset('img/ld.jpg') }}" alt=""></a>
-        <div class="home-banner-info-container clear">
-          <a class="banner-name-city txtRight right txtWhite media-cover-location" href="/shemale-escorts/richmond-va/">
-          Richmond, VA </a>
-          <a class="banner-name-city txtRight right media-cover-button" href="/Tskimcarta" style="margin-top: -10px;"><span class="button" id="span-button">view my profile</span></a>
-          <a class="txtWhite banner-name-city left" href="/Tskimcarta">Tskimcarta</a>
-        </div>
-    </li>
-  </ul>
-</div>
-<div class="col-md-2" id="side-img" style="padding:0px; margin:0px">
-  <div class="col-md-12" style="padding:0px;">
-      <a href="#">
-        <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
-        <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-      </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld1.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld3.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
-  </div>
-  <div class="col-md-12" style="padding:0px;">
-    <a href="#">
-      <img src="{{ asset('img/ld.jpg') }}" alt="" style="padding:0px; margin:0px">
-      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive banner-ribbon">
-    </a>
-  </div>
-</div>
-<div class="overlay"></div>

@@ -44,6 +44,7 @@
                                <label for="email" class="reg-label">1 hour:</label>
                                <select class="form-control" name="incall_1hr" id="price-edit-incall_1hr">
                                    <option selected value="{{ $details['escort']['incall_1hr'] }}">{{ $details['escort']['incall_1hr'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
 
@@ -84,6 +85,7 @@
                                <select class="form-control" name="incall_1dy" id="price-edit-incall_1dy">
 
                                    <option selected value="{{ $details['escort']['incall_1dy'] }}">{{ $details['escort']['incall_1dy'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -131,6 +133,7 @@
                                <label for="email" class="reg-label">Overnight:</label>
                                <select class="form-control" name="incall_overnight" id="price-edit-incall_overnight">
                                    <option selected value="{{ $details['escort']['incall_overnight'] }}">{{ $details['escort']['incall_overnight'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -177,6 +180,7 @@
                                <label for="email" class="reg-label">One week:</label>
                                <select class="form-control" name="incall_1wk" id="price-edit-incall_1wk">
                                    <option selected value="{{ $details['escort']['incall_1wk'] }}">{{ $details['escort']['incall_1wk'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -237,6 +241,7 @@
                                <label for="email" class="reg-label">1 hour:</label>
                                <select class="form-control" name="outcall_1hr" id="price-edit-outcall_1hr">
                                    <option selected value="{{ $details['escort']['outcall_1hr'] }}">{{ $details['escort']['outcall_1hr'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
 
@@ -276,6 +281,7 @@
                                <label for="email" class="reg-label">24 hour:</label>
                                <select class="form-control" name="outcall_1dy" id="price-edit-outcall_1dy">
                                    <option selected value="{{ $details['escort']['outcall_1dy'] }}">{{ $details['escort']['outcall_1dy'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -323,6 +329,7 @@
                                <label for="email" class="reg-label">Overnight:</label>
                                <select class="form-control" name="outcall_overnight" id="price-edit-outcall_overnight">
                                    <option selected value="{{ $details['escort']['outcall_overnight'] }}">{{ $details['escort']['outcall_overnight'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -370,6 +377,7 @@
                                <label for="email" class="reg-label">One week:</label>
                                <select class="form-control" name="outcall_1wk" id="price-edit-outcall_1wk">
                                    <option selected value="{{ $details['escort']['outcall_1wk'] }}">{{ $details['escort']['outcall_1wk'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -427,6 +435,7 @@
                                <label for="email" class="reg-label">Video Sex:</label>
                                <select class="form-control" name="video_sex" id="price-edit-video_sex">
                                    <option selected value="{{ $details['escort']['video_sex'] }}">{{ $details['escort']['video_sex'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
 
@@ -466,6 +475,7 @@
                                <label for="email" class="reg-label">Sex Chat:</label>
                                <select class="form-control" name="sex_chat" id="price-edit-sex_chat">
                                    <option selected value="{{ $details['escort']['sex_chat'] }}">{{ $details['escort']['sex_chat'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -513,6 +523,7 @@
                                <label for="email" class="reg-label">Phone Sex:</label>
                                <select class="form-control" name="phone_sex" id="price-edit-phone_sex">
                                    <option selected value="{{ $details['escort']['phone_sex'] }}">{{ $details['escort']['phone_sex'] }}</option>
+                                   <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
@@ -559,6 +570,7 @@
                                <label for="email" class="reg-label">Nudes:</label>
                                <select class="form-control" name="nudes" id="price-edit-nudes">
                                   <option selected value="{{ $details['escort']['nudes'] }}">{{ $details['escort']['nudes'] }}</option>
+                                  <option value="Not available">Not available</option>
                                   <option value="10,000">10,000</option>
                                   <option value="15,000">15,000</option>
                                   <option value="20,000">20,000</option>

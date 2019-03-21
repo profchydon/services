@@ -36,7 +36,7 @@
                     <div class="escort-info">
                       <div class="escort-info-inner">
                         <h4 class="escort-name">{{ $feature[0]['name'] }}</h4>
-                        <p class="escort-location">{{ $feature[0]['city'] }} , {{ $feature[0]['state'] }} </p>
+                        <p class="escort-location">{{ $feature[0]['city'] }} , <span class="highlight"> {{ $feature[0]['state'] }}</span> </p>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 <div class="col-md-12 heading">
-    <h4 class="landing-header">Other Escorts near you</h4>
+    <h4 class="landing-header">Other <span class="highlight">Escorts</span> near you</h4>
 </div>
 
 @if ($escorts === "No escort available right now")
@@ -31,8 +31,8 @@
 
           <div class="escort-info">
             <div class="escort-info-inner">
-              <h4 class="escort-name">{{ $escort->user->username }}</h4>
-              <p class="escort-location">{{ $escort->escort->city }} , {{ $escort->escort->state }}</p>
+              <h4 class="escort-name">{{ $escort->user->name }}</h4>
+              <p class="escort-location">{{ $escort->escort->city }} , <span class="highlight"> {{ $escort->escort->state }}</span></p>
 
             </div>
           </div>

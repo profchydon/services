@@ -8,7 +8,7 @@
           <div class="row">
 
               <div class="col-md-12 heading">
-                  <h4 class="landing-header">Escorts near you</h4>
+                  <h4 class="landing-header">E<span class="highlight">s</span>co<span class="highlight">rts ne</span>ar y<span class="highlight">ou</span></h4>
               </div>
 
               @foreach($escorts as $escort)
@@ -34,7 +34,7 @@
                     <div class="escort-info" id="other_escorts_info">
                       <div class="escort-info-inner" id="other_escorts_info_inner">
                         <h4 class="escort-name">{{ $escort['user']['username'] }}</h4>
-                        <p class="escort-location">{{ $escort['escort']['city'] }} , {{ $escort['escort']['state'] }}</p>
+                        <p class="escort-location">{{ $escort['escort']['city'] }} , <span class="highlight"> {{ $escort['escort']['state'] }}</span> </p>
                       </div>
                     </div>
                   </div>

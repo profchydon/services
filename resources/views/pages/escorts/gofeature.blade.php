@@ -65,7 +65,7 @@
                     </select>
 
                     <script src="https://js.paystack.co/v1/inline.js"></script>
-                    <button type="button" onclick="payWithPaystack()" class="btn-get-started feature-subscribe-btn btn-block"> Pay now </button>
+                    <button type="button" onclick="goFeature()" class="btn-get-started feature-subscribe-btn btn-block"> Pay now </button>
                   </form>
 
                 </div>

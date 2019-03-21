@@ -13,15 +13,12 @@
   $text = $profile_page."\n \n Hi,%20I%20just%20viewed%20your%20profile%20on%20xcort.ng%20and%20i'm%20interested%20in%20meeting%20you";
 ?>
 
-<h3 class="escort-profile-greeting-header">Hi, I'm {{ $escort['user']['name'] }} and i'm {{ $age }}yrs old</h3>
+<h3 class="escort-profile-greeting-header">Hi, I'm <span class="highlight">{{ $escort['user']['name'] }}</span> and i'm <span class="highlight">{{ $age }}yrs old</span></h3>
 <div class="container main-body" id="escort-main-body">
 
     <div class="row">
 
       <div class="col-md-4">
-
-        <!-- <div class="profile profile-image" style="background-image:url({{ asset($profile_image) }}); background-position: center; background-repeat: no-repeat;  background-size: cover; vertical-align: middle;">
-        </div> -->
 
         <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 

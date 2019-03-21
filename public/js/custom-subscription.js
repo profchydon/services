@@ -1,4 +1,4 @@
-function payWithPaystack() {
+function goFeature() {
   var token = $('input[name="_token"]').attr("value");
   var email = $("#email").val();
   var escort_id = $("#escort_id").val();

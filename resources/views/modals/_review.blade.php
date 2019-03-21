@@ -9,7 +9,7 @@
 
                          <button type="button" class="close" data-dismiss="modal" aria-label="Close" name="button"><span style="color:white" aria-hidden="true">&times;</span></button>
 
-                         <h4 class="modal-title text-center">Add review</h4>
+                         <h4 class="modal-title text-center">Add <span class="highlight">review</span> </h4>
 
                      </div>
 
@@ -38,6 +38,28 @@
 
                              <div class="col-md-12">
                                <div class="form-group">
+                                 <label for="" class="review-label">Rate escort</label>
+                                 <select class="form-control" name="">
+                                    <option value="5">5 Stars </option>
+                                    <option value="4">4 Stars </option>
+                                    <option value="3">3 Stars </option>
+                                    <option value="2">2 Stars </option>
+                                    <option value="1">1 Stars </option>
+                                    <option value="0">0 Stars </option>
+                                 </select>
+                                 <span class="fa fa-star checked" id="review-star"></span>
+                                 <span class="fa fa-star" id="review-star"></span>
+                                 <span class="fa fa-star" id="review-star"></span>
+                                 <span class="fa fa-star" id="review-star"></span>
+                                 <span class="fa fa-star" id="review-star"></span>
+                                 <span class="fa fa-star" id="review-star"></span>
+                                 <p id="edit-email-error-message"></p>
+                               </div>
+                             </div>
+
+
+                             <div class="col-md-12">
+                               <div class="form-group">
                                  <label for="" class="review-label">Your review</label>
                                  <textarea name="review-message" id="review-message" rows="8" cols="80" class="form-control" style="resize:none"></textarea>
                                </div>
@@ -45,30 +67,28 @@
 
                            </div>
 
+                           <button type="submit" class="btn btn-primary btn-block review-modal-close" name="submit-review" id="submit-review" style="font-weight:600;">Submit review</button>
+
                       </div>
 
-                     <div class="modal-footer">
-
-                       <button type="submit" class="btn btn-primary btn-block" name="submit-review" id="submit-review" style="font-weight:600;">Submit review</button>
-
-                     </div>
                      @else
 
-                     <p>You have to be logged in to add a review</p>
+                     <div class="modal-body notloggedin">
+                        <p>You have to be logged in to add a review</p>
+                     </div>
 
                      <div class="modal-footer">
 
-                       <a href="/login" class="btn btn-primary btn-block">Login</a>
+                       <a href="/login" class="btn btn-primary btn-block modal-login-button">Login</a>
 
                      </div>
 
                       @endif
 
 
-                 </form>
+                    </form>
 
-                 <p id="review-success-message" class="success-message"></p>
-
+                    <p id="review-success-message" class="success-message"></p>
 
                  </div>
 

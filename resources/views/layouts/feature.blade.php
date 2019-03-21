@@ -1,7 +1,8 @@
 <div class="feature-container">
   <div class="row">
 
-    <h4 class="feature-header">Featured Escorts</h4>
+    <h4 class="feature-header">Featured <span class="highlight">Escorts</span> </h4>
+    <!-- <h4 class="feature-header">Fe<span class="highlight">atu</span>red<span class="highlight"> Esc</span>or<span class="highlight">ts</span></h4> -->
 
     <div id="partner-slide" class="owl-carousel">
 
@@ -37,7 +38,7 @@
                     <div class="escort-info">
                       <div class="escort-info-inner">
                         <h4 class="escort-name">{{ $feature[0]->name }}</h4>
-                        <p class="escort-location">{{ $feature[0]->city }} , {{ $feature[0]->state }} </p>
+                        <p class="escort-location">{{ $feature[0]->city }} , <span class="highlight"> {{ $feature[0]->state }}</span> </p>
                       </div>
                     </div>
                   </div>

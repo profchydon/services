@@ -232,7 +232,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">1 hour:</label>
                            <select class="form-control" name="incall_1hr" id="incall_1hr">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
 
@@ -271,7 +271,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">24 hours:</label>
                            <select class="form-control" name="incall_1dy" id="incall_1dy">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
                                <option value="20,000">20,000</option>
@@ -318,7 +318,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Overnight:</label>
                            <select class="form-control" name="incall_overnight" id="incall_overnight">
-                              <option selected>Select a value</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
                                <option value="20,000">20,000</option>
@@ -364,7 +364,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">1 Week:</label>
                            <select class="form-control" name="incall_1wk" id="incall_1wk">
-                              <option selected>Select a value</option>
+                              <option selected value="Not available">Select an amount</option>
                               <option value="10,000">10,000</option>
                               <option value="15,000">15,000</option>
                               <option value="20,000">20,000</option>
@@ -422,7 +422,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">1 hour:</label>
                            <select class="form-control" name="outcall_1hr" id="outcall_1hr">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
 
@@ -461,7 +461,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">24 hours:</label>
                            <select class="form-control" name="outcall_1dy" id="outcall_1dy">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
                                <option value="20,000">20,000</option>
@@ -501,7 +501,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Overnight:</label>
                            <select class="form-control" name="outcall_overnight" id="outcall_overnight">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
                                <option value="20,000">20,000</option>
@@ -541,7 +541,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">1 Week:</label>
                            <select class="form-control" name="outcall_1wk" id="outcall_1wk">
-                               <option selected>Select an amount</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="10,000">10,000</option>
                                <option value="15,000">15,000</option>
                                <option value="20,000">20,000</option>
@@ -602,7 +602,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Video Sex:</label>
                            <select class="form-control" name="video_sex" id="video_sex">
-                               <option selected value="Not Available">Select a value</option>
+                               <option selected value="Not available">Select an amount</option>
                                <option value="5,000">5,000</option>
                                <option value="10,000">10,000</option>
 
@@ -644,7 +644,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Sex Chat:</label>
                            <select class="form-control" name="sex_chat" id="sex_chat">
-                             <option selected value="Not Available">Select a value</option>
+                             <option selected value="Not available">Select a value</option>
                              <option value="5,000">5,000</option>
                              <option value="10,000">10,000</option>
 
@@ -686,7 +686,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Phone Sex:</label>
                            <select class="form-control" name="phone_sex" id="phone_sex">
-                             <option selected value="Not Available">Select a value</option>
+                             <option selected value="Not available">Select a value</option>
                              <option value="5,000">5,000</option>
                              <option value="10,000">10,000</option>
 
@@ -727,7 +727,7 @@
                          <div class="form-group">
                            <label for="email" class="reg-label">Nudes:</label>
                            <select class="form-control" name="nudes" id="nudes">
-                             <option selected value="Not Available">Select a value</option>
+                             <option selected value="Not available">Select a value</option>
                              <option value="5,000">5,000</option>
                              <option value="10,000">10,000</option>
 

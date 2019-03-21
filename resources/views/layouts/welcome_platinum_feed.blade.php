@@ -1,5 +1,5 @@
 <div class="col-md-12 heading">
-    <h4 class="landing-header">Platinum Escorts</h4>
+    <h4 class="landing-header"> <span class="highlight">Platinum </span>Escorts</h4>
 </div>
 
 @if ($platinumEscorts === "No platinum escort available right now")
@@ -23,8 +23,8 @@
           <span id="video"></span>
           <div class="escort-info">
             <div class="escort-info-inner">
-              <h4 class="escort-name">{{ $platinumEscort->user->username }}</h4>
-              <p class="escort-location">{{ $platinumEscort->escort->city }} , {{ $platinumEscort->escort->state }}</p>
+              <h4 class="escort-name">{{ $platinumEscort->user->name }}</h4>
+              <p class="escort-location">{{ $platinumEscort->escort->city }} , <span class="highlight"> {{ $platinumEscort->escort->state }}</span></p>
             </div>
           </div>
         </div>
