@@ -5,8 +5,9 @@
   display: none;
 }
 .container.login-body {
-    padding: 150px 10px;
+    padding: 100px 10px;
 }
+
 </style>
 
 @include('pages.login')

@@ -15,7 +15,7 @@
                   <div class="escort-info">
                     <div class="escort-info-inner">
                       <h4 class="escort-name">Escort Name</h4>
-                      <p class="escort-location">Lekki, Lagos Nigeria</p>
+                      <p class="escort-location">Lekki, <span class="highlight">Lekki</span> </p>
                     </div>
                   </div>
                 </div>

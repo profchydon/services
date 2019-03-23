@@ -1,11 +1,11 @@
-<div class="col-md-12 heading">
-    <h4 class="landing-header">Gold <span class="highlight">Escorts</span></h4>
-</div>
-
-@if ($goldEscorts === "No Gold escort available right now")
+@if ($goldEscorts === "No gold escort available right now")
 
 
 @else
+
+  <div class="col-md-12 heading">
+      <h4 class="landing-header">Gold <span class="highlight">Escorts</span></h4>
+  </div>
 
   <?php $path = "img/escort/images/" ?>
 

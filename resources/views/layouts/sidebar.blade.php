@@ -39,7 +39,7 @@
         <span>Dashboard</span></a>
     </li>
 
-    @if ( !( session('verified') === 1) && !($details['escort']) == NULL )
+    @if ( !( session('verified') == 1) && !($details['escort']) == NULL )
     <li class="">
       <a href="{{ route('verify') }}">
         <div class="icon-w">
@@ -50,7 +50,7 @@
     </li>
     @endif
 
-    @if ( session('verified') === 1 )
+    @if ( session('verified') == 1 )
     <li class=" has-sub-menu" disabled="">
       <a href="#" disabled="">
         <div class="icon-w">
@@ -101,6 +101,13 @@
           </ul>
         </div>
       </div>
+    </li>
+    <li class="">
+      <a href="{{ route('transactions') }}">
+        <div class="icon-w">
+          <ion-icon name="log-out"></ion-icon>
+        </div>
+        <span>Transactions</span></a>
     </li>
     @endif
 

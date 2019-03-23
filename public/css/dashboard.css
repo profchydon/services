@@ -11,6 +11,30 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
 }
 
+.table{
+  color: #fff;
+  font-size: 12px;
+}
+
+.row.inner-row-content.transactions-inner-row-content {
+    padding: 50px;
+}
+
+.row.transaction-details thead {
+    color: #ed2b7c;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.row.transaction-details td{
+  border-top: 1px solid #25354c;
+}
+
+.row.transaction-details {
+    height: 100vh;
+}
+
 .menu-w.menu-layout-compact ul.main-menu > li .icon-w {
     width: 70px;
     color: #ed2b7c;
@@ -36,13 +60,16 @@ button.btn-get-started.feature-subscribe-btn.btn-block {
     margin: 10px 0px;
 }
 .unverified-alert-div {
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    text-align: center;
-    background-image: url('/img/header-bg.png');
-    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  border: 1px solid #222e3f;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-left-color: #b41c5c;
+  background: #1c2737;
 }
 .unverified-alert-div a{
   text-decoration: none;
@@ -488,6 +515,16 @@ ul#video-gallery {
   .menu-mobile ul.main-menu > li .icon-w + span {
     padding-left: 0px;
     font-size: 13px;
+  }
+  .table-responsive{
+    border: none;
+  }
+  .row.inner-row-content.transactions-inner-row-content {
+    padding: 20px 5px;
+  }
+  .row.transaction-details {
+    height: 100vh;
+    padding: 20px 10px;
   }
   .feature-heading.text-center {
     margin: 10px;

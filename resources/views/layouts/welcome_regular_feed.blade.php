@@ -1,11 +1,13 @@
-<div class="col-md-12 heading">
-    <h4 class="landing-header">Other <span class="highlight">Escorts</span> near you</h4>
-</div>
+
 
 @if ($escorts === "No escort available right now")
 
 
 @else
+
+<div class="col-md-12 heading">
+    <h4 class="landing-header">Other <span class="highlight">Escorts</span> near you</h4>
+</div>
     <?php $path = "img/escort/images/" ?>
 
     @foreach($escorts as $escort)

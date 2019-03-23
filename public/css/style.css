@@ -34,9 +34,39 @@ input.form-control.search-input {
     font-weight: 300;
     display: block;
 }
-h1,h2,h3,h4,h5,h6{
-  /* font-family: 'Open Sans', sans-serif; */
+.forgot-password {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 13px;
 }
+.forgot-password a {
+  color: #fff !important;
+}
+.forgot-password a:hover {
+  color: #ED2B7C !important;
+}
+.logo-h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+.login-h4{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+.login-h4 a{
+  color: #ed2b7c;
+}
+
+a.back-to-homepage {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff !important;
+    font-size: 13px;
+}
+
 #code-hero {
     text-align: center;
     background-image: url('/img/hero.png');
@@ -46,11 +76,18 @@ h1,h2,h3,h4,h5,h6{
     padding-bottom: 8vw;
     padding-top: 7vw;
 }
-#code-hero h1, #code-hero h2 {
+#code-hero h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fff
+}
+#code-hero h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #fff;
+  font-size: 26px
 }
+
 .navbar-header h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -100,6 +137,10 @@ a.btn.btn-primary.btn.block.see-more-button {
     font-weight: 600;
     /* border-radius: 3px; */
 }
+a.btn.btn-primary.btn.block.see-more-button.see-more-button:hover {
+    border: 1px solid #ed2b7c;
+    background: #ed2b7c;
+}
 #tour-widget {
     max-width: 218px;
     min-width: 218px;
@@ -111,7 +152,7 @@ a.btn.btn-primary.btn.block.see-more-button {
     left: -27px;
     line-height: 10px;
     width: 99.4%;
-    background: #b41c5c;
+    background: #2d343d;
     color: #fff;
     padding: 5px;
     text-align: left;
@@ -630,7 +671,10 @@ h5.unverified-alert.text-center {
     opacity: 1;
 }
 .side-menu-magic {
-    background-image: linear-gradient(-154deg, #ed2b7c 8%, #4b2662 90%);
+    background-image: url('/img/hero.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     border-radius: 0px;
     padding: 40px;
     text-align: center;
@@ -646,6 +690,9 @@ h5.unverified-alert.text-center {
     color: #fff;
     font-size: 19px;
     text-transform: uppercase;
+}
+.btn-w {
+    background: #ED2B7C !important;
 }
 
 fieldset {
@@ -900,11 +947,12 @@ p.footer-p-main {
     font-weight: 500;
 }
 footer.footer {
-    background-color: #1f2a39;
-    padding: 25px;
-    margin: 0px;
-    border: 1px solid #1c2633;
+  background-color: #262c35;
+  padding: 25px;
+  margin: 0px;
+  border: 1px solid #232931;
 }
+
 
 #pricing-list {
     display: inline;
@@ -1049,6 +1097,7 @@ p.registered-p {
 
 .form-holder small{
   color: #ed2b7c;
+  font-weight: 500;
 }
 
 .form-holder a{
@@ -1522,9 +1571,10 @@ select.selectpicker.form-control {
   }
   #code-hero h1{
     font-size: 18px;
+    line-height: 24px;
   }
   #code-hero h2 {
-    font-size: 14px;
+    font-size: 10px;
     margin: 10px 0px;
     line-height: 22px;
   }

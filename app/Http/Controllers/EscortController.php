@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Auth;
 use DB;
 use Session;
@@ -392,7 +393,12 @@ class EscortController extends Controller
         } else {
 
           $escort = Json_decode($response , TRUE);
+          $transactions = (new Collection($escort['data']['transaction']))->paginate(1);
+          // echo "<pre>";
+          // var_dump($transactions);
+          // die();
 
+          Session::put('transactions' , $transactions);
           Session::put('profile_image' , $escort['data']["escort"]['profile_image']);
           Session::put('escort_id' , $escort['data']["escort"]['id']);
           Session::put('verified' , $escort['data']["escort"]['verified']);
@@ -401,6 +407,54 @@ class EscortController extends Controller
           // return view('pages.escorts.dashboard2', ['details' => $escort['data']]);
 
         }
+    }
+
+    public function allEscortTransactions()
+    {
+      $authorization = Auth::user()->api_key;
+
+      $curl = curl_init();
+
+      curl_setopt_array($curl, array(
+          CURLOPT_URL => $this->base_url."/api/v1/escorts/details/dashboard",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+          CURLOPT_HTTPHEADER => array(
+            "Authorization: {$authorization}",
+            "Content-Type: application/json"
+          ),
+      ));
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+        echo "cURL Error #:" . $err;
+      } else {
+
+        $escort = Json_decode($response , TRUE);
+        $transactions = (new Collection($escort['data']['transaction']))->paginate(10);
+        // echo "<pre>";
+        // var_dump($transactions);
+        // die();
+
+        // Session::put('transactions' , $transactions);
+        Session::put('profile_image' , $escort['data']["escort"]['profile_image']);
+        Session::put('escort_id' , $escort['data']["escort"]['id']);
+        Session::put('verified' , $escort['data']["escort"]['verified']);
+
+        return view('transactions', ['transactions' => $transactions]);
+        // return view('pages.escorts.dashboard2', ['details' => $escort['data']]);
+
+      }
+
+
     }
 
 

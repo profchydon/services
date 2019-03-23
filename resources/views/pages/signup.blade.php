@@ -2,10 +2,16 @@
     <div class="row">
 
       <!-- <button name="button" data-toggle="modal" data-target="#loading-modal">Load</button> -->
-      
+
       <div class="col-md-4"></div>
 
       <div class="col-md-4">
+
+        <div class="row text-center">
+            <h1 class="logo-h1">XCORT<span class="highlight">.ng</span></h1>
+
+            <h4 class="login-h4">Have an account already? <a href="{{ route('login') }}">Login here</a></h4>
+        </div>
 
           <div class="form-holder">
 
@@ -14,7 +20,7 @@
             <form class="form-group" id="signup-form">
 
                 <div class="form-group">
-                  <label for="">Name <small>(This will be the name displayed to other users)</small> </label>
+                  <label for="">Name <small>(This will be the name displayed to clients)</small> </label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Enter your fullname">
                 </div>
 
@@ -52,13 +58,9 @@
 
             </form>
             <div class="already text-center">
-                <p class="registered-p">Already registered?</p> <small class="sign-up-login"> <a href="login">Login</a> </small>
+                <a href="{{route('welcome')}}" class="back-to-homepage">Back to homepage</a>
             </div>
 
-          </div>
-
-          <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-              <a href="{{ route('welcome') }}" class="loginhome">Home</a>
           </div>
 
       </div>

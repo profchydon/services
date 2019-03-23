@@ -38,7 +38,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h1>XCORT<span class="highlight">.ng</span></h1>
+          <h1 class="logo-h1">XCORT<span class="highlight">.ng</span></h1>
           <!-- <a class="navbar-brand" href="#">
               <img src="img/logo.svg" class="logo img-responsive" alt="">
           </a> -->

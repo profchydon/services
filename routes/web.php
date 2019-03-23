@@ -28,6 +28,7 @@ Route::group(['prefix' => 'escort'], function () {
     Route::post('service-register' , 'EscortController@serviceRegister')->name('service_register');
     Route::post('service-update' , 'EscortController@serviceUpdate')->name('service_update');
     Route::post('gofeature/success' , 'EscortController@saveGoFeatureDetails');
+    Route::get('transactions/all' , 'EscortController@allEscortTransactions')->name('transactions');
     Route::view('verify-escort','verify-escort')->name('verify');
 
 });

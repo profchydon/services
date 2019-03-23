@@ -40,6 +40,17 @@
           <span>Dashboard</span></a>
       </li>
 
+      @if ( !( session('verified') == 1) && !($details['escort']) == NULL )
+      <li class="">
+        <a href="{{ route('verify') }}">
+          <div class="icon-w">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+          <span>Verify Account</span>
+        </a>
+      </li>
+      @endif
+
       @if ( !( session('verified') === 1) && !($details['escort']) == NULL )
       <li class=" has-sub-menu">
         <a href="#">
@@ -82,12 +93,13 @@
         </div>
       </li>
       <li class="">
-        <a href="{{ route('welcome') }}">
+        <a href="{{ route('transactions') }}">
           <div class="icon-w">
-            <ion-icon name="checkmark"></ion-icon>
+            <ion-icon name="log-out"></ion-icon>
           </div>
-          <span>Verify Account</span></a>
+          <span>Transactions</span></a>
       </li>
+
       @endif
 
 

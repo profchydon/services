@@ -6,6 +6,11 @@
       <div class="col-md-4">
 
           <div class="form-holder">
+              <div class="row text-center">
+                  <h1 class="logo-h1">XCORT<span class="highlight">.ng</span></h1>
+
+                  <h4 class="login-h4">Don't have an account? <a href="{{ route('escort_signup') }}">Sign up for free</a></h4>
+              </div>
 
             <p id="login-success-message" class="success-message"></p>
             <p id="login-error-message" class="error-message"></p>
@@ -28,21 +33,14 @@
                   <button type="submit" class="btn btn-primary btn-block" name="button">Login</button>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <small class="signup"> <a href="signup">Sign up</a> </small>
-
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <small class="forgotpassword pull-right"> <a href="forgotpassword">Forgot password</a> </small>
-                    </div>
-                </div>
-
             </form>
-          </div>
 
-          <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-              <a href="{{ route('welcome') }}" class="loginhome">Home</a>
+            <div class="row login-option-row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <small class="forgot-password"> <a href="forgotpassword">Forgot password?</a> </small>
+                </div>
+            </div>
           </div>
 
       </div>
