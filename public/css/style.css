@@ -34,6 +34,45 @@ input.form-control.search-input {
     font-weight: 300;
     display: block;
 }
+#email-match{
+  display: none;
+  font-size: 12px;
+}
+.error-warn-holder {
+    text-align: center;
+    padding: 10px;
+    background: #490a0a;
+    color: #fff;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.icon-social{
+  font-size: 15px;
+}
+
+h4.follow {
+    margin-top: 25px;
+}
+
+.footer-bottom {
+  background: #21272f;
+  border-top: 1px solid #1e232b;
+  padding: 16px;
+}
+
+.row.search-miss-row {
+    text-align: center;
+    margin: 50px;
+    color: #fff;
+}
+.search-miss {
+    font-size: 16px;
+}
+small.errorwarn {
+    color: #fff !important;
+    font-size: 11.5px;
+}
 .forgot-password {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -203,7 +242,7 @@ a.btn.btn-primary.btn.block.see-more-button.see-more-button:hover {
 #feature2-widget > .escort-info {
     position: absolute;
     bottom: 0;
-    left: -27px;
+    left: -28px;
     line-height: 10px;
     width: 100%;
     /* background: #b41c5c; */
@@ -509,14 +548,23 @@ button#signupdropdown {
     font-weight: 600;
 }
 ul.dropdown-menu {
-    background: #2d4567;
-    margin: 10px 0px;
-    border-radius: 0px;
-    border: 1px solid #273b58;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #1e293a;
+  border-radius: 0px;
+  border: 1px solid #1e293a;
 }
 .dropdown-menu>li>a {
     color: #fff;
+    display: block;
+    padding: 3px 30px;
+    clear: both;
+    font-weight: 600;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}
+.dropdown-menu>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ed2b7c;
 }
 div#signupdropdownnav {
     display: inline;
@@ -946,13 +994,36 @@ p.footer-p-main {
     color: #fff;
     font-weight: 500;
 }
-footer.footer {
+footer {
   background-color: #262c35;
   padding: 25px;
   margin: 0px;
   border: 1px solid #232931;
+  margin-top: 50px;
+  color: #fff;
+  /* font-family: 'Open Sans', sans-serif; */
 }
 
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ed2b7c;
+}
+
+ul.link-list {
+    padding: 0px;
+}
 
 #pricing-list {
     display: inline;
@@ -1043,10 +1114,17 @@ h5.details-header {
 }
 
 #signup-success-message {
-    color: mediumseagreen;
     text-align: center;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #3c763d !important;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: none;
 }
 .col-12.text-center.see-more-div {
     margin-top: 30px;
@@ -1093,6 +1171,7 @@ p.registered-p {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
+    text-transform: capitalize;
 }
 
 .form-holder small{
@@ -1563,6 +1642,21 @@ select.selectpicker.form-control {
 }
 
 @media (max-width:768px) {
+  footer{
+    padding: 10px;
+  }
+  .footer-bottom a {
+      font-size: 13px;
+  }
+  footer .col-xs-5, footer .col-xs-4, footer .col-xs-3 {
+    padding: 0px 5px;
+  }
+  footer h4 {
+    font-size: 12px;
+  }
+  footer a {
+    font-size: 11px;
+  }
   h3.escort-profile-greeting-header{
     font-size: 14.5px;
   }
@@ -1570,13 +1664,13 @@ select.selectpicker.form-control {
     padding: 10px;
   }
   #code-hero h1{
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
   }
   #code-hero h2 {
-    font-size: 10px;
+    font-size: 13px;
     margin: 10px 0px;
-    line-height: 22px;
+    line-height: 20px;
   }
   #feature2-escorts-img-holder {
     margin: 0px -9px;

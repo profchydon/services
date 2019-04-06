@@ -17,11 +17,47 @@
 
 <script>
 
+  var signupButton = document.querySelector('#signup');
+  var email = document.querySelector('#email');
+  var confirmEmail = document.querySelector('#confirm_email');
+  var emailMatch = document.querySelector('#email-match');
+
+  if (typeof(signupButton) != 'undefined' && signupButton != null)
+  {
+    signupButton.disabled = true;
+    confirmEmail.addEventListener('keyup' , function() {
+        if (email.value !== confirmEmail.value) {
+          emailMatch.style.display = 'block';
+          signupButton.disabled = true;
+        }else if (email.value === confirmEmail.value) {
+          emailMatch.style.display = 'none';
+          signupButton.disabled = false;
+        }
+    });
+  }
+
+
 $(document).ready(function(){
 
     $('#signup-form').submit(function () {
         event.preventDefault();
         $('#loading-modal').show();
+
+        // var errors = 0;
+        // $("#signup-form :input").map(function(){
+        //      if( $(this).val() === "" ) {
+        //           errors++;
+        //     } else if ($(this).val()) {
+        //     }
+        // });
+        //
+        // if(errors > 0){
+        //   $('#loading-modal').hide();
+        //     $('.error-warn-holder').show();
+        //     $('.errorwarn').text("All fields are required.. Kindly enter a value for all fields");
+        //     errors = 0
+        //     return false;
+        // }
 
         $('#signup-email-error-message').hide();
         $('#signup-email-error-message').empty();
@@ -68,10 +104,11 @@ $(document).ready(function(){
                 $('#signup-phone-error-message').append(response.message);
             }else if (response.message === "User created successfully") {
                 $('#loading-modal').hide();
-                $('#signup-success-message').show();
+                $('#signup-form').slideUp();
+                $('#signup-success-message').slideDown();
                 $('#signup-success-message').append("Congrats! Your account was created successfully. An email for verification has been sent to "+$("#email").val()+ ". Kindly check your email and complete the verification process." );
 
-                setTimeout("window.location='/login'", 5000);
+                // setTimeout("window.location='/login'", 5000);
             }
         });
 

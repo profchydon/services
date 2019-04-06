@@ -17,10 +17,36 @@
 
 <script>
 
+var signupButton = document.querySelector('#signup');
+var email = document.querySelector('#email');
+var confirmEmail = document.querySelector('#confirm_email');
+var emailMatch = document.querySelector('#email-match');
+
+if (typeof(signupButton) != 'undefined' && signupButton != null)
+{
+  signupButton.disabled = true;
+  confirmEmail.addEventListener('keyup' , function() {
+      if (email.value !== confirmEmail.value) {
+        emailMatch.style.display = 'block';
+        signupButton.disabled = true;
+      }else if (email.value === confirmEmail.value) {
+        emailMatch.style.display = 'none';
+        signupButton.disabled = false;
+      }
+  });
+}
+
 $(document).ready(function(){
 
     $('#signup-form').submit(function () {
         event.preventDefault();
+        $('#loading-modal').show();
+
+        var name = $("#name").val();
+        var username = $("#username").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var phone = $("#phone").val();
 
         $('#signup-email-error-message').hide();
         $('#signup-email-error-message').empty();
@@ -30,11 +56,11 @@ $(document).ready(function(){
         $('#signup-phone-error-message').empty();
 
         const formData = {
-            "name" : $("#name").val(),
-            "username" : $("#username").val(),
-            "email" : $("#email").val(),
-            "password" : $("#password").val(),
-            "phone" : $("#phone").val(),
+            "name" : name,
+            "username" : username,
+            "email" : email,
+            "password" : password,
+            "phone" : phone,
             "user_type" : "user"
         }
 

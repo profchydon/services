@@ -44,9 +44,16 @@ Route::post('verify-escort','EscortController@uploadImageForVerification');
 
 
 Route::get('escort/{escort}' , 'UserController@getEscort');
+Route::get('escorts/new' , 'UserController@getNewEscorts')->name('new-escorts');
+// Route::get('escorts/gender/{gender}' , 'UserController@getEscortsByGender');
+Route::get('escorts/{rank}/all' ,  'UserController@getEscortsByRank');
+Route::get('escorts/{field}/{value}' ,  'UserController@getEscortsBySearch');
+// Route::get('escorts/country/{country}' ,  'UserController@getEscortsByCountry');
+
+Route::get('escorts/tours' , 'UserController@getNewEscorts')->name('escort-on-tours');
+Route::get('contact-us' , 'UserController@getNewEscorts')->name('contact-us');
 Route::get('escorts/vip' , 'UserController@getVIPEscorts');
 Route::get('escorts' , 'UserController@getEscorts');
-Route::get('escorts/{rank}/all' ,  'UserController@getEscortsByRank');
 Route::get('activate/{email}' , 'UserController@getActivation');
 Route::post('activation' , 'UserController@activation');
 Route::get('sendmail' , 'UserController@sendActivationMail');

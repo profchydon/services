@@ -58,7 +58,7 @@ class UserController extends Controller
         curl_close($curl);
 
         $response = Json_decode($response);
-        // var_dump($response); die();
+
         if ($err) {
         echo "cURL Error #:" . $err;
         } else {
@@ -99,7 +99,6 @@ class UserController extends Controller
 
         }
     }
-
 
     public function activation(Request $request)
     {
@@ -221,7 +220,6 @@ class UserController extends Controller
         }
     }
 
-
     public function getEscortsByRank($rank)
     {
 
@@ -252,19 +250,26 @@ class UserController extends Controller
 
 
           $response = json_decode($response , TRUE);
+          $search_hit = false;
 
+          if ($response['data']['escorts'] == "No escort available right now") {
+            $escorts = "No search result found for {$rank} escorts.";
+            $search_hit = false;
+            $features = $response['data']['features'];
+            $features = (object) $features;
+          }else {
+            $search_hit = true;
+            $escorts = (new Collection($response['data']['escorts']))->paginate(24);
+            $features = $response['data']['features'];
+            $features = (object) $features;
+          }
 
-          $escorts = (new Collection($response['data']['escorts']))->paginate(24);
-          $features = $response['data']['features'];
-          $features = (object) $features;
-
-          // var_dump($features);
-          // die();
-
-          return view('platinumescorts',
+          return view('escorts',
           [
             'escorts' => $escorts,
-            'features' => $features
+            'features' => $features,
+            'search_hit' => $search_hit,
+            'search_phrase' => "All {$rank} Escorts"
           ]);
 
         }
@@ -299,17 +304,26 @@ class UserController extends Controller
         } else {
 
           $response = json_decode($response , TRUE);
+          $search_hit = false;
 
-          // $escorts = (new Collection($escorts['data']))->paginate(24);
-
-          $escorts = (new Collection($response['data']['escorts']))->paginate(24);
-          $features = $response['data']['features'];
-          $features = (object) $features;
+          if ($response['data']['escorts'] == "No escort available right now") {
+            $escorts = "No search result found for escorts.";
+            $search_hit = false;
+            $features = $response['data']['features'];
+            $features = (object) $features;
+          }else {
+            $search_hit = true;
+            $escorts = (new Collection($response['data']['escorts']))->paginate(24);
+            $features = $response['data']['features'];
+            $features = (object) $features;
+          }
 
           return view('escorts',
           [
             'escorts' => $escorts,
-            'features' => $features
+            'features' => $features,
+            'search_hit' => $search_hit,
+            'search_phrase' => "All Escorts"
           ]);
 
         }
@@ -318,6 +332,77 @@ class UserController extends Controller
     public function getActivation($email)
     {
         return view('activation' , ['email' => $email]);
+    }
+
+    public function getEscortsBySearch($field,$value)
+    {
+
+        // var_dump($field);
+        // var_dump($value);
+        // die();
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => $this->base_url."/api/v1/escorts/search/{$field}/{$value}",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+          CURLOPT_HTTPHEADER => array(
+
+            "Content-Type: application/json"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+
+
+          $response = json_decode($response , TRUE);
+          $search_hit = false;
+          // var_dump($response['data']['features']);
+          // die();
+
+          if ($response['data']['escorts'] == "No escort available right now") {
+            $escorts = "No search result found for escorts in {$value}.";
+            $search_hit = false;
+            $features = $response['data']['features'];
+            $features = (object) $features;
+            if ($field == "gender" || $field == "rank") {
+              $search_phrase = "All {$value} Escorts";
+            }else {
+              $search_phrase = "All Escorts in {$value}";
+            }
+          }else {
+            $search_hit = true;
+            $escorts = (new Collection($response['data']['escorts']))->paginate(24);
+            $features = $response['data']['features'];
+            $features = (object) $features;
+            if ($field == "gender" || $field == "rank") {
+              $search_phrase = "All {$value} Escorts";
+            }else {
+              $search_phrase = "All Escorts in {$value}";
+            }
+          }
+
+          return view('escorts',
+          [
+            'escorts' => $escorts,
+            'features' => $features,
+            'search_hit' => $search_hit,
+            'search_phrase' => $search_phrase
+          ]);
+
+        }
     }
 
 }

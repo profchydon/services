@@ -48,7 +48,6 @@
       @endforeach
 
       @endif
-
     </div>
 
   </div>

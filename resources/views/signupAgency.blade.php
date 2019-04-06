@@ -17,6 +17,25 @@
 
 <script>
 
+var signupButton = document.querySelector('#signup');
+var email = document.querySelector('#email');
+var confirmEmail = document.querySelector('#confirm_email');
+var emailMatch = document.querySelector('#email-match');
+
+if (typeof(signupButton) != 'undefined' && signupButton != null)
+{
+  signupButton.disabled = true;
+  confirmEmail.addEventListener('keyup' , function() {
+      if (email.value !== confirmEmail.value) {
+        emailMatch.style.display = 'block';
+        signupButton.disabled = true;
+      }else if (email.value === confirmEmail.value) {
+        emailMatch.style.display = 'none';
+        signupButton.disabled = false;
+      }
+  });
+}
+
 $(document).ready(function(){
 
     $('#signup-form').submit(function () {

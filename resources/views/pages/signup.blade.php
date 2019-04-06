@@ -16,6 +16,9 @@
           <div class="form-holder">
 
             <p id="signup-success-message"></p>
+            <div class="error-warn-holder">
+              <small class="errorwarn"></small>
+            </div>
 
             <form class="form-group" id="signup-form">
 
@@ -36,14 +39,15 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="">Confirm Password</label>
-                  <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Re-enter your password">
-                </div>
-
-                <div class="form-group">
                   <label for="">Email Address</label>
                   <input type="email" name="email" class="form-control" id="email" placeholder="Enter a valid email address">
                   <p id="signup-email-error-message"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="">Confirm Email Address</label>
+                  <input type="email" name="confirm_email" class="form-control" id="confirm_email" placeholder="Re-enter your email address">
+                  <small id="email-match">Email addresses does not match!</small>
                 </div>
 
                 <div class="form-group">
