@@ -1,7 +1,8 @@
+<?php $banner = "/img/hero.png" ?>
 <div class="col-md-3 sidebar">
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -12,7 +13,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -23,7 +24,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -34,7 +35,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -45,7 +46,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -56,7 +57,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>
@@ -67,7 +68,7 @@
   </a>
 
   <a href="">
-    <div class="side-menu-magic">
+    <div class="side-menu-magic" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
       <h4>
         Place your Escort Profile Ads Here
       </h4>

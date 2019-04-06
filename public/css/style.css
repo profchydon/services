@@ -108,7 +108,7 @@ a.back-to-homepage {
 
 #code-hero {
     text-align: center;
-    background-image: url('/img/hero.png');
+    /* background-image: url('/img/hero.png'); */
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -719,7 +719,7 @@ h5.unverified-alert.text-center {
     opacity: 1;
 }
 .side-menu-magic {
-    background-image: url('/img/hero.png');
+    /* background-image: url('/img/hero.png'); */
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;

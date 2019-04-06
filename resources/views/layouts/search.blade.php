@@ -1,55 +1,6 @@
-<!-- <div class="city-list">
-  <div class="container">
-    <div class="row">
+<?php $banner = "/img/hero.png" ?>
 
-      <form class="" action="index.html" method="post">
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option selected>Amount</option>
-              <option value="">10,000</option>
-              <option value="">15,000</option>
-              <option value="">20,000</option>
-              <option value="">25,000</option>
-              <option value="">30,000</option>
-              <option value="">35,000</option>
-              <option value="">40,000</option>
-              <option value="">45,000</option>
-              <option value="">50,000</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option value="">State</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option value="">Gender</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option value="">Services</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option value="">Availability</option>
-              <option value="">Incall</option>
-              <option value="">Outcall</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <select class="selectpicker form-control">
-              <option value="">Choose your city to see all escorts</option>
-          </select>
-        </div>
-
-      </form>
-    </div>
-  </div>
-</div> -->
-<div id="code-hero" class="c-brick">
+<div id="code-hero" class="c-brick" style="background-image:url({{ asset($banner) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
   <div class="code_content__wrap">
     <h1>Professional <span class="highlight">Escort</span> and <span class="highlight">Masseuse</span> Services.</h1>
     <h2>Over 1000 <span class="highlight">escorts</span> available to give you a <span class="highlight">comfortable</span> time</h2>
