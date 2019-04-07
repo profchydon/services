@@ -51,7 +51,7 @@
       </li>
       @endif
 
-      @if ( !( session('verified') === 1) && !($details['escort']) == NULL )
+      @if ( !( session('verified') == 1) && !($details['escort']) == NULL )
       <li class=" has-sub-menu">
         <a href="#">
           <div class="icon-w">

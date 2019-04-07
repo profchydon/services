@@ -1,4 +1,4 @@
-<div class="container">
+==<div class="container">
   <div class="row">
 
     <div id="partner-slide" class="owl-carousel">
@@ -20,13 +20,13 @@
               <a href="/escort/{{ $feature[0]['username'] }}">
                 <div class="escorts-img-holder" id="feature2-escorts-img-holder">
                   <div class="sb-widget widget-register" id="feature2-widget" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-                    @if ( $feature[0]['rank'] === "platinum")
+                    @if ( $feature[0]['rank'] == "platinum")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
-                    @elseif ( $feature[0]['rank'] === "gold")
+                    @elseif ( $feature[0]['rank'] == "gold")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
-                    @elseif ( $feature[0]['rank'] === "silver")
+                    @elseif ( $feature[0]['rank'] == "silver")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
-                    @elseif ( $feature[0]['rank'] === "regular")
+                    @elseif ( $feature[0]['rank'] == "regular")
                         <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive feature-ribbon">
                     @endif
 

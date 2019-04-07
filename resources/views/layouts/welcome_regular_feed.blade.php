@@ -1,6 +1,6 @@
 
 
-@if ($escorts === "No escort available right now")
+@if ($escorts == "No escort available right now")
 
 
 @else
@@ -17,13 +17,13 @@
     <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $escort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-          @if ( $escort->escort->rank === "platinum")
+          @if ( $escort->escort->rank == "platinum")
               <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
-          @elseif ( $escort->escort->rank === "gold")
+          @elseif ( $escort->escort->rank == "gold")
               <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
-          @elseif ( $escort->escort->rank === "silver")
+          @elseif ( $escort->escort->rank == "silver")
               <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
-          @elseif ( $escort->escort->rank === "regular")
+          @elseif ( $escort->escort->rank == "regular")
               <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon">
           @endif
 

@@ -1,4 +1,4 @@
-@if ($goldEscorts === "No gold escort available right now")
+@if ($goldEscorts == "No gold escort available right now")
 
 
 @else
