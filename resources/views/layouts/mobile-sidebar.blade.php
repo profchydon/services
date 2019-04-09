@@ -1,7 +1,7 @@
 
 <div class="menu-mobile menu-activated-on-click color-scheme-dark">
   <div class="mm-logo-buttons-w">
-    <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>Xcort.ng</span></a>
+    <a class="mm-logo dashboard-logo" href="{{ route('escort_dashboard')}}">XCORT<span class="highlight">.ng</span></a>
     <div class="mm-buttons">
       <div class="content-panel-open">
         <div class="os-icon os-icon-grid-circles"></div>
@@ -51,7 +51,7 @@
       </li>
       @endif
 
-      @if ( !( session('verified') == 1) && !($details['escort']) == NULL )
+      @if ( session('verified') == 1 )
       <li class=" has-sub-menu">
         <a href="#">
           <div class="icon-w">
@@ -101,7 +101,6 @@
       </li>
 
       @endif
-
 
       <li class="">
         <a href="{{ route('logout') }}">

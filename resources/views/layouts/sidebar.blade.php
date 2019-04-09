@@ -5,7 +5,7 @@
     <a class="logo" href="index.html">
       <div class="logo-element"></div>
       <div class="logo-label">
-        Xcort.ng
+        <a class="mm-logo dashboard-logo" href="{{ route('escort_dashboard')}}">XCORT<span class="highlight">.ng</span></a>
       </div>
     </a>
   </div>

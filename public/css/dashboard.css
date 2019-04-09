@@ -20,6 +20,25 @@ h1,h2,h3,h4,h5,h6{
     padding: 50px;
 }
 
+.dashboard-logo{
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.dashboard-logo:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+span.highlight {
+    margin: 0px !important;
+    color: #ED2B7C !important;
+}
+
 .row.transaction-details thead {
     color: #ed2b7c;
     text-transform: uppercase;

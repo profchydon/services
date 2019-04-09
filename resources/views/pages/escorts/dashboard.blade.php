@@ -4,6 +4,7 @@
   $video_path = "video/escort/";
 
 ?>
+
 <div class="all-wrapper with-side-panel solid-bg-all">
 
   <div class="layout-w">
