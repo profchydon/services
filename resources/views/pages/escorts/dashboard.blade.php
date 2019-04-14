@@ -19,11 +19,6 @@
 
             <section class="col-md-12">
 
-              <h4 class="element-header dashboard-greetings">
-                Welcome {{ Auth::user()->name }}
-              </h4>
-
-
                 @include('layouts._unverified')
 
                 <div class="row user_details">
