@@ -393,18 +393,17 @@ class EscortController extends Controller
         } else {
 
           $escort = Json_decode($response , TRUE);
-          $transactions = (new Collection($escort['data']['transaction']))->paginate(1);
+          // $transactions = (new Collection($escort['data']['transaction']))->paginate(1);
           // echo "<pre>";
-          // var_dump($transactions);
+          // var_dump($escort['data']);
           // die();
 
-          Session::put('transactions' , $transactions);
+          // Session::put('transactions' , $transactions);
           Session::put('profile_image' , $escort['data']["escort"]['profile_image']);
           Session::put('escort_id' , $escort['data']["escort"]['id']);
           Session::put('verified' , $escort['data']["escort"]['verified']);
 
           return view('escortdashboard', ['details' => $escort['data']]);
-          // return view('pages.escorts.dashboard2', ['details' => $escort['data']]);
 
         }
     }

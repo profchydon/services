@@ -59,10 +59,10 @@ function goFeature() {
 
       $.ajax(settings)
         .done(function(response) {
-          // if (response.message === "Review successful created") {
-          //     $('#review-success-message').append("Thanks..your review has been added succesfully." );
-          //     location.reload();
-          // }
+          if (response.message === "Feature successfully created") {
+              swal("Successful!", "Your Go Feature Subscription was successful", "success");
+              setTimeout("window.location='/escort/transactions/all'", 1000);
+          }
         })
         .fail(function(data) {
           console.log("error encountered");
@@ -121,7 +121,7 @@ function goSilver() {
       var settings = {
         async: true,
         crossDomain: true,
-        url: $("#base_url").val() + "/api/v1/transactions/create",
+        url: $("#base_url").val() + "/api/v1/subscription/create",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -133,10 +133,10 @@ function goSilver() {
 
       $.ajax(settings)
         .done(function(response) {
-          // if (response.message === "Review successful created") {
-          //     $('#review-success-message').append("Thanks..your review has been added succesfully." );
-          //     location.reload();
-          // }
+          if (response.message === "Subscription successfully created") {
+              swal("Successful!", "Your Go Silver Subscription was successful", "success");
+              setTimeout("window.location='/escort/transactions/all'", 1000);
+          }
         })
         .fail(function(data) {
           console.log("error encountered");
@@ -195,7 +195,7 @@ function goGold() {
       var settings = {
         async: true,
         crossDomain: true,
-        url: $("#base_url").val() + "/api/v1/transactions/create",
+        url: $("#base_url").val() + "/api/v1/subscription/create",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -207,10 +207,10 @@ function goGold() {
 
       $.ajax(settings)
         .done(function(response) {
-          // if (response.message === "Review successful created") {
-          //     $('#review-success-message').append("Thanks..your review has been added succesfully." );
-          //     location.reload();
-          // }
+          if (response.message === "Subscription successfully created") {
+              swal("Successful!", "Your Go Gold Subscription was successful", "success");
+              setTimeout("window.location='/escort/transactions/all'", 1000);
+          }
         })
         .fail(function(data) {
           console.log("error encountered");
@@ -269,7 +269,7 @@ function goPlatinum() {
       var settings = {
         async: true,
         crossDomain: true,
-        url: $("#base_url").val() + "/api/v1/transactions/create",
+        url: $("#base_url").val() + "/api/v1/subscription/create",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -281,10 +281,10 @@ function goPlatinum() {
 
       $.ajax(settings)
         .done(function(response) {
-          // if (response.message === "Review successful created") {
-          //     $('#review-success-message').append("Thanks..your review has been added succesfully." );
-          //     location.reload();
-          // }
+          if (response.message === "Subscription successfully created") {
+              swal("Successful!", "Your Go Platinum Subscription was successful", "success");
+              setTimeout("window.location='/escort/transactions/all'", 1000);
+          }
         })
         .fail(function(data) {
           console.log("error encountered");

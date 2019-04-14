@@ -43,22 +43,6 @@ $(document).ready(function(){
         event.preventDefault();
         $('#loading-modal').show();
 
-        // var errors = 0;
-        // $("#signup-form :input").map(function(){
-        //      if( $(this).val() === "" ) {
-        //           errors++;
-        //     } else if ($(this).val()) {
-        //     }
-        // });
-        //
-        // if(errors > 0){
-        //   $('#loading-modal').hide();
-        //     $('.error-warn-holder').show();
-        //     $('.errorwarn').text("All fields are required.. Kindly enter a value for all fields");
-        //     errors = 0
-        //     return false;
-        // }
-
         $('#signup-email-error-message').hide();
         $('#signup-email-error-message').empty();
         $('#signup-username-error-message').hide();
@@ -108,7 +92,7 @@ $(document).ready(function(){
                 $('#signup-success-message').slideDown();
                 $('#signup-success-message').append("Congrats! Your account was created successfully. An email for verification has been sent to "+$("#email").val()+ ". Kindly check your email and complete the verification process." );
 
-                // setTimeout("window.location='/login'", 5000);
+                setTimeout("window.location='/login'", 5000);
             }
         });
 

@@ -337,10 +337,6 @@ class UserController extends Controller
     public function getEscortsBySearch($field,$value)
     {
 
-        // var_dump($field);
-        // var_dump($value);
-        // die();
-
         $curl = curl_init();
 
         curl_setopt_array($curl, array(

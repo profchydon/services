@@ -20,6 +20,60 @@ h1,h2,h3,h4,h5,h6{
     padding: 50px;
 }
 
+li.subscription-li {
+    font-size: 8px;
+}
+
+a.element-box.el-tablo.subscription-tablo {
+    text-align: left;
+}
+
+a.element-box.el-tablo {
+    padding: 10px;
+    background: #1c2737;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    height: 90px;
+}
+
+.el-tablo .value {
+    font-size: 2.3em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-family: 'Laila', serif;
+}
+
+a.el-tablo:hover .label {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+a.el-tablo:hover .value {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #ed2b7c;
+}
+
+.el-tablo .label {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    color: #ed2b7c;
+    letter-spacing: 1px;
+}
+
+.element-header.dashboard-greetings {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
 .dashboard-logo{
     color: #fff;
     font-weight: 600;

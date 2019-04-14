@@ -19,7 +19,64 @@
 
             <section class="col-md-12">
 
+              <h4 class="element-header dashboard-greetings">
+                Welcome {{ Auth::user()->name }}
+              </h4>
+
+
                 @include('layouts._unverified')
+
+                <div class="row user_details">
+                    <fieldset>
+                      <div class="element-content">
+                        <div class="row">
+                          <div class="col-sm-4 col-xxxl-3">
+                            <a class="element-box el-tablo">
+                              <div class="label">
+                                Account Type
+                              </div>
+                              <div class="value">
+                                {{ $details['escort']['rank'] }}
+                              </div>
+                              <!-- <small href="#" class="account-type-footer">Upgrade Now</small> -->
+                            </a>
+
+                          </div>
+
+                          <div class="col-sm-4 col-xxxl-3">
+                            <a class="element-box el-tablo">
+                              <div class="label">
+                                Total no of profile views
+                              </div>
+                              <div class="value">
+                                {{ $details['escort']['views'] }}
+                              </div>
+                            </a>
+                          </div>
+
+                          <div class="col-sm-4 col-xxxl-3">
+                            <a class="element-box el-tablo subscription-tablo">
+                              <div class="label">
+                                Ongoing Subscription
+                              </div>
+                              <div class="value">
+                                  <ul class="subscription-ul">
+                                    <?php
+                                        if ( count($details['features']) > 0) {
+                                          $now = Carbon\Carbon::now();
+                                          $date = Carbon\Carbon::parse($details['features'][0]['created_at']);
+                                          $difference = $now->diffInDays($date);
+                                     ?>
+                                     <li class="subscription-li">Feature - Ongoing (Expires in {{ $details['features'][0]['duration'] - $difference }} days)</li>
+                                     <?php
+                                        }
+                                      ?>
+                                  </ul>
+                              </div>
+                            </a>
+                          </div>
+                    </fieldset>
+                </div>
 
 
                 <div class="row user_details">

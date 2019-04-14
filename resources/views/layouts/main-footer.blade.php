@@ -98,7 +98,7 @@
       <a href="{{route('welcome')}}">
         <h1 class="logo-h1">XCORT<span class="highlight">.ng</span></h1>
       </a>
-      <p>&copy; 2018 XCORT.ng | <a href="pages/terms-and-conditions.html">Terms and conditions</a> | <a href="contact.html">Contact us</a></p>
+      <p>&copy; 2018 XCORT.ng | <a href="pages/terms-and-conditions.html">Terms and conditions</a></p>
     </div>
   </div>
 </div>
