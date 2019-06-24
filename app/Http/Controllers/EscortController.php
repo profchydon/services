@@ -489,7 +489,7 @@ class EscortController extends Controller
           $escort = DB::table('escorts')->where('user_id' , $user_id)->first();
           $video = DB::table('videos')->where('escort_id' , $escort->id)->first();
 
-          if (count($video) == "0") {
+          if ($video == NULL) {
 
             $data = [
               'user_id' => $user_id,

@@ -156,7 +156,10 @@
                               <!-- Hidden video div -->
                               <!-- data-src should not be provided when you use html5 videos -->
                                 <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
-                                    <img src="{{ asset('img/e.jpg') }}" />
+                                  <video id="video-js-small" class="sm-video-object sm-html5 video-js vjs-default-skin" controls preload="none" playsinline autoplay muted loop>
+                                      <source src="{{ asset($this_video) }}" type="video/mp4">
+                                       Your browser does not support HTML5 video.
+                                  </video>
                                 </li>
 
                               <?php
