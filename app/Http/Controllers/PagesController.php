@@ -79,9 +79,9 @@ class PagesController extends Controller
             }else {
                 $features = array($response->data->features);
 
-                // echo "<pre>";
-                // var_dump($features[0]);
-                // die();
+                echo "<pre>";
+                var_dump($response->data->escorts);
+                die();
 
                 return view('welcome',
                 [
