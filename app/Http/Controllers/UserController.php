@@ -63,19 +63,19 @@ class UserController extends Controller
         echo "cURL Error #:" . $err;
         } else {
 
-          if ($response->status === 'failed') {
+          if ($response->status == 'failed') {
 
-              if ($response->message === "Incorrect login details") {
+              if ($response->message == "Incorrect login details") {
 
                   return redirect()->back()->with('error' , $response->message);
 
-              }elseif ($response->message === "User's account has not been activated") {
+              }elseif ($response->message == "User's account has not been activated") {
 
                   return view('activation', ['email' => $response->data]);
 
               }
 
-          }elseif ($response->status === 'success' && $response->message === "Ok") {
+          }elseif ($response->status == 'success' && $response->message == "Ok") {
 
               $user = $response->data;
 
