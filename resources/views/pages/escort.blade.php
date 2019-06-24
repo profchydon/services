@@ -24,11 +24,11 @@
 
         <div class="row contact-me-section">
 
-            <div class="col-md-12">
+            <div class="col-md-6">
               <a target="_blank" href="tel:+{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-6">
               <a target="_blank" href="https://wa.me/{{ $phone }}?text={{ $text }}" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
             </div>
 
