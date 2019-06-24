@@ -18,17 +18,17 @@
 
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-3">
 
         <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
         <div class="row contact-me-section">
 
-            <div class="col-md-6">
+            <div class="col-md-12">
               <a target="_blank" href="tel:+{{ $phone }}" class="call-me"> <i class="fa fa-phone" aria-hidden="true"></i> Call me!</a>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
               <a target="_blank" href="https://wa.me/{{ $phone }}?text={{ $text }}" class="chat-with-me"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat with me</a>
             </div>
 
@@ -50,7 +50,7 @@
 
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-9">
 
         <div class="panel-group" id="accordion">
 

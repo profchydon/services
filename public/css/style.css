@@ -416,15 +416,14 @@ a.chat-with-me {
   box-sizing: border-box;
 }
 img.img-responsive.escort-page-profile-image {
-    /* margin-bottom: 20px; */
-    background: #2a313b;
-    border: 1px solid #3d3d3d;
-    object-fit: cover;
-    object-position: top;
-    padding: 1px;
-    max-height: 350px;
-    min-height: 350px;
-    width: 100%;
+  background: #2a313b;
+  border: 1px solid #3d3d3d;
+  object-fit: cover;
+  object-position: top;
+  padding: 1px;
+  max-height: 250px;
+  min-height: 250px;
+  width: 100%;
 }
 #span-button {
   background: #b41c5c;
