@@ -293,13 +293,13 @@ img.img-responsive.verified-icon {
     }
 }
 .video-icon {
-    width: 40px;
-    position: absolute;
-    z-index: 2;
-    top: 135px;
-    right: 0px;
-    animation: blink 2s;
-    animation-iteration-count: infinite;
+  width: 45px;
+  position: absolute;
+  z-index: 2;
+  top: 138px;
+  right: 5px;
+  animation: blink 2s;
+animation-iteration-count: infinite;
 }
 a:hover{
   text-decoration: none;
