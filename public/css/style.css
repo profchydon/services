@@ -20,6 +20,7 @@ h3.escort-profile-greeting-header {
     outline: 1px solid #212f41;
     border-top: 1px solid #1b2737;
     font-size: 16px;
+    margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -343,10 +344,14 @@ a.details-header {
     border-color: #212d3d;
 }
 .panel-group {
-    margin: 3px 0px !important;
+    /* margin: 3px 0px !important; */
+    padding: 0px 15px;
 }
 .panel-group .panel {
     border-radius: 0px;
+}
+.row.contact-me-section.hidden-sm.hidden-xs {
+    padding: 0px 15px;
 }
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
     border-top-color: #21272f;

@@ -20,6 +20,9 @@
           @if( $goldEscort->escort->verified == 1)
               <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
           @endif
+          @if( $goldEscort->video)
+              <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+          @endif
           <span id="video"></span>
           <div class="escort-info">
             <div class="escort-info-inner">
