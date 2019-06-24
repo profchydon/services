@@ -293,13 +293,13 @@ img.img-responsive.verified-icon {
     }
 }
 .video-icon {
-  width: 45px;
-  position: absolute;
-  z-index: 2;
-  top: 138px;
-  right: 5px;
-  animation: blink 2s;
-animation-iteration-count: infinite;
+      width: 30px;
+      position: absolute;
+      z-index: 2;
+      top: 150px;
+      right: 5px;
+      animation: blink 2s;
+      animation-iteration-count: infinite;
 }
 a:hover{
   text-decoration: none;
@@ -420,9 +420,11 @@ img.img-responsive.escort-page-profile-image {
     background: #2a313b;
     border: 1px solid #3d3d3d;
     object-fit: cover;
+    object-position: top;
     padding: 1px;
     max-height: 350px;
     min-height: 350px;
+    width: 100%;
 }
 #span-button {
   background: #b41c5c;
