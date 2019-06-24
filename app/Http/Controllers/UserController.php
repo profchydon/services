@@ -93,6 +93,10 @@ class UserController extends Controller
 
                   return redirect()->intended('agency/dashboard');
 
+              }elseif ( Auth::user()->user_type == "admin") {
+
+                  return redirect()->intended('admin/dashboard');
+
               }
 
           }

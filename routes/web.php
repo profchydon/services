@@ -58,3 +58,10 @@ Route::get('activate/{email}' , 'UserController@getActivation');
 Route::post('activation' , 'UserController@activation');
 Route::get('sendmail' , 'UserController@sendActivationMail');
 Route::post('login' , 'UserController@login');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+    Route::get('dashboard' , 'AdminController@dashboard')->name('admin_dashboard');
+    Route::get('verify/escort/{escort_id}' , 'AdminController@verifyEscort');
+    Route::get('verify/escort/true/{verification_id}/{escort_id}' , 'AdminController@verifyEscortTrue');
+});

@@ -50,6 +50,7 @@ class EscortController extends Controller
 
         $data = [
           'escort_id' => $escort->id,
+          'user_id' => $user_id,
           'image' => $imageName,
         ];
 
@@ -116,7 +117,7 @@ class EscortController extends Controller
         $escort = DB::table('escorts')->where('user_id' , $user_id)->first();
         $image = DB::table('images')->where('escort_id' , $escort->id)->first();
 
-        if (count($image) == "0") {
+        if ($image == NULL) {
 
           $data = [
             'user_id' => $user_id,
@@ -257,7 +258,7 @@ class EscortController extends Controller
         'domination_receiving' => isset($request->service17) ? 1 : 0,
         'double_penetration' => isset($request->service18) ? 1 : 0,
         'erotic_massage' => isset($request->service19) ? 1 : 0,
-        'extraball' => isset($request->service20) ? 1 : 0,
+        // 'extraball' => isset($request->service20) ? 1 : 0,
         'face_sitting' => isset($request->service21) ? 1 : 0,
         'fetish' => isset($request->service22) ? 1 : 0,
         'fisting_giving' => isset($request->service23) ? 1 : 0,
@@ -342,6 +343,8 @@ class EscortController extends Controller
 
       curl_close($curl);
       $response = Json_decode($response);
+
+      // dd($response);
 
       if ($err) {
         echo "cURL Error #:" . $err;

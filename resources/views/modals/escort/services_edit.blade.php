@@ -31,7 +31,7 @@
 
                           @foreach($details['servicesFields'] as $services)
                             <div class="col-md-3 col-sm-4 col-xs-4 service-register-div">
-                              <li class="list-group-item service-register-list">
+                              <li class="list-group-item service-register-list" id="service-list">
                                 <input type="checkbox" class="service-register-checkbox" name="service{{$n}}" value="{{$services}}"><label for="service{{$n}}"><p class="service-register-p">{{$services}}</p></label>
                               </li>
                             </div>

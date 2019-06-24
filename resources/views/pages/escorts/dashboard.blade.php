@@ -21,19 +21,25 @@
 
                 @include('layouts._unverified')
 
+                @if($details['escort'] != NULL)
                 <div class="row user_details">
                     <fieldset>
                       <div class="element-content">
                         <div class="row">
                           <div class="col-sm-4 col-xxxl-3">
-                            <a class="element-box el-tablo">
+                            <a class="element-box el-tablo" id="account-type-el-tablo">
                               <div class="label">
                                 Account Type
                               </div>
                               <div class="value">
                                 {{ $details['escort']['rank'] }}
                               </div>
-                              <!-- <small href="#" class="account-type-footer">Upgrade Now</small> -->
+                              <br>
+                              <div class="">
+                                <!-- <a href="#" class="account-type-footer" id="account-type-el-tablo-upgrade"></a> -->
+                                <!-- <button type="button" class="btn btn-default btn-block" name="button" id="account-type-el-tablo-upgrade">Upgrade Now</button> -->
+                              </div>
+
                             </a>
 
                           </div>
@@ -57,7 +63,7 @@
                               <div class="value">
                                   <ul class="subscription-ul">
                                     <?php
-                                        if ( count($details['features']) > 0) {
+                                        if ( $details['features'] != NULL) {
                                           $now = Carbon\Carbon::now();
                                           $date = Carbon\Carbon::parse($details['features'][0]['created_at']);
                                           $difference = $now->diffInDays($date);
@@ -72,7 +78,7 @@
                           </div>
                     </fieldset>
                 </div>
-
+                @endif
 
                 <div class="row user_details">
                     <fieldset>

@@ -14,16 +14,17 @@
                      <h5>
                          Note: {{ $details['escort']['rank'] }} escorts can only set their price rate
                          @if( $details['escort']['rank'] == "regular")
-                            N10,000 - N50,000
+                            N10,000 - N40,000
                          @elseif ( $details['escort']['rank'] == "silver")
-                            N10,000 - N70,000
-                         @elseif ( $details['escort']['rank'] == "gold")
                             N10,000 - N100,000
+                         @elseif ( $details['escort']['rank'] == "gold")
+                            N10,000 - N300,000
                          @elseif ( $details['escort']['rank'] == "platinum")
-                            N10,000 - N150,000
+                            N10,000 - N500,000
                          @else
                          @endif
                      </h5>
+                     <a href="{{ route('upgrade') }}" class="upgrade-account">Click to upgrade your account to set higher rates</a>
                    </div>
 
                    <hr>
@@ -43,37 +44,37 @@
                              <div class="form-group">
                                <label for="email" class="reg-label">1 hour:</label>
                                <select class="form-control" name="incall_1hr" id="price-edit-incall_1hr">
-                                   <option selected value="{{ $details['escort']['incall_1hr'] }}">{{ $details['escort']['incall_1hr'] }}</option>
-                                   <option value="Not available">Not available</option>
-                                   <option value="10,000">10,000</option>
-                                   <option value="15,000">15,000</option>
+                                 <option selected value="{{ $details['escort']['incall_1hr'] }}">{{ $details['escort']['incall_1hr'] }}</option>
+                                 <option value="Not available">Not available</option>
+                                 <option value="10,000">10,000</option>
+                                 <option value="15,000">15,000</option>
 
-                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-                                     <option value="20,000">20,000</option>
-                                     <option value="25,000">25,000</option>
-                                     <option value="30,000">30,000</option>
-                                     <option value="35,000">35,000</option>
-                                   @endif
+                                 @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                   <option value="20,000">20,000</option>
+                                   <option value="25,000">25,000</option>
+                                   <option value="30,000">30,000</option>
+                                   <option value="35,000">35,000</option>
+                                 @endif
 
-                                   @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                 @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
 
-                                     <option value="40,000">40,000</option>
-                                     <option value="45,000">45,000</option>
-                                     <option value="50,000">50,000</option>
-                                     <option value="55,000">55,000</option>
-                                   @endif
+                                   <option value="40,000">40,000</option>
+                                   <option value="45,000">45,000</option>
+                                   <option value="50,000">50,000</option>
+                                   <option value="55,000">55,000</option>
+                                 @endif
 
-                                   @if($details['escort']['rank'] == "platinum")
-                                   <option value="60,000">60,000</option>
-                                   <option value="65,000">65,000</option>
-                                   <option value="70,000">70,000</option>
-                                   <option value="75,000">75,000</option>
-                                   <option value="80,000">80,000</option>
-                                   <option value="85,000">85,000</option>
-                                   <option value="95,000">90,000</option>
-                                   <option value="90,000">95,000</option>
-                                   <option value="100,000">100,000</option>
-                                   @endif
+                                 @if($details['escort']['rank'] == "platinum")
+                                 <option value="60,000">60,000</option>
+                                 <option value="65,000">65,000</option>
+                                 <option value="70,000">70,000</option>
+                                 <option value="75,000">75,000</option>
+                                 <option value="80,000">80,000</option>
+                                 <option value="85,000">85,000</option>
+                                 <option value="95,000">90,000</option>
+                                 <option value="90,000">95,000</option>
+                                 <option value="100,000">100,000</option>
+                                 @endif
 
                                </select>
                              </div>
@@ -137,18 +138,19 @@
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
-                                   <option value="25,000">25,000</option>
+
 
                                    @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-
+                                     <option value="25,000">25,000</option>
                                      <option value="30,000">30,000</option>
                                      <option value="35,000">35,000</option>
                                      <option value="40,000">40,000</option>
-                                     <option value="45,000">45,000</option>
-                                     <option value="50,000">50,000</option>
+
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                     <option value="45,000">45,000</option>
+                                     <option value="50,000">50,000</option>
                                      <option value="55,000">55,000</option>
                                      <option value="60,000">60,000</option>
                                      <option value="65,000">65,000</option>
@@ -188,6 +190,9 @@
                                    <option value="30,000">30,000</option>
                                    <option value="35,000">35,000</option>
                                    <option value="40,000">40,000</option>
+
+
+                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
                                    <option value="45,000">45,000</option>
                                    <option value="50,000">50,000</option>
                                    <option value="55,000">55,000</option>
@@ -201,13 +206,12 @@
                                    <option value="90,000">95,000</option>
                                    <option value="100,000">100,000</option>
 
-                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-                                   <option value="150,000">150,000</option>
-                                   <option value="200,000">200,000</option>
 
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                   <option value="150,000">150,000</option>
+                                   <option value="200,000">200,000</option>
                                    <option value="250,000">250,000</option>
                                    <option value="300,000">300,000</option>
                                    <option value="350,000">350,000</option>
@@ -333,18 +337,19 @@
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
                                    <option value="20,000">20,000</option>
-                                   <option value="25,000">25,000</option>
+
 
                                    @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-
+                                     <option value="25,000">25,000</option>
                                      <option value="30,000">30,000</option>
                                      <option value="35,000">35,000</option>
                                      <option value="40,000">40,000</option>
-                                     <option value="45,000">45,000</option>
-                                     <option value="50,000">50,000</option>
+
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                     <option value="45,000">45,000</option>
+                                     <option value="50,000">50,000</option>
                                      <option value="55,000">55,000</option>
                                      <option value="60,000">60,000</option>
                                      <option value="65,000">65,000</option>
@@ -385,6 +390,9 @@
                                    <option value="30,000">30,000</option>
                                    <option value="35,000">35,000</option>
                                    <option value="40,000">40,000</option>
+
+
+                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
                                    <option value="45,000">45,000</option>
                                    <option value="50,000">50,000</option>
                                    <option value="55,000">55,000</option>
@@ -398,13 +406,12 @@
                                    <option value="90,000">95,000</option>
                                    <option value="100,000">100,000</option>
 
-                                   @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-                                   <option value="150,000">150,000</option>
-                                   <option value="200,000">200,000</option>
 
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                   <option value="150,000">150,000</option>
+                                   <option value="200,000">200,000</option>
                                    <option value="250,000">250,000</option>
                                    <option value="300,000">300,000</option>
                                    <option value="350,000">350,000</option>
@@ -417,7 +424,6 @@
                                    <option value="450,000">450,000</option>
                                    <option value="500,000">500,000</option>
                                    @endif
-
                                </select>
                              </div>
                            </div>
@@ -478,40 +484,32 @@
                                    <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
-                                   <option value="20,000">20,000</option>
-                                   <option value="25,000">25,000</option>
 
                                    @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-
+                                     <option value="20,000">20,000</option>
+                                     <option value="25,000">25,000</option>
                                      <option value="30,000">30,000</option>
                                      <option value="35,000">35,000</option>
-                                     <option value="40,000">40,000</option>
-                                     <option value="45,000">45,000</option>
-                                     <option value="50,000">50,000</option>
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                     <option value="40,000">40,000</option>
+                                     <option value="45,000">45,000</option>
+                                     <option value="50,000">50,000</option>
                                      <option value="55,000">55,000</option>
-                                     <option value="60,000">60,000</option>
-                                     <option value="65,000">65,000</option>
-                                     <option value="70,000">70,000</option>
-                                     <option value="75,000">75,000</option>
-                                     <option value="80,000">80,000</option>
-                                     <option value="85,000">85,000</option>
-                                     <option value="95,000">90,000</option>
-                                     <option value="90,000">95,000</option>
-                                     <option value="100,000">100,000</option>
                                    @endif
 
                                    @if($details['escort']['rank'] == "platinum")
-                                   <option value="60,000">150,000</option>
-                                   <option value="65,000">200,000</option>
-                                   <option value="70,000">250,000</option>
-                                   <option value="75,000">300,000</option>
-                                   <option value="80,000">350,000</option>
-                                   <option value="85,000">400,000</option>
-                                   <option value="95,000">450,000</option>
-                                   <option value="90,000">500,000</option>
+                                   <option value="60,000">60,000</option>
+                                   <option value="65,000">65,000</option>
+                                   <option value="70,000">70,000</option>
+                                   <option value="75,000">75,000</option>
+                                   <option value="80,000">80,000</option>
+                                   <option value="85,000">85,000</option>
+                                   <option value="95,000">90,000</option>
+                                   <option value="90,000">95,000</option>
+                                   <option value="100,000">100,000</option>
                                    @endif
 
                                </select>
@@ -526,40 +524,32 @@
                                    <option value="Not available">Not available</option>
                                    <option value="10,000">10,000</option>
                                    <option value="15,000">15,000</option>
-                                   <option value="20,000">20,000</option>
-                                   <option value="25,000">25,000</option>
 
                                    @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-
+                                     <option value="20,000">20,000</option>
+                                     <option value="25,000">25,000</option>
                                      <option value="30,000">30,000</option>
                                      <option value="35,000">35,000</option>
-                                     <option value="40,000">40,000</option>
-                                     <option value="45,000">45,000</option>
-                                     <option value="50,000">50,000</option>
                                    @endif
 
                                    @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                     <option value="40,000">40,000</option>
+                                     <option value="45,000">45,000</option>
+                                     <option value="50,000">50,000</option>
                                      <option value="55,000">55,000</option>
-                                     <option value="60,000">60,000</option>
-                                     <option value="65,000">65,000</option>
-                                     <option value="70,000">70,000</option>
-                                     <option value="75,000">75,000</option>
-                                     <option value="80,000">80,000</option>
-                                     <option value="85,000">85,000</option>
-                                     <option value="95,000">90,000</option>
-                                     <option value="90,000">95,000</option>
-                                     <option value="100,000">100,000</option>
                                    @endif
 
                                    @if($details['escort']['rank'] == "platinum")
-                                   <option value="60,000">150,000</option>
-                                   <option value="65,000">200,000</option>
-                                   <option value="70,000">250,000</option>
-                                   <option value="75,000">300,000</option>
-                                   <option value="80,000">350,000</option>
-                                   <option value="85,000">400,000</option>
-                                   <option value="95,000">450,000</option>
-                                   <option value="90,000">500,000</option>
+                                   <option value="60,000">60,000</option>
+                                   <option value="65,000">65,000</option>
+                                   <option value="70,000">70,000</option>
+                                   <option value="75,000">75,000</option>
+                                   <option value="80,000">80,000</option>
+                                   <option value="85,000">85,000</option>
+                                   <option value="95,000">90,000</option>
+                                   <option value="90,000">95,000</option>
+                                   <option value="100,000">100,000</option>
                                    @endif
                                </select>
                              </div>
@@ -573,43 +563,32 @@
                                   <option value="Not available">Not available</option>
                                   <option value="10,000">10,000</option>
                                   <option value="15,000">15,000</option>
-                                  <option value="20,000">20,000</option>
-                                  <option value="25,000">25,000</option>
-                                  <option value="30,000">30,000</option>
-                                  <option value="35,000">35,000</option>
-                                  <option value="40,000">40,000</option>
-                                  <option value="45,000">45,000</option>
-                                  <option value="50,000">50,000</option>
-                                  <option value="55,000">55,000</option>
+
+                                  @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+                                    <option value="20,000">20,000</option>
+                                    <option value="25,000">25,000</option>
+                                    <option value="30,000">30,000</option>
+                                    <option value="35,000">35,000</option>
+                                  @endif
+
+                                  @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
+
+                                    <option value="40,000">40,000</option>
+                                    <option value="45,000">45,000</option>
+                                    <option value="50,000">50,000</option>
+                                    <option value="55,000">55,000</option>
+                                  @endif
+
+                                  @if($details['escort']['rank'] == "platinum")
                                   <option value="60,000">60,000</option>
                                   <option value="65,000">65,000</option>
                                   <option value="70,000">70,000</option>
                                   <option value="75,000">75,000</option>
                                   <option value="80,000">80,000</option>
-
-
-                                  @if( ($details['escort']['rank'] == "silver") || ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
                                   <option value="85,000">85,000</option>
                                   <option value="95,000">90,000</option>
                                   <option value="90,000">95,000</option>
                                   <option value="100,000">100,000</option>
-                                  <option value="150,000">150,000</option>
-                                  <option value="200,000">200,000</option>
-
-                                  @endif
-
-                                  @if( ($details['escort']['rank'] == "gold") || ($details['escort']['rank'] == "platinum"))
-                                  <option value="250,000">250,000</option>
-                                  <option value="300,000">300,000</option>
-                                  <option value="350,000">350,000</option>
-                                  <option value="400,000">400,000</option>
-
-
-                                  @endif
-
-                                  @if($details['escort']['rank'] == "platinum")
-                                  <option value="450,000">450,000</option>
-                                  <option value="500,000">500,000</option>
                                   @endif
                                </select>
                              </div>

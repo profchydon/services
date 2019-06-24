@@ -62,6 +62,8 @@ class PagesController extends Controller
 
       $response = Json_decode($response);
 
+      // dd($response);
+
       if ($err) {
 
       echo "cURL Error #:" . $err;
@@ -72,7 +74,7 @@ class PagesController extends Controller
 
             if ($response->data->escorts === "No escort available right now") {
 
-                return view('launching');
+              return view('launching');
 
             }else {
                 $features = array($response->data->features);

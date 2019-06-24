@@ -24,11 +24,11 @@ li.subscription-li {
     font-size: 8px;
 }
 
-a.element-box.el-tablo.subscription-tablo {
+.element-box.el-tablo.subscription-tablo {
     text-align: left;
 }
 
-a.element-box.el-tablo {
+.element-box.el-tablo {
     padding: 10px;
     background: #1c2737;
     color: #fff;
@@ -47,13 +47,13 @@ a.element-box.el-tablo {
     font-family: 'Laila', serif;
 }
 
-a.el-tablo:hover .label {
+.el-tablo:hover .label {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     color: #fff;
 }
 
-a.el-tablo:hover .value {
+.el-tablo:hover .value {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     color: #ed2b7c;
@@ -83,6 +83,12 @@ a.el-tablo:hover .value {
     text-decoration: none;
 }
 
+
+.fa-ul>li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
 .dashboard-logo:hover{
     color: #fff;
     text-decoration: none;
@@ -91,6 +97,11 @@ a.el-tablo:hover .value {
 span.highlight {
     margin: 0px !important;
     color: #ED2B7C !important;
+}
+
+#account-type-el-tablo {
+    padding: 0px;
+    padding-top: 10px;
 }
 
 .row.transaction-details thead {
@@ -174,21 +185,36 @@ h5.unverified-alert.text-center {
     object-fit: cover;
 }
 h5.availability-h5 {
-    color: #b41c5c;
-    margin: 15px 0px;
+    color: #fff;
     font-weight: 600;
+    margin: 35px 0px;
+    font-size: 14px;
 }
 .price-edit-heading h4 {
-    color: #1f3955;
+    color: #fff;
     font-size: 15px;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 .price-edit-heading h5 {
     color: #b41c5c;
+    margin-bottom: 20px;
+}
+.upgrade-account {
+    color: #fff;
+    background: #b41c5c;
+    padding: 10px 30px;
+    font-size: 13px;
+    text-decoration: none;
+}
+.upgrade-account:hover {
+    color: #fff;
+    background: #98184e;
+    text-decoration: none;
 }
 label.reg-label {
     margin-bottom: 4px;
-    color: #1f3955;
+    color: #fff;
     font-size: 11px;
 }
 h6.card-price.text-center {
@@ -196,10 +222,15 @@ h6.card-price.text-center {
     margin: 3px;
 }
 i.fas.fa-check {
-    color: #fff;
+    color: forestgreen;
 }
 .upgrade-pricing-section .card-body{
-  margin: 30px 0px;
+
+}
+.upgrade-account-holder {
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 0px 20px 10px 20px;
+    border: 1px solid #142235b5;
 }
 section.upgrade-pricing-section {
     width: 100%;
@@ -260,7 +291,8 @@ label#feature-label {
     font-weight: 600;
     background: #0a7cf8;
     margin: 0px;
-    padding: 9px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 .feature-heading.text-center {
     color: #fff;
@@ -378,15 +410,16 @@ button#edit-submit-escort,
 button#register-submit-service,
 button#edit-submit-escort {
   background: #b41c5c;
-  padding: 10px;
+  padding: 20px;
   font-size: 14px;
   font-weight: 600;
   border-radius: 3px;
 }
+
 .modal-body {
   position: relative;
   padding: 15px;
-  background-color: #d9d9d9 !important;
+  background-color: #1f3754 !important;
   margin-bottom: 10px;
 }
 .modal-header {
@@ -414,9 +447,9 @@ button#edit-submit-escort {
   font-size: 14px;
 }
 .modal-content {
-  background: #d9d9d9;
+  background: #1f3855;
   border-radius: 4px;
-  border: 1px solid #989898;
+  border: 1px solid #244061;
   padding: 10px;
 }
 a#lg-download {
@@ -454,6 +487,10 @@ li.list-group-item {
   border: 1px solid #1c2635;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+li#service-list {
+    background-color: #1f3855;
+    border: 1px solid #1f3855;
 }
 .row {
   display: -webkit-box;
@@ -588,6 +625,13 @@ ul#video-gallery {
   .menu-mobile ul.main-menu > li .icon-w + span {
     padding-left: 0px;
     font-size: 13px;
+  }
+  .upgrade-account {
+    color: #fff;
+    background: #b41c5c;
+    padding: 10px;
+    font-size: 10px;
+    text-decoration: none;
   }
   .table-responsive{
     border: none;

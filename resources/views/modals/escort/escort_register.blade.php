@@ -221,7 +221,7 @@
 
                    </div>
 
-                   <div class="row" id="incall-row" style="display:none">
+                   <!-- <div class="row" id="incall-row" style="display:none">
 
                      <div class="col-md-12">
                          <h5 class="availability-h5">Enter rates for Incalls:</h5>
@@ -764,7 +764,7 @@
                          </div>
                        </div>
 
-                   </div>
+                   </div> -->
 
                    <div class="row">
                        <div class="col-md-12">
