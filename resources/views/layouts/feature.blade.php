@@ -36,9 +36,9 @@
                         <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="featured-verified-icon">
                     @endif
 
-                    @if( $feature[0]->video)
+                    <!-- @if( $feature[0]->video)
                         <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
-                    @endif
+                    @endif -->
                     <div class="escort-info">
                       <div class="escort-info-inner">
                         <h4 class="escort-name">{{ $feature[0]->name }}</h4>
