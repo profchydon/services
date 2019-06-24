@@ -18,7 +18,7 @@
 
     <div class="row">
 
-      <div class="col-md-3">
+      <div class="col-md-3 profile-image-section">
 
         <img src="{{ asset($profile_image) }}" class="img-responsive escort-page-profile-image"/>
 
@@ -43,7 +43,6 @@
         </div>
 
         <div class="row contact-me-section hidden-sm hidden-xs">
-
           <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
           <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
         </div>
@@ -398,7 +397,6 @@
     </div>
 
     <div class="contact-me-section hidden-md hidden-lg">
-
       <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
       <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
     </div>

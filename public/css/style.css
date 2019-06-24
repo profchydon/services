@@ -417,6 +417,9 @@ a.chat-with-me {
   color: #fff;
   box-sizing: border-box;
 }
+.profile-image-section {
+    padding: 0px;
+}
 img.img-responsive.escort-page-profile-image {
   background: #2a313b;
   border: 1px solid #3d3d3d;
@@ -1617,7 +1620,7 @@ h4.escort-name {
 
 .navbar-default {
     background-color: #202c3d;
-    padding: 10px 30px;
+    padding: 10px 75px;
     margin: 0px;
     border: none;
     background-image: url('/img/header-bg.png');
@@ -1640,7 +1643,7 @@ select.selectpicker.form-control {
 }
 
 .container.main-body {
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
 }
 
 .heading {
