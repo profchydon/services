@@ -31,7 +31,9 @@
               <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
           @endif
 
-          <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+          @if( $escort->video)
+              <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+          @endif
 
           <div class="escort-info">
             <div class="escort-info-inner">
