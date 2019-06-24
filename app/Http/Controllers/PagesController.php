@@ -80,7 +80,7 @@ class PagesController extends Controller
                 $features = array($response->data->features);
 
                 echo "<pre>";
-                var_dump($response->data->escorts);
+                var_dump($response->data->platinumEscorts);
                 die();
 
                 return view('welcome',
