@@ -52,15 +52,15 @@
 
       <div class="col-md-9">
 
-        <div class="panel-group" id="accordion">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingOne">
                 <div class="panel-title">
                     <a href="#image" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Images</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="image">
+              <div class="panel-collapse collapse in" role="tabpanel" id="image" aria-labelledby="headingOne">
                   <div class="panel-body">
                     <div id="animated-thumbnails">
 
@@ -97,17 +97,13 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingTwo">
                 <div class="panel-title">
                     <a href="#video" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Videos</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="video">
+              <div class="panel-collapse collapse" role="tabpanel" id="video" aria-labelledby="headingTwo">
                   <div class="panel-body">
                     <fieldset>
 
@@ -133,7 +129,7 @@
                               ?>
                               <!-- Hidden video div -->
                               <div style="display:none;" id="{{ $videoCount }}">
-                                  <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none" playsinline autoplay loop>
+                                  <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none" playsinline loop>
                                       <source src="{{ asset($this_video) }}" type="video/mp4">
                                        Your browser does not support HTML5 video.
                                   </video>
@@ -156,7 +152,7 @@
                               <!-- Hidden video div -->
                               <!-- data-src should not be provided when you use html5 videos -->
                                 <li data-poster="{{ asset('img/e.jpg') }}" data-sub-html="{{ $video }}" data-html="#{{ $videoCount }}" >
-                                  <video id="video-js-small" class="sm-video-object sm-html5 video-js vjs-default-skin" controls preload="none" playsinline autoplay muted loop>
+                                  <video id="video-js-small" class="sm-video-object sm-html5 video-js vjs-default-skin" controls preload="none" playsinline autoplay muted>
                                       <source src="{{ asset($this_video) }}" type="video/mp4">
                                        Your browser does not support HTML5 video.
                                   </video>
@@ -189,17 +185,13 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingThree">
                 <div class="panel-title">
                     <a href="#details" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Details</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="details">
+              <div class="panel-collapse collapse" id="details" aria-labelledby="headingThree">
                   <div class="panel-body">
                     <fieldset>
                         <div class="col-md-12 escort-list-details" style="padding:0px;">
@@ -219,34 +211,26 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingFour">
                 <div class="panel-title">
                     <a href="#about" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>About Me</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="about">
+              <div class="panel-collapse collapse" id="about" aria-labelledby="headingFour">
                   <div class="panel-body">
                       <p class="about-p">{{ $escort['escort']['about'] }}</p>
                   </div>
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingFive">
                 <div class="panel-title">
                     <a href="#pricing" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Rates</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="pricing">
+              <div class="panel-collapse collapse" id="pricing" aria-labelledby="headingFive">
                   <div class="panel-body">
                     <fieldset>
                         <div class="col-md-4 escort-list-details">
@@ -286,17 +270,13 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingSix">
                 <div class="panel-title">
                     <a href="#other-details" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>Other Details</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="other-details">
+              <div class="panel-collapse collapse" id="other-details" aria-labelledby="headingSix">
                   <div class="panel-body">
                     <fieldset>
 
@@ -334,17 +314,13 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingSeven">
                 <div class="panel-title">
                     <a href="#services" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Services</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="services">
+              <div class="panel-collapse collapse" id="services" aria-labelledby="headingSeven">
                   <div class="panel-body">
                     <fieldset>
                         <?php
@@ -379,17 +355,13 @@
                </div>
             </div>
 
-        </div>
-
-        <div class="panel-group" id="accordion">
-
             <div class="panel panel-default">
-              <div class="panel-heading panel-clr">
+              <div class="panel-heading panel-clr" role="tab" id="headingEight">
                 <div class="panel-title">
                     <a href="#review" data-toggle="collapse" data-parent="#accordion" class="details-header"><i class="fa fa-plus"></i>My Reviews</a>
                 </div>
               </div>
-              <div class="panel-collapse collapse" id="review">
+              <div class="panel-collapse collapse" id="review" aria-labelledby="headingEight">
                   <div class="panel-body">
                     <fieldset>
 
@@ -420,6 +392,7 @@
             </div>
 
         </div>
+
       </div>
 
     </div>
