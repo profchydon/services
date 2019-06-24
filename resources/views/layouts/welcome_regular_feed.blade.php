@@ -31,6 +31,8 @@
               <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
           @endif
 
+          <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+
           <div class="escort-info">
             <div class="escort-info-inner">
               <h4 class="escort-name">{{ $escort->user->name }}</h4>

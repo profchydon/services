@@ -281,6 +281,26 @@ img.img-responsive.verified-icon {
     top: 0;
     right: 0px;
 }
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.video-icon {
+    width: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 135px;
+    right: 0px;
+    animation: blink 2s;
+    animation-iteration-count: infinite;
+}
 a:hover{
   text-decoration: none;
   color: #ed2b7c;
