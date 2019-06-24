@@ -133,7 +133,7 @@
                               ?>
                               <!-- Hidden video div -->
                               <div style="display:none;" id="{{ $videoCount }}">
-                                  <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none" playsinline autoplay loop>
+                                  <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none" playsinline loop>
                                       <source src="{{ asset($this_video) }}" type="video/mp4">
                                        Your browser does not support HTML5 video.
                                   </video>
