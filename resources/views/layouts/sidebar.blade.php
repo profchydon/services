@@ -109,6 +109,80 @@
         </div>
         <span>Transactions</span></a>
     </li>
+
+    <li class=" has-sub-menu" disabled="">
+      <a href="#" disabled="">
+        <div class="icon-w">
+          <ion-icon name="cash"></ion-icon>
+        </div>
+        <span>Account Settings</span></a>
+      <div class="sub-menu-w">
+        <div class="sub-menu-header">
+          Account Settings
+        </div>
+        <div class="sub-menu-icon">
+          <i class="os-icon os-icon-users"></i>
+        </div>
+        <div class="sub-menu-i">
+          <ul class="sub-menu">
+            <li>
+              <a href="/profile/picture">Account Details</a>
+            </li>
+            <li>
+              <a href="/profile/picture">My Services</a>
+            </li>
+            <li>
+              <a href="/profile/picture">Pricing</a>
+            </li>
+            <li>
+              <a href="/profile/picture">Images</a>
+            </li>
+            <li>
+              <a href="/profile/picture">Videos</a>
+            </li>
+            <li>
+              <a href="/profile/picture">Choose profile picture</a>
+            </li>
+            <li>
+              <a href="/account/upgrade">Upgrade Account</a>
+            </li>
+            <li>
+              <a href="/account/upgrade">Change Password</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li class=" has-sub-menu" disabled="">
+      <a href="#" disabled="">
+        <div class="icon-w">
+          <ion-icon name="cash"></ion-icon>
+        </div>
+        <span>Gifts</span></a>
+      <div class="sub-menu-w">
+        <div class="sub-menu-icon">
+          <i class="os-icon os-icon-users"></i>
+        </div>
+        <div class="sub-menu-i">
+          <ul class="sub-menu">
+           
+            <li>
+              <a href="/account/upgrade">Xcort Token Gifts</a>
+            </li>
+            <li>
+              <a href="/account/upgrade">Cash Gifts</a>
+            </li>
+            <li>
+              <a href="/account/upgrade">Profile Sponsors</a>
+            </li>
+            <li>
+              <a href="/account/upgrade">Learn more about the gift system</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
     @endif
 
     <li class="">
@@ -120,15 +194,5 @@
     </li>
   </ul>
 
-  <!-- <div class="side-menu-magic">
-    <h4>
-      Light Admin
-    </h4>
-    <p>
-      Clean Bootstrap 4 Template
-    </p>
-    <div class="btn-w">
-      <a class="btn btn-white btn-rounded" href="https://themeforest.net/item/light-admin-clean-bootstrap-dashboard-html-template/19760124?ref=Osetin" target="_blank">Purchase Now</a>
-    </div>
-  </div> -->
+  
 </div>

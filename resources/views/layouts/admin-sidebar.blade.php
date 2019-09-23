@@ -51,16 +51,5 @@
         <span>Logout</span></a>
     </li>
   </ul>
-
-  <!-- <div class="side-menu-magic">
-    <h4>
-      Light Admin
-    </h4>
-    <p>
-      Clean Bootstrap 4 Template
-    </p>
-    <div class="btn-w">
-      <a class="btn btn-white btn-rounded" href="https://themeforest.net/item/light-admin-clean-bootstrap-dashboard-html-template/19760124?ref=Osetin" target="_blank">Purchase Now</a>
-    </div>
-  </div> -->
+  
 </div>

@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block" name="signup" id="signup" style="font-weight:600;">Sign up</button>
+                  <button type="submit" class="btn btn-primary btn-block" name="signup" id="" style="font-weight:600;">Sign up</button>
                 </div>
 
             </form>
