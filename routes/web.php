@@ -34,7 +34,7 @@ Route::group(['prefix' => 'escort'], function () {
 });
 
 
-Route::view('imageview','imageview');
+Route::view('imageview','imageview')->name('image.view');
 Route::post('image-view','EscortController@uploadImage');
 
 Route::view('videoview','videoview');

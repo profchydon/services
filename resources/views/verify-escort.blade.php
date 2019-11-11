@@ -117,9 +117,11 @@
                   <h4>Rules for xcort.ng escort account verification.</h4>
 
                   <ul>
+                    <li>Make sure your account has at least three images of you. Note that accounts without a minimum of 3 images that clearly assures your clients about you, will not be approved.</li>
+                    <li>If you haven't fulfilled the above condition, <a href="{{route('image.view')}}">click here</a> to upload at least 3 images for your account</li>
                     <li>Upload an image that clearly shows your face and your xcort.ng username written boldly on a plain white paper.</li>
                     <li>Do not upload image more than once.</li>
-                    <li>Do not upload image more than once.</li>
+                    <li>Remember to click the <i class="fa fa-upload"></i> icon to complete your upload</li>
                   </ul>
 
               </div>
