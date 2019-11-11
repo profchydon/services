@@ -6,7 +6,7 @@
 @else
 
 <div class="col-md-12 heading">
-    <h4 class="landing-header">Other <span class="highlight">Escorts</span> near you</h4>
+    <h4 class="landing-header">New <span class="highlight">Escorts</span></h4>
 </div>
     <?php $path = "img/escort/images/" ?>
 
