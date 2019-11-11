@@ -22,11 +22,15 @@
           list-style-type: decimal;
           line-height: 27px;
         }
+        .main-section li {
+            font-size: 14px;
+            margin: 10px 0px;
+        }
 
         .main-section {
           margin: 0 auto;
-          padding: 20px;
-          margin-top: 50px;
+          padding: 20px 0px;
+          margin-top: 10px;
           background-color: #1d2939!important;
           border: 1px solid #1d2939!important;
         }
