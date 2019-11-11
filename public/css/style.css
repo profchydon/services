@@ -444,8 +444,8 @@ img.img-responsive.escort-page-profile-image {
   object-fit: cover;
   /* object-position: top; */
   padding: 1px;
-  max-height: 400px;
-  min-height: 400px;
+  max-height: 370px;
+  min-height: 370px;
   width: 100%;
 }
 #span-button {
