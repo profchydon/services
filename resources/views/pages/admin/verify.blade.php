@@ -97,14 +97,14 @@ $verification_img = "img/escort/verification/".$escort['verification']['image'];
             @endif
       </div>
 
-          <div class="row">
-              <div class="col-md-6">
-                  <a href="/admin/verify/escort/true/{{$escort['verification']['id']}}/{{$escort['escort']['id']}}" class="btn btn-primary btn-block">Accept</a>
-              </div>
-              <div class="col-md-6">
-                  <a href="#" class="btn btn-primary btn-block">Reject</a>
-              </div>
+      <div class="row inner-row-content" id="admin-dashboard-container">
+          <div class="col-md-6">
+              <a href="/admin/verify/escort/true/{{$escort['verification']['id']}}/{{$escort['escort']['id']}}" class="btn btn-primary btn-block">Accept</a>
           </div>
+          <div class="col-md-6">
+              <a href="#" class="btn btn-primary btn-block">Reject</a>
+          </div>
+      </div>
 
     </div>
 
