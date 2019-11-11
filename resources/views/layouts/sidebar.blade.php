@@ -125,29 +125,12 @@
         </div>
         <div class="sub-menu-i">
           <ul class="sub-menu">
-            <li>
-              <a href="/profile/picture">Account Details</a>
-            </li>
-            <li>
-              <a href="/profile/picture">My Services</a>
-            </li>
-            <li>
-              <a href="/profile/picture">Pricing</a>
-            </li>
-            <li>
-              <a href="/profile/picture">Images</a>
-            </li>
-            <li>
-              <a href="/profile/picture">Videos</a>
-            </li>
+            
             <li>
               <a href="/profile/picture">Choose profile picture</a>
             </li>
             <li>
-              <a href="/account/upgrade">Upgrade Account</a>
-            </li>
-            <li>
-              <a href="/account/upgrade">Change Password</a>
+              <a href="/account/password/change">Change Password</a>
             </li>
           </ul>
         </div>
