@@ -33,9 +33,9 @@
                   @if( $escort['escort']['verified'] == 1)
                       <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right" id="other_escorts_inner_verified_icon">
                   @endif
-                  @if( $escort['escort']['video'])
+                  {{-- @if( $escort['escort']['video'])
                       <img src="{{ asset('img/video2.png') }}" alt="" class="img-responsive video-icon">
-                  @endif
+                  @endif --}}
                   <div class="escort-info" id="other_escorts_info">
                     <div class="escort-info-inner" id="other_escorts_info_inner">
                       <h4 class="escort-name">{{ $escort['user']['username'] }}</h4>
