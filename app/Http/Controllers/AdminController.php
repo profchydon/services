@@ -27,6 +27,7 @@ class AdminController extends Controller
     {
 
         $authorization = Auth::user()->api_key;
+        // dd($authorization);
 
         $curl = curl_init();
 
@@ -96,7 +97,7 @@ class AdminController extends Controller
 
           $escort = Json_decode($response , TRUE);
           // echo "<pre>";
-          // var_dump($escort['data']);
+          // dd($escort['data']);
           // die();
 
           return view('verify-escort-admin' , ['escort' => $escort['data']]);
