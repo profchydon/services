@@ -213,8 +213,10 @@ a.btn.btn-primary.btn.block.see-more-button.see-more-button:hover {
 }
 
 #feature-widget {
-    max-width: 218px;
-    min-width: 218px;
+    max-width: 219px;
+    min-width: 219px;
+    min-height: 260px;
+    max-height: 260px;
     padding: 15px !important;
 }
 
@@ -492,7 +494,7 @@ img.img-responsive.feature-ribbon {
 }
 .feature-header {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 18px;
     border-bottom: 1.3px solid #4a505bbf;
     padding-bottom: 10px;
     color: #fff;
@@ -1211,7 +1213,7 @@ p.registered-p {
 
 .landing-header {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
     text-transform: capitalize;
 }
