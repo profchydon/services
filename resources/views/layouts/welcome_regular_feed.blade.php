@@ -12,7 +12,7 @@
 
     @foreach($escorts as $escort)
 
-    <?php $image_url = $path."{$escort->escort->profile_image}"; ?>
+    <?php $image_url = $path."{$escort->profile_image}"; ?>
 
     <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $escort->user->username }}">

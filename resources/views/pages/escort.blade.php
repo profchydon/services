@@ -43,13 +43,26 @@
         </div>
 
         <div class="row contact-me-section hidden-sm hidden-xs">
-          <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Send me a gift!</a>
-          <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
+            @if($escort['escort']['rank'] == "platinum" || $escort['escort']['rank'] == "gold")
+              <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Gift me Cash</a>
+            @endif
+            @if($escort['escort']['rank'] == "platinum")
+              <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Gift me xcort coins</a>
+              <a class="call-me" id="gift-me"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</a>
+            @endif
+            @if($escort['escort']['rank'] == "regular" || $escort['escort']['rank'] == "silver")
+              <button class="btn btn-primary btn-block call-me" id="disabled" disabled title="This feature is only enabled for Gold and Platinum Escorts"> 
+                  <i class="fa fa-gift" aria-hidden="true"></i> Gift me Cash
+              </button>
+              <button class="btn btn-primary btn-block call-me" id="disabled" disabled disabled title="This feature is only enabled for Platinum Escorts"> <i class="fa fa-gift" aria-hidden="true"></i> Gift me xcort coins</button>
+              <button class="btn btn-primary btn-block call-me" id="disabled" disabled disabled title="This feature is only enabled for Platinum Escorts"> <i class="fa fa-gift" aria-hidden="true"></i> Sponsor my profile</button>
+            @endif
+            
         </div>
 
       </div>
 
-      <div class="col-md-9">
+      <div class="col-md-9" class="escort-content-details">
 
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 

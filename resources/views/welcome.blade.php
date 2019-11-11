@@ -8,6 +8,6 @@
 
 @include('pages.welcome')
 
-@include('layouts.tour')
+<!-- @include('layouts.tour') -->
 
 @endsection

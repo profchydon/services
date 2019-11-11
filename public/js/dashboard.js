@@ -1,11 +1,11 @@
 $(document).ready(function() {
   //State and City Stuff
   $.ajax({
-    url: "http://xcort.africausaforums.com/public/js/locations.json",
+    url: "/js/locations.json",
     type: "GET",
     dataType: "json"
-  }).done(function(error) {
-    mydata = error;
+  }).done(function(response) {
+    mydata = response;
     for (var state in mydata.States) {
       $("#state").append(
         '<option value="' + String(state) + '">' + String(state) + " </option>"
