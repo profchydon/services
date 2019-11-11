@@ -5,7 +5,7 @@
     <h1>Professional <span class="highlight">Escort</span> and <span class="highlight">Masseuse</span> Services.</h1>
     <h2>Over 1000 <span class="highlight">escorts</span> available to give you a <span class="highlight">comfortable</span> time</h2>
     <div class="row" style="margin:0px;">
-      <div class="col-md-2">
+      {{-- <div class="col-md-2">
 
       </div>
       <div class="col-md-8">
@@ -17,7 +17,7 @@
       </div>
       <div class="col-md-2">
 
-      </div>
+      </div> --}}
 
     </div>
   </div>
