@@ -20,7 +20,7 @@
               <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
           @endif
           @if( $silverEscort->video)
-              <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+              <img src="{{ asset('img/video2.png') }}" alt="" class="img-responsive video-icon">
           @endif
           <span id="video"></span>
           <div class="escort-info">

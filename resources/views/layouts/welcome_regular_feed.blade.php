@@ -32,7 +32,7 @@
           @endif
 
           @if( $escort->video)
-              <img src="{{ asset('img/video.png') }}" alt="" class="img-responsive video-icon">
+              <img src="{{ asset('img/video2.png') }}" alt="" class="img-responsive video-icon">
           @endif
 
           <div class="escort-info">
