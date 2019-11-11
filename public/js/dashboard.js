@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //State and City Stuff
   $.ajax({
-    url: "/js/locations.json",
+    url: "/public/js/locations.json",
     type: "GET",
     dataType: "json"
   }).done(function(response) {
