@@ -16,7 +16,11 @@
     <div class="col-md-2 col-sm-6 col-xs-6 escorts-img-holder">
       <a href="escort/{{ $goldEscort->user->username }}">
         <div class="sb-widget widget-register" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;">
-          <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+          <div class="badges-desktop-wrapper-right">
+            <div class="badge-vip">
+              <span>vip</span>
+            </div>
+          </div>
           @if( $goldEscort->escort->verified == 1)
               <img src="{{ asset('img/verified.png') }}" alt="" class="img-responsive verified-icon pull-right">
           @endif
