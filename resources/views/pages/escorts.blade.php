@@ -21,13 +21,23 @@
               <a href="/escort/{{ $escort['user']['username'] }}">
                 <div class="sb-widget widget-register" style="background-image:url({{ asset($image_url) }}); background-position: center; background-repeat: no-repeat; background-size: cover; vertical-align: middle;" id="other_escorts_inner">
                   @if ( $escort['escort']['rank'] == "platinum")
-                      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+                      {{-- <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon"> --}}
+                      <div class="badges-desktop-wrapper-right">
+                        <div class="badge-vip">
+                          <span>vip</span>
+                        </div>
+                      </div>
                   @elseif ( $escort['escort']['rank'] == "gold")
-                      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+                      {{-- <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon"> --}}
+                      <div class="badges-desktop-wrapper-right">
+                        <div class="badge-vip">
+                          <span>vip</span>
+                        </div>
+                      </div>
                   @elseif ( $escort['escort']['rank'] == "silver")
-                      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+                      {{-- <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon"> --}}
                   @elseif ( $escort['escort']['rank'] == "regular")
-                      <img src="{{ asset('img/exclusive-ribbon.png') }}" alt="" class="img-responsive ribbon">
+                      {{-- <img src="/img/exclusive-ribbon.png" alt="" class="img-responsive ribbon"> --}}
                   @endif
 
                   @if( $escort['escort']['verified'] == 1)
@@ -36,6 +46,7 @@
                   @if( $escort['video'])
                       <img src="{{ asset('img/video2.png') }}" alt="" class="img-responsive video-icon">
                   @endif
+                  
                   <div class="escort-info" id="other_escorts_info">
                     <div class="escort-info-inner" id="other_escorts_info_inner">
                       <h4 class="escort-name">{{ $escort['user']['username'] }}</h4>

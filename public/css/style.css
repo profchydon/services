@@ -63,6 +63,13 @@ input.form-control.search-input {
   right: 122px;
 }
 
+#other_escorts .badges-desktop-wrapper-right {
+  position: absolute;
+  top: 2%;
+  z-index: 3;
+  right: 150px;
+}
+
 .badge-vip {
   background-image: linear-gradient(180deg,#f1d119,#cc9505);
   font-size: 15px;
@@ -533,6 +540,22 @@ img.img-responsive.feature-ribbon {
     top: 0;
     height: 54px;
     left: -27px;
+}
+#feature-escorts-img-holder .badges-desktop-wrapper-right {
+  /* width: 49px; */
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  /* height: 54px; */
+  left: -27px;
+}
+#feature2-escorts-img-holder .badges-desktop-wrapper-right {
+  /* width: 49px; */
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  /* height: 54px; */
+  left: -27px;
 }
 .tour-container{
     padding: 15px 30px;
@@ -1777,6 +1800,18 @@ select.selectpicker.form-control {
     top: 2%;
     z-index: 3;
     right: 129px;
+  }
+  #feature2-escorts-img-holder .badges-desktop-wrapper-right {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: -18px;
+  }
+  #other_escorts .badges-desktop-wrapper-right {
+    position: absolute;
+    top: 2%;
+    z-index: 3;
+    right: 127px;
   }
   .badge-photos, .badge-vip {
     width: 35px;
