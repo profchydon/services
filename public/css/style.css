@@ -1653,7 +1653,7 @@ img.logo.img-responsive {
 
 p.escort-location {
     margin: 0px;
-    font-size: 10px;
+    font-size: 13px;
     /* font-style: italic; */
     font-weight: 900;
     display: inline-block;
@@ -1670,7 +1670,7 @@ span.verified.pull-right {
 h4.escort-name {
     text-transform: capitalize;
     margin: 0px;
-    font-size: 12.5px;
+    font-size: 15px;
     font-weight: 100;
 }
 
