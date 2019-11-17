@@ -1772,6 +1772,16 @@ select.selectpicker.form-control {
   h3.escort-profile-greeting-header{
     font-size: 14.5px;
   }
+  .badges-desktop-wrapper-right {
+    position: absolute;
+    top: 2%;
+    z-index: 3;
+    right: 130px;
+  }
+  .badge-photos, .badge-vip {
+    width: 35px;
+    height: 35px;
+  }
   #code-hero {
     padding: 10px;
   }
