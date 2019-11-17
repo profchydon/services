@@ -56,6 +56,59 @@ input.form-control.search-input {
     display: none;
 }
 
+.badges-desktop-wrapper-right {
+  position: absolute;
+  top: 2%;
+  z-index: 3;
+  right: 122px;
+}
+
+.badge-vip {
+  background-image: linear-gradient(180deg,#f1d119,#cc9505);
+  font-size: 15px;
+}
+
+.itembg .badges-desktop-wrapper-right div:first-child {
+  top: 0;
+  transition-delay: .36s;
+}
+
+.itembg .badges-desktop-wrapper-right .badge-vip {
+  position: relative;
+  width: 65px;
+  height: 65px;
+}
+
+.badge-top big, .itembg .badges-desktop-wrapper-right .badge-vip {
+  font-size: 25px;
+}
+
+.badge-photos, .badge-vip {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.3), inset 0 2px 0 0 hsla(0,0%,100%,.4);
+  text-transform: uppercase;
+  margin: 0 5px;
+  text-shadow: 0 0 1px rgba(0,0,0,.3);
+  font-weight: 700;
+}
+
 .icon-social{
   font-size: 15px;
 }
